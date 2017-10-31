@@ -5,12 +5,13 @@
 #   gem 'sqlite3'
 #
 default: &default
-  dapter: mysql2
+  adapter: mysql2
   encoding: utf8
   pool: 5
   username: root
   password:
   socket: /tmp/mysql.sock
+
 development:
   <<: *default
   database: booklog16d_development
