@@ -24,6 +24,9 @@ http://booklog.jp/
   - has_many :bookshelfs
   - has_many :reviews
 
+#### 備考
+  ・ユーザー管理機能はdeviseを用いて行う。
+  ・imageのアップロードはcarrierwaveを用いて行う。
 
 ### Productモデル
  | カラム名 | 型 | index | 外部制約|その他 |
@@ -38,6 +41,8 @@ http://booklog.jp/
   - has_many :users, through: :bookshelfs
   - has_many :bookshelfs
 
+#### 備考
+  ・imageのアップロードはcarrierwaveを用いて行う。
 
 ### Bookshelfモデル(Product - Userの中間テーブル)
  | カラム名 | 型 | index | 外部制約|その他 |
