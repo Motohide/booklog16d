@@ -49,6 +49,7 @@ http://booklog.jp/
   - belongs_to :user
   - belongs_to :product
 
+
 ### Reviewモデル
  | カラム名 | 型 | index | 外部制約|その他 |
   | :---------------: |:---------------:| :----------: | :----------: | :-------:|
@@ -60,7 +61,6 @@ http://booklog.jp/
   |spoiler_status|integer|-|-|-|
   |user_id|-|-|true|-|
   |product_id|-|-|true||
-
 
 #### Association
   - belongs_to :user
