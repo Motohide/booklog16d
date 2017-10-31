@@ -7,17 +7,17 @@ http://booklog.jp/
  | カラム名 | 型 | index | 外部制約|その他 |
   | :---------------: |:---------------:| :----------: | :----------: | :-------:|
   |mail|string|true||null: false, unique: true|
-  |gender|integer|-|||
-  |birth_year|integer|-|||
-  |birth_month|integer|-|||
-  |birth_day|integer|-|||
-  |image|string||||
-  |prefecture|integer||||
-  |hometown|string||||
-  |website|string||||
-  |bio|string||||
-  |job|string||||
   |nickname|string|true||null: false, unique: true|
+  |gender|integer|-|-|-|
+  |birth_year|integer|-|-|-|
+  |birth_month|integer|-|-|-|
+  |birth_day|integer|-|-|-|
+  |image|string|-|-|-|
+  |prefecture|integer|-|-|-|
+  |hometown|string|-|-|-|
+  |website|string|-|-|-|
+  |bio|string|-|-|-|
+  |job|string|-|-|-|
 
 #### Association
   - has_many :products, through: :bookshelf
@@ -29,9 +29,9 @@ http://booklog.jp/
  | カラム名 | 型 | index | 外部制約|その他 |
   | :---------------: |:---------------:| :----------: | :----------: | :-------:|
   |name|string|true||null: false|
-  |image|string|-||-|
-  |author|string|-||null: false|
-  |publisher|string|||null: false|
+  |image|string|-|-|-|
+  |author|string|-|-|null: false|
+  |publisher|string|-|-|null: false|
 
 #### Association
   - has_many :reviews
@@ -39,11 +39,11 @@ http://booklog.jp/
   - has_many :bookshelfs
 
 
-### Bookshelfモデル
+### Bookshelfモデル(Product - Userの中間テーブル)
  | カラム名 | 型 | index | 外部制約|その他 |
   | :---------------: |:---------------:| :----------: | :----------: | :-------:|
-  |user_id||-||-|
-  |product_id||-||-|
+  |user_id|integer|-||-|
+  |product_id|integer|-||-|
 
 #### Association
   - belongs_to :user
@@ -55,11 +55,11 @@ http://booklog.jp/
   |reading_status|integer|-||null: false|
   |rate|integer|-||null: false|
   |body|string|-||null: false|
-  |note|string||||
-  |public_status|integer||||
-  |spoiler_status|integer||||
-  |user_id|||true||
-  |product_id|||true||
+  |note|string|-|-|-|
+  |public_status|integer|-|-|-|
+  |spoiler_status|integer|-|-|-|
+  |user_id|-|-|true|-|
+  |product_id|-|-|true||
 
 
 #### Association
