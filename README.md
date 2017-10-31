@@ -19,7 +19,7 @@ http://booklog.jp/
   |job|string||||
   |nickname|string|true||null: false, unique: true|
 
-## Association
+#### Association
   - has_many :products, through: :bookshelf
   - has_many :bookshelfs
   - has_many :reviews
@@ -33,7 +33,7 @@ http://booklog.jp/
   |author|string|-||null: false|
   |publisher|string|||null: false|
 
-## Association
+#### Association
   - has_many :reviews
   - has_many :users, through: :bookshelfs
   - has_many :bookshelfs
@@ -45,7 +45,7 @@ http://booklog.jp/
   |user_id||-||-|
   |product_id||-||-|
 
-## Association
+#### Association
   - belongs_to :user
   - belongs_to :product
 
@@ -62,6 +62,6 @@ http://booklog.jp/
   |product_id|||true||
 
 
-## Association
+#### Association
   - belongs_to :user
   - belongs_to :product
