@@ -20,6 +20,9 @@ http://booklog.jp/
   |nickname|string|true||null: false, unique: true|
 
 ## Association
+  - has_many :products, through: :bookshelf
+  - has_many :bookshelfs
+  - has_many :reviews
 
 
 ### Productモデル
@@ -31,6 +34,10 @@ http://booklog.jp/
   |publisher|string|||null: false|
 
 ## Association
+  - has_many :reviews
+  - has_many :users, through: :bookshelfs
+  - has_many :bookshelfs
+
 
 ### Bookshelfモデル
  | カラム名 | 型 | index | 外部制約|その他 |
@@ -39,6 +46,8 @@ http://booklog.jp/
   |product_id||-||-|
 
 ## Association
+  - belongs_to :user
+  - belongs_to :product
 
 ### Reviewモデル
  | カラム名 | 型 | index | 外部制約|その他 |
@@ -49,5 +58,10 @@ http://booklog.jp/
   |note|string||||
   |public_status|integer||||
   |spoiler_status|integer||||
+  |user_id|||true||
+  |product_id|||true||
+
 
 ## Association
+  - belongs_to :user
+  - belongs_to :product
