@@ -20,13 +20,13 @@ http://booklog.jp/
   |job|string||||
   |nickname|string|true||null: false, unique: true|
 
-
 #### Productモデル
  | カラム名 | 型 | index | 外部制約|その他 |
   | :---------------: |:---------------:| :----------: | :----------: | :-------:|
-  |||-||-|
-  |||-||-|
-  |||-||-|
+  |name|string|true||null: false|
+  |image|string|-||-|
+  |author|string|-||null: false|
+  |publisher|string|||null: false|
 
 #### Bookshelfモデル
  | カラム名 | 型 | index | 外部制約|その他 |
