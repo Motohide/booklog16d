@@ -3,10 +3,9 @@
 http://booklog.jp/
 
 ## DB構成
-#### Userモデル
+### Userモデル
  | カラム名 | 型 | index | 外部制約|その他 |
   | :---------------: |:---------------:| :----------: | :----------: | :-------:|
-  |id|string|true||null: false, unique: true|
   |mail|string|true||null: false, unique: true|
   |gender|integer|-|||
   |birth_year|integer|-|||
@@ -20,7 +19,10 @@ http://booklog.jp/
   |job|string||||
   |nickname|string|true||null: false, unique: true|
 
-#### Productモデル
+## Association
+
+
+### Productモデル
  | カラム名 | 型 | index | 外部制約|その他 |
   | :---------------: |:---------------:| :----------: | :----------: | :-------:|
   |name|string|true||null: false|
@@ -28,23 +30,24 @@ http://booklog.jp/
   |author|string|-||null: false|
   |publisher|string|||null: false|
 
-#### Bookshelfモデル
- | カラム名 | 型 | index | 外部制約|その他 |
-  | :---------------: |:---------------:| :----------: | :----------: | :-------:|
-  |||-||-|
-  |||-||-|
-  |||-||-|
+## Association
 
-#### Product-Bookshelfモデル
+### Bookshelfモデル
  | カラム名 | 型 | index | 外部制約|その他 |
   | :---------------: |:---------------:| :----------: | :----------: | :-------:|
-  |||-||-|
-  |||-||-|
-  |||-||-|
+  |user_id||-||-|
+  |product_id||-||-|
 
-#### Reviewモデル
+## Association
+
+### Reviewモデル
  | カラム名 | 型 | index | 外部制約|その他 |
   | :---------------: |:---------------:| :----------: | :----------: | :-------:|
-  |||-||-|
-  |||-||-|
-  |||-||-|
+  |reading_status|integer|-||null: false|
+  |rate|integer|-||null: false|
+  |body|string|-||null: false|
+  |note|string||||
+  |public_status|integer||||
+  |spoiler_status|integer||||
+
+## Association
