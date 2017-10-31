@@ -25,7 +25,8 @@ http://booklog.jp/
   - has_many :reviews
 
 #### 備考
-  ・ユーザー管理機能はdeviseを用いて行う。　　
+  ・ユーザー管理機能はdeviseを用いて行う。
+
   ・imageのアップロードはcarrierwaveを用いて行う。
 
 ### Productモデル
