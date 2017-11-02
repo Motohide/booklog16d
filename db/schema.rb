@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101065700) do
+ActiveRecord::Schema.define(version: 20171102073045) do
 
   create_table "bookshelves", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -38,10 +38,12 @@ ActiveRecord::Schema.define(version: 20171101065700) do
     t.string   "note"
     t.integer  "public_status"
     t.integer  "spoiler_status"
-    t.integer  "user_id"
-    t.integer  "product_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "user_id"
+    t.integer  "product_id"
+    t.index ["product_id"], name: "index_reviews_on_product_id", using: :btree
+    t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
