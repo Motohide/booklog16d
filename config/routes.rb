@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   end
   resources :products, only: [:index, :new, :show] do
     resources :reviews, only: [:new, :edit]
+    collection do
+      get 'search'
+    end
   end
 end
