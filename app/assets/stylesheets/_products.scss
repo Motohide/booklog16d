@@ -1,0 +1,110 @@
+.wrapper {
+  margin: 0 auto ;
+  width: 980px;
+}
+
+
+
+
+.header {
+width: 100vw;
+font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+
+  .global-navi-wrapper {
+    background-color: rgb(139, 175, 191);
+    height: 50px;
+    color: white;
+
+    .booklog-icon {
+      background-image: url(img_booklog.png);
+      background-size: contain;
+      float: left;
+      width: 60px;
+      height: 50px;
+    }
+  }
+
+  .global-navi {
+    background-color: rgb(139, 175, 191);
+    li {
+      display: inline-block;
+    }
+
+    &__left {
+      float: left;
+      font-size: 14px;
+    }
+
+    &__right {
+      float: right;
+    }
+  }
+
+  .search {
+    position: relative;
+    float: left;
+
+    &__input {
+      float: left;
+    }
+
+    &__search-btn {
+      float: left;
+    }
+
+  }
+
+  .info {
+    clear: both;
+    text-align: center;
+    background-color: #E4E4E4;
+    font-size: 12px;
+    display: block;
+
+    li {
+      margin: 8px;
+      display: inline-block;
+    }
+
+    .icon {
+      padding: 2px 6px;
+      font-size: 6px;
+      color: white;
+      background-color: #E27A70;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .news-text {
+      color: #666;
+    }
+  }
+}
+
+.body {
+  background-color: #FEFBF0;
+  padding-top: 20px;
+
+  .booklog-award {
+    border: 5px solid black ;
+  }
+
+  .recommend-list {
+    margin: 20px 0;
+    text-align: center;
+
+    &__1, &__2, &__3 {
+      display: inline-block;
+      padding-right: 54px;
+    }
+
+    &__4 {
+      display: inline-block;
+      padding-right: 0px;
+    }
+  }
+}
+
+.footer {
+  background-color: #F4F4F4;
+}
