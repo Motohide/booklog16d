@@ -1,0 +1,102 @@
+.header {
+font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+
+.header__wrapper {
+ position: fixed;
+ width: 100vw;
+}
+
+  .global-navi-wrapper {
+    background-color: rgb(139, 175, 191);
+    color: white;
+    overflow: auto;
+
+    .booklog-icon {
+      background-image: url(img_booklog.png);
+      background-size: contain;
+      float: left;
+      width: 60px;
+      height: 50px;
+      margin: 10px 10px 0;
+    }
+  }
+
+  .global-navi {
+    background-color: rgb(139, 175, 191);
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      line-height: 60px;
+
+      .link_to-cancel {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    &__left {
+      float: left;
+      font-size: 14px;
+    }
+
+    &__right {
+      float: right;
+      font-size: 24px;
+    }
+  }
+
+  .search {
+    position: relative;
+    float: left;
+    margin: 15px 10px 10px;
+
+    &__input {
+      float: left;
+      height: 24px;
+    }
+
+    &__search-btn {
+      float: left;
+      background-color: white;
+      color: #666;
+      height: 23px;
+      padding: 2px 6px 3px;
+    }
+
+  }
+
+  .info {
+    padding-top: 60px;
+    clear: both;
+    text-align: center;
+    background-color: #E4E4E4;
+    font-size: 12px;
+    display: block;
+
+    li {
+      margin: 8px;
+      display: inline-block;
+    }
+
+    .icon {
+      padding: 2px 6px;
+      font-size: 6px;
+      color: white;
+      background-color: #E27A70;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .news-text {
+      color: #666;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

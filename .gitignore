@@ -19,3 +19,11 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+*.png
+
+*.jpg
+
+*.gif
+app/assets/images/
+app/assets/stylesheets/img_booklog.png
