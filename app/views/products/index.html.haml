@@ -4,13 +4,13 @@
       %ul.global-navi.global-navi__left
         %li.booklog-icon
         %li.global-navi__ranking
-          ランキング
+          = link_to "ランキング", "", class:"link_to-cancel"
         %li.global-navi__release
-          新刊情報
+          = link_to "新刊情報", "", class:"link_to-cancel"
         %li.global-navi__quetions
-          談話室
+          = link_to "談話室", "", class:"link_to-cancel"
         %li.global-navi__matome
-          まとめ
+          = link_to "まとめ", "", class:"link_to-cancel"
       .search.global-navi
         %input.search__input
         .search__search-btn
@@ -18,13 +18,13 @@
       %ul.global-navi.global-navi__right
         %li.global-navi__mypage
         %li.global-navi__home
-          %i.fa.fa-home
+          = link_to "", "", class:"fa fa-home link_to-cancel"
         %li.global-navi__bookshelf
-          %i.fa.fa-book
+          = link_to "", "", class:"fa fa-book link_to-cancel"
         %li.global-navi__timeline
-          %i.fa.fa-clock-o
+          = link_to "", "", class:"fa fa-clock-o link_to-cancel"
         %li.global-navi__dropdown-menu-click
-          %i.fa.fa-bars
+          = link_to "", "", class:"fa fa-bars link_to-cancel"
   %ul.info
     %li.icon NEW
     %li.news-text
@@ -54,7 +54,7 @@
               = image_tag "book__review__karioki.jpg",class:"review-container__image"
               .review-container__product-info
                 .review-container__product-info__title
-                  本のタイトル
+                  タイトル
                 .review-container__product-info__author
                   作者の名前だよ
               .review-container__review

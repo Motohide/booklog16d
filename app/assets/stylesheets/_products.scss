@@ -1,11 +1,9 @@
 $star-color: #EDB74B;
 
-
 .wrapper {
   margin: 0 auto ;
   width: 980px;
 }
-
 
 .body {
   background-color: #FEFBF0;
@@ -65,6 +63,10 @@ $star-color: #EDB74B;
         height: 75px;
         width: 50px;
         margin: 0 10px 10px 0;
+
+        &:hover {
+          opacity: 0.6;
+        }
       }
       &__product-info {
         float: left;
@@ -72,11 +74,19 @@ $star-color: #EDB74B;
           text-decoration: underline;
           font-size: 14px;
           font-weight: bold;
+
+          &:hover {
+           color: #4EAECC;
+          }
         }
         &__author {
           margin: 10px 0 5px;
           font-size: 12px;
           color: #4EAECC;
+
+          &:hover {
+           color: #da4740;
+          }
         }
       }
 
@@ -92,6 +102,10 @@ $star-color: #EDB74B;
               padding: 0 0 0 15px;
               color: #656565;
               float: left;
+
+            &:hover {
+               color: #4EAECC;
+              }
             }
           .rating {
               float: right;
@@ -121,6 +135,10 @@ $star-color: #EDB74B;
         height: 75px;
         width: 50px;
         margin: 0 10px 10px 0;
+
+        &:hover {
+          opacity: 0.6;
+        }
       }
 
       &__product-info {
@@ -130,12 +148,20 @@ $star-color: #EDB74B;
           text-decoration: underline;
           font-size: 14px;
           font-weight: bold;
+
+          &:hover {
+           color: #4EAECC;
+          }
         }
 
         &__author {
           margin: 10px 0 5px;
           font-size: 12px;
           color: #4EAECC;
+
+          &:hover {
+           color: #da4740;
+          }
         }
       }
 
@@ -177,6 +203,10 @@ $star-color: #EDB74B;
         height: 75px;
         width: 50px;
         margin: 0 10px 10px 0;
+
+        &:hover {
+          opacity: 0.6;
+        }
       }
 
       &__product-info {
@@ -186,12 +216,20 @@ $star-color: #EDB74B;
           text-decoration: underline;
           font-size: 14px;
           font-weight: bold;
+
+          &:hover {
+           color: #4EAECC;
+          }
         }
 
         &__author {
           margin: 10px 0 0;
           font-size: 12px;
           color: #4EAECC;
+
+          &:hover {
+           color: #da4740;
+          }
         }
 
         &__publish-date {
@@ -232,6 +270,11 @@ $star-color: #EDB74B;
         border-radius: 3px;
         font-size: 12px;
         padding: 3px 7px;
+
+        &:hover {
+          background-color: #D4E8F6;
+          border: 1px rgb(139, 175, 191) solid;
+        }
       }
     }
   }
@@ -243,16 +286,19 @@ $star-color: #EDB74B;
     margin-top: 10px;
 
     &__body {
-    display: inline-block;;
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    width: 60px;
-    height: 19px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    }
+      display: inline-block;;
+      text-decoration: none;
+      color: white;
+      background-color: black;
+      width: 60px;
+      height: 19px;
+      padding: 10px 20px;
+      border-radius: 5px;
 
+      &:hover {
+        background-color: #42A3D9;
+      }
+    }
   }
 
   .total-amount-of-numbers-about-booklog {

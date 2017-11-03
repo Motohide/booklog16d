@@ -11,12 +11,13 @@
     font-size: 10px;
     margin-right: 40px;
 
+
     &__twitter {
     background-color: #3993DD;
     }
 
     &__facebook {
-    background-color: #4768AC;
+    background-color: #15227B;
     }
 
     &__hatena {
@@ -41,7 +42,7 @@
 
       &__search-books, &__official-bookshelf, &__support   {
         float: left;
-        width: 160px;
+        width: 142px;
         padding-right: 40px;
       }
 
@@ -70,10 +71,16 @@
     margin-bottom: 4px;
   }
 
-  ul {
-    font-size: 11px;
-    line-height: 1.8em;
-    margin-bottom: 15px;
+    ul {
+      font-size: 11px;
+      line-height: 1.8em;
+      margin-bottom: 15px;
+
+      li {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .section-line {
