@@ -1,0 +1,97 @@
+.footer {
+  background-color: #E4E4E4;
+  padding: 30px 0 5px;
+
+  .SNS-btn {
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    margin-right: 40px;
+
+    &__twitter {
+    background-color: #3993DD;
+    }
+
+    &__facebook {
+    background-color: #4768AC;
+    }
+
+    &__hatena {
+    background-color: #42A3D9;
+    }
+  }
+
+  .footer__wrapper {
+    background-color: white;
+    border-radius: 10px;
+    margin: 5px auto 15px;
+    padding: 30px;
+
+    .top {
+      overflow: auto;
+
+      &__fortune-meetings-with-books {
+        float: left;
+        width: 130px;
+        padding-right: 40px;
+      }
+
+      &__search-books, &__official-bookshelf, &__support   {
+        float: left;
+        width: 160px;
+        padding-right: 40px;
+      }
+
+      &__banners {
+        float: left;
+        width: 130px;
+
+        .store {
+          width: 200px;
+          height: 230px;
+        }
+
+        .biblio-battle {
+          padding-top: 10px;
+          width: 200px;
+          height: 65px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    color: #333;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  ul {
+    font-size: 11px;
+    line-height: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .section-line {
+    border-top: 1px #cdcdcd solid;
+    padding-top: 5px;
+    margin-top: 5px;
+  }
+
+  .footer-navi {
+    color: #a1a1a1;
+
+    li {
+      font-size: 12px;
+      display: inline-block;
+    }
+
+    .copyright-policy {
+      float: right;
+    }
+  }
+}

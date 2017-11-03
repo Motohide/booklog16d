@@ -1,29 +1,30 @@
 .header
-  .global-navi-wrapper
-    %ul.global-navi.global-navi__left
-      %li.booklog-icon
-      %li.global-navi__ranking
-        ランキング
-      %li.global-navi__release
-        新刊情報
-      %li.global-navi__quetions
-        談話室
-      %li.global-navi__matome
-        まとめ
-    .search.global-navi
-      %input.search__input
-      .search__search-btn
-        %i.fa.fa-search
-    %ul.global-navi.global-navi__right
-      %li.global-navi__mypage
-      %li.global-navi__home
-        %i.fa.fa-home
-      %li.global-navi__bookshelf
-        %i.fa.fa-book
-      %li.global-navi__timeline
-        %i.fa.fa-clock-o
-      %li.global-navi__dropdown-menu-click
-        %i.fa.fa-bars
+  .header__wrapper
+    .global-navi-wrapper
+      %ul.global-navi.global-navi__left
+        %li.booklog-icon
+        %li.global-navi__ranking
+          ランキング
+        %li.global-navi__release
+          新刊情報
+        %li.global-navi__quetions
+          談話室
+        %li.global-navi__matome
+          まとめ
+      .search.global-navi
+        %input.search__input
+        .search__search-btn
+          %i.fa.fa-search
+      %ul.global-navi.global-navi__right
+        %li.global-navi__mypage
+        %li.global-navi__home
+          %i.fa.fa-home
+        %li.global-navi__bookshelf
+          %i.fa.fa-book
+        %li.global-navi__timeline
+          %i.fa.fa-clock-o
+        %li.global-navi__dropdown-menu-click
+          %i.fa.fa-bars
   %ul.info
     %li.icon NEW
     %li.news-text
@@ -46,46 +47,103 @@
 
       .middle-page-content
         .middle-page-content__popular-review
-          .review-container
-            .review-container__image
-            .review-container__title
-            .review-container__author
-            .review-container__review
-              .user-info
-              .review-text
+          %h2.top-title
+            人気のレビュー
+          - 5.times do
+            .review-container
+              = image_tag "book__review__karioki.jpg",class:"review-container__image"
+              .review-container__product-info
+                .review-container__product-info__title
+                  本のタイトル
+                .review-container__product-info__author
+                  作者の名前だよ
+              .review-container__review
+                .user-info
+                  .user-name
+                    ユーザー名前
+                  .rating
+                    %i.fa.fa-star
+                    %i.fa.fa-star
+                    %i.fa.fa-star
+                    %i.fa.fa-star
+                    %i.fa.fa-star
+                .review-text
+                  .review-text__body
+                    ヨオオオオオオオオオオオオオアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアアサ
+                  .review-text__like-count
+                    = image_tag "faving.gif"
+          .more-btn
+            = link_to "もっとみる", "", class:"more-btn__body"
         .middle-page-content__ranking
-          .ranking-container
-            .ranking-container__image
-            .ranking-container__title
-            .ranking-containerg__author
-            .ranking-container__evaluation
+          %h2.top-title
+            ランキング
+          - 10.times do
+            .ranking-container
+              = image_tag "book__review__karioki.jpg",class:"ranking-container__image"
+              .ranking-container__product-info
+                .ranking-container__product-info__title
+                  AAAAAAAAAAAAAaaa
+                .ranking-container__product-info__author
+                  作者の名前だよ
+                .ranking-container__evaluation
+                  = link_to "219人が登録","",class:"ranking-container__evaluation__registration-number"
+                  = link_to "3.75", "", class:"fa fa-star ranking-container__evaluation__average"
+                  %span.ranking-container__evaluation__recent-registration-number 最近69人が登録
+          .more-btn
+            = link_to "もっとみる", "", class:"more-btn__body"
+
         .middle-page-content__release
-          .release-container
-            .release-container__image
-            .release-container__title
-            .release-container__author
-            .release-container__date
-
+          %h2.top-title
+            新刊情報
+          - 10.times do
+            .release-container
+              = image_tag "book__review__karioki.jpg",class:"release-container__image"
+              .release-container__product-info
+                .release-container__product-info__title
+                  YOOOOOOOOOOOOO
+                .release-container__product-info__author
+                  作者の名前だよ
+                .release-container__product-info__publish-date
+                  2017年11月3日
+              .release-container__date
+          .more-btn
+            = link_to "もっとみる", "", class:"more-btn__body"
         .popular-author
-          %h3
+          %h3.popular-author__heading
             話題の作家
-            %ul.hot-author-name
+          %ul.hot-authors
+            - 45.times do
               %li
+                = link_to "青山", "", class:"authors-name"
+              %li
+              = link_to "青山", "", class:"authors-name"
 
-          %h3
+          %h3.popular-author__heading
             人気の作家のおすすめ本・新刊情報・電子書籍
-            %ul.popular-author-name
+          %ul.popular-authors
+            - 45.times do
               %li
+                = link_to "田中", "", class:"authors-name"
+              %li
+                = link_to "田中", "", class:"authors-name"
 
         .advertisement
         .total-amount-of-numbers-about-booklog
+          %span ブクログは、
+          %span.red 104万5403人
+          %span の利用者が、
+          %span.red 7751万4529アイテム
+          %span を登録して、
+          %span.red 812万5116件のレビュー
+          %span を書いています。
 
 .footer
   .wrapper
-    .top
-      .top__fortune-meetings-with-books
-        %h3
-          本と出会う
+    .footer__wrapper
+      .top
+        .top__fortune-meetings-with-books
+          %h3.footer__title
+            本と出会う
           %ul
             %li ランキング
             %li 新刊情報
@@ -96,27 +154,27 @@
             %li プクログ大賞
             %li プクログ通信
 
-      .top__search-books
-        %h3
-          本を探す
+        .top__search-books
+          %h3.footer__title
+            本を探す
           %ul.search-by-keyword-or-tag
             %li キーワード
             %li タグから探す
-        %h3
-          本棚を探す
+          %h3.footer__title
+            本棚を探す
           %ul.search-from-bookshelves
             %li プロフィールから本棚を探す
             %li ブクログID検索
 
-        %h3
-          ブクログ
+          %h3.footer__title
+            ブクログ
           %ul.applications
             %li iPhone アプリ
             %li その他のブクログアプリ
 
-      .top__official-bookshelf
-        %h3
-          公式本棚
+        .top__official-bookshelf
+          %h3.footer__title
+            公式本棚
           %ul
             %li ブクログスタッフの本棚
             %li 芥川賞の本棚
@@ -124,42 +182,47 @@
             %li TVドラマ原作本棚
             %li 映画の原作本棚
             %li アニメの原作本棚
-            %li プクログ公式本棚一覧
+            %li.official-bookshelf.section-line プクログ公式本棚一覧
             %li 公式本棚の新着情報
-        %h3
-          ようこそブクログへ
+          %h3.footer__title
+            ようこそブクログへ
           %ul
             %li プクログについて
             %li 初めての方へ
             %li チュートリアル
 
-      .top__support
-        %h3
-          サポート
+        .top__support
+          %h3.footer__title
+            サポート
           %ul
             %li お知らせプクログ
             %li ヘルプ
             %li お問い合わせ
-            %li 広告掲載について
+            %li.section-line 広告掲載について
             %li メディア掲載情報
-            %li 公式 Twitter
+            %li.section-line 公式 Twitter
             %li Facebookページ
             %li プクロぐ公式グッズ
 
-      .top__banners
-        .store
-        .biblio-battle
+        .top__banners
+          = image_tag "bnr_booklogshop@2x.png", class:"store"
+          = image_tag "bnr_bibliobattle200_65@2x.png", class:"biblio-battle"
 
-    .SNS-btns
+      .SNS-btns
+        = link_to " ツイート", "", class:"fa fa-twitter SNS-btn SNS-btn__twitter"
+        = link_to " いいね! 1.6万", "", class:"fa fa-facebook SNS-btn SNS-btn__facebook"
+        = link_to "B! ブックマーク", "", class:"SNS-btn SNS-btn__hatena"
+    %ul.footer-navi
+      %li.service-policy
+        利用規約
+        |
+      %li.about-Cookie-usage
+        Cookieの使用について
+        |
+      %li.about-us
+        会社概要
+        |
+      %li.privacy-policy
+        プライバシーポリシー
 
-  %ul.footer-navi
-    %li.service-policy
-      利用規約
-    %li.about-Cookie-usage
-      Cookieの使用について
-    %li.about-us
-      会社概要
-    %li.privacy-policy
-      プライバシーポリシー
-
-  .copyright Copyright ©︎ 2017 Booklog.inc. All Rights Reserved
+      %span.copyright-policy Copyright ©︎ 2017 Booklog.inc. All Rights Reserved

@@ -1,85 +1,11 @@
+$star-color: #EDB74B;
+
+
 .wrapper {
   margin: 0 auto ;
   width: 980px;
 }
 
-
-
-
-.header {
-width: 100vw;
-font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
-
-  .global-navi-wrapper {
-    background-color: rgb(139, 175, 191);
-    height: 50px;
-    color: white;
-
-    .booklog-icon {
-      background-image: url(img_booklog.png);
-      background-size: contain;
-      float: left;
-      width: 60px;
-      height: 50px;
-    }
-  }
-
-  .global-navi {
-    background-color: rgb(139, 175, 191);
-    li {
-      display: inline-block;
-    }
-
-    &__left {
-      float: left;
-      font-size: 14px;
-    }
-
-    &__right {
-      float: right;
-    }
-  }
-
-  .search {
-    position: relative;
-    float: left;
-
-    &__input {
-      float: left;
-    }
-
-    &__search-btn {
-      float: left;
-    }
-
-  }
-
-  .info {
-    clear: both;
-    text-align: center;
-    background-color: #E4E4E4;
-    font-size: 12px;
-    display: block;
-
-    li {
-      margin: 8px;
-      display: inline-block;
-    }
-
-    .icon {
-      padding: 2px 6px;
-      font-size: 6px;
-      color: white;
-      background-color: #E27A70;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-
-    .news-text {
-      color: #666;
-    }
-  }
-}
 
 .body {
   background-color: #FEFBF0;
@@ -103,8 +29,241 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
       padding-right: 0px;
     }
   }
+
+  .middle-page-content {
+
+    .top-title {
+      border-bottom: 3px solid black;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 0 15px;
+    }
+
+    &__popular-review {
+      width: 310px;
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__ranking {
+      width: 310px;
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__release {
+      width: 310px;
+      float: left;
+      margin-bottom: 20px;
+    }
+
+    .review-container {
+      &__image {
+        float: left;
+        height: 75px;
+        width: 50px;
+        margin: 0 10px 10px 0;
+      }
+      &__product-info {
+        float: left;
+        &__title {
+          text-decoration: underline;
+          font-size: 14px;
+          font-weight: bold;
+        }
+        &__author {
+          margin: 10px 0 5px;
+          font-size: 12px;
+          color: #4EAECC;
+        }
+      }
+
+      &__review {
+        clear: both;
+        .user-info {
+          background-color: #f0f0f0;
+          padding: 10px 0;
+          display: table;
+          width: 100%;
+          .user-name {
+              font-size: 12px;
+              padding: 0 0 0 15px;
+              color: #656565;
+              float: left;
+            }
+          .rating {
+              float: right;
+              color: $star-color;
+              font-size: 12px;
+              padding-right: 15px;
+            }
+        }
+        .review-text {
+          background-color: #fff;
+          font-size: 16px;
+          padding: 10px 15px;
+
+          &__body {
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+    .ranking-container {
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      overflow: auto;
+      border-bottom: 1px #cdcdcd solid;
+      &__image {
+        float: left;
+        height: 75px;
+        width: 50px;
+        margin: 0 10px 10px 0;
+      }
+
+      &__product-info {
+        float: left;
+
+        &__title {
+          text-decoration: underline;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        &__author {
+          margin: 10px 0 5px;
+          font-size: 12px;
+          color: #4EAECC;
+        }
+      }
+
+      &__evaluation {
+        clear: both;
+        font-size: 12px;
+        display: block;
+
+        &__registration-number {
+          font-weight: bold;
+          color: #da4740;
+          text-decoration: none;
+          padding-right: 10px;
+        }
+
+        &__average {
+          color: $star-color;
+          text-decoration: none;
+          font-weight: bold;
+          padding-right: 10px;
+        }
+
+        &__recent-registration-number {
+          color: #EE746E;
+          font-size: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .release-container {
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      overflow: auto;
+      border-bottom: 1px #cdcdcd solid;
+
+      &__image {
+        float: left;
+        height: 75px;
+        width: 50px;
+        margin: 0 10px 10px 0;
+      }
+
+      &__product-info {
+        float: left;
+
+        &__title {
+          text-decoration: underline;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        &__author {
+          margin: 10px 0 0;
+          font-size: 12px;
+          color: #4EAECC;
+        }
+
+        &__publish-date {
+          font-size: 10px;
+          color: #333;
+        }
+      }
+    }
+
+    .popular-author {
+      clear: both;
+      background-color: white;
+      border: 1px #cdcdcd solid;
+      padding: 15px;
+
+      &__heading {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+        clear: both;
+      }
+
+      .hot-authors {
+        overflow: auto;
+        margin-bottom: 15px;
+      }
+
+      .popular-authors {
+        overflow: auto;
+      }
+      .authors-name {
+        float: left;
+        margin: 0 4px 4px 0;
+        color: #7e7e7e;
+        text-decoration: none;
+        border: 1px #CBCBCB solid;
+        border-radius: 3px;
+        font-size: 12px;
+        padding: 3px 7px;
+      }
+    }
+  }
+
+    .more-btn {
+    clear: both;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 10px;
+
+    &__body {
+    display: inline-block;;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    width: 60px;
+    height: 19px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    }
+
+  }
+
+  .total-amount-of-numbers-about-booklog {
+    font-size:10px;
+    text-align: center;
+    padding: 20px 0;
+
+    span.red {
+    font-weight: bold;
+    color: #cc0000;
+    }
+  }
 }
 
-.footer {
-  background-color: #F4F4F4;
-}
