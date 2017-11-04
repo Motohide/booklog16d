@@ -1,0 +1,159 @@
+.account-page{
+  background-color: #FCF8EC;
+  .account-page__body{
+    margin: 40px 190px 100px;
+    width: 980px;
+    height: 1022px;
+
+  .body{
+    position: relative;
+    margin: 40px auto 100px;
+    padding: 0;
+    background: none;
+
+    .body__top {
+      width: 980px;
+      height: 200px;
+      margin-bottom: 50px;
+
+      .body__top__header {
+      h1 {
+        font-size: 34px;
+        font-weight: normal;
+        line-height: 38px;
+        margin: 0 10 0 10px;
+        color: #1e1e1e;
+        padding-top: 30px;
+      }
+
+      p {
+        word-break: normal;
+        margin: 20px 0 20px 0px;
+        color: #333;
+        font-size: 14px;
+        line-height: 1.7em;
+      }
+      }
+
+      .body__top__footer {
+        h2 {
+          font-size: 16px;
+          font-weight: bold;
+          margin: 0 0 5px 0;
+        }
+
+        .social-network {
+          margin: 10px 0;
+
+           li {
+            display: inline-block;
+            width: 300px;
+            margin-bottom: 30px;
+            float: left;
+            text-align: center;
+
+              .fa {
+              color: white;
+              text-decoration: none;
+              }
+
+              .twitter {
+                background-color: #55acee;
+                padding: 15px 0;
+                margin-right: 8px;
+                border-radius: 5px;
+              }
+
+              .facebook {
+                background-color: #455A93;
+                padding: 15px 0;
+                margin-left: 8px;
+                border-radius:5px;
+              }
+           }
+        }
+      }
+    }
+    .body__middle{
+      height: 700px;
+      width: 600px;
+
+      h2{
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .body-wrapper {
+        border-top:  5px #333 solid;
+        background-color: white;
+        width: 600px;
+  }
+
+
+      &__id {
+        width: 600px;
+        overflow: auto;
+      }
+
+      &__password {
+        width: 600px;
+        overflow: auto;
+        clear: both;
+      }
+
+      &__comment{
+        width: 550px;
+        height: 83px;
+        overflow: auto;
+        clear: both;
+        background-color: #f0f0f0;
+        border-bottom: 1px #cdcdcd solid;
+        font-size: 13px;
+        padding: 15px 25px;
+      }
+
+      &__e-mail {
+        width: 600px;
+        overflow: auto;
+        clear: both;
+      }
+
+      &__gender{
+        width: 600px;
+        overflow: auto;
+        clear: both;
+      }
+
+      &__birth-day{
+        width: 600px;
+        overflow: auto;
+        clear: both;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 14px;
+
+      }
+    }
+
+      .left-content{
+        float: left;
+        width: 160px;
+        height: 69px;
+        text-align: left;
+        padding: 25px;
+        background-color: #e8f6f5;
+        font-size: 13px;
+        font-weight: bold;
+        border-bottom: 1px #cdcdcd solid;
+      }
+
+      .right-content{
+        float: left;
+        width: 340px;
+        height: 110px;
+        padding: 10px 0 0 10px;
+      }
+  }
+  }
+}

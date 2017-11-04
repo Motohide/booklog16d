@@ -1,0 +1,83 @@
+#account-page.account-page
+  .account-page__body
+    .body
+      .body__top
+        .body__top__header
+          %h1 ブクログの新規登録
+          %p
+            ブクログをはじめる方法は2つあります。
+            %br
+            どちらもコーヒーを淹れている間（5分くらい）でできます。もちろん、無料です。
+        .body__top__footer
+          %h2 SNSアカウントでブクログを始める
+          %ul.social-network
+            %li
+              .twitter
+                = link_to "twitterで新規登録", "", class:"fa fa-twitter"
+            %li
+              .facebook
+                = link_to "facebookで新規登録", "", class:"fa fa-facebook-official"
+
+      .body__middle
+        %h2 メールアドレスでブクログを始める。
+        .body-wrapper
+          .body__middle__id
+            .left-content
+              %h5 ブクログID
+            .right-content
+              %input.registration-info__booklog-id
+
+          .body__middle__password
+            .body__middle__password__left-content
+            .left-content
+              %h5 パスワード
+            .body__middle__password__right-content
+            .right-content
+              %input.registration-info__password
+
+          .body__middle__comment
+            .p 性別・生年月日はプロフィールとして公開いたします。※登録後に公開設定を変更することが可能です。なお、ログイン情報を忘れてしまった場合、下記の情報で本人確認を行うため正しく入力してください。
+
+          .body__middle__e-mail
+            .left-content
+              %h5 メールアドレス
+            .body__middle__e-mail__right-content
+            .right-content
+              %input.registration-info__e-mail
+
+          .body__middle__gender
+            .body__middle__gender__left-content
+            .left-content
+              %h5 性別
+            .body__middle__gender__right-content
+            .right-content
+              %input{ type: "radio", class: "checkbox-gender"}
+              %label 男性
+
+              %input{ type: "radio", class: "checkbox-gender"}
+              %label 女性
+
+          .body__middle__birth-day
+            .body__middle__birth-day__left-content
+            .left-content
+              %h5 誕生日
+            .body__middle__birth-day__right-content
+            .right-content
+              %select
+                %option 1900
+              年
+              %select
+                %option 12
+              月
+              %select
+                %option 31
+              日
+
+      / .body__under
+      /   .body__under__header
+      /     .a link
+      /     .p をお読みいただき、確認ページにお進みください。
+      /   .body__under__footer
+      /   %h2 規約に同意して確認ページに進む
+
+
