@@ -1,4 +1,5 @@
 #account-page.account-page
+  .header
   .account-page__body
     .body
       .body__top
@@ -25,7 +26,9 @@
             .left-content
               %h5 ブクログID
             .right-content
-              %input.registration-info__booklog-id
+              %input.registration-info
+              %ul.id-condition
+                %li 半角英数小文字 3 ~ 16 文字
 
           .body__middle__password
             .body__middle__password__left-content
@@ -33,17 +36,20 @@
               %h5 パスワード
             .body__middle__password__right-content
             .right-content
-              %input.registration-info__password
+              %input.registration-info
+              %ul.password-condition
+                %li 半角英数・記号5～16文字
 
           .body__middle__comment
-            .p 性別・生年月日はプロフィールとして公開いたします。※登録後に公開設定を変更することが可能です。なお、ログイン情報を忘れてしまった場合、下記の情報で本人確認を行うため正しく入力してください。
+            .p 性別・生年月日はプロフィールとして公開いたします。
+            %br ※登録後に公開設定を変更することが可能です。なお、ログイン情報を忘れてしまった場合、下記の情報で本人確認を行うため正しく入力してください。
 
           .body__middle__e-mail
             .left-content
               %h5 メールアドレス
             .body__middle__e-mail__right-content
             .right-content
-              %input.registration-info__e-mail
+              %input.registration-info{type: "text", placeholder: "連絡な可能なメールアドレス"}
 
           .body__middle__gender
             .body__middle__gender__left-content
@@ -52,10 +58,10 @@
             .body__middle__gender__right-content
             .right-content
               %input{ type: "radio", class: "checkbox-gender"}
-              %label 男性
+              %label.gender 男性
 
               %input{ type: "radio", class: "checkbox-gender"}
-              %label 女性
+              %label.gender 女性
 
           .body__middle__birth-day
             .body__middle__birth-day__left-content
@@ -63,21 +69,45 @@
               %h5 誕生日
             .body__middle__birth-day__right-content
             .right-content
-              %select
-                %option 1900
+              %select.date-of-birth__year
+                %option 1990
+                %option 1991
               年
-              %select
+              %select.date-of-birth__month
                 %option 12
+                %option 11
               月
-              %select
+              %select.date-of-birth__day
                 %option 31
               日
 
-      / .body__under
-      /   .body__under__header
-      /     .a link
-      /     .p をお読みいただき、確認ページにお進みください。
-      /   .body__under__footer
-      /   %h2 規約に同意して確認ページに進む
+      .body__under
+        .body__under__terms-condition
+          %span
+          = link_to "ブクログの利用規約", "", class:"link-condition"
+          %span.link-text をお読みいただき、確認ページにお進みください。
+        .body__under__blue-btn
+          %a
+          = link_to "規約に同意して確認ページに進む"
 
+    .footer
+      %ul
+        %a
+        = link_to "WEB本棚サビースブクログ"
+        %a
+        |
+        = link_to "新規登録"
+        %a
+        |
+        = link_to "ブクログについて"
+        %a
+        |
+        = link_to "ブクログ特集"
+        %a
+        |
+        = link_to "お知らせブログ"
+        %a
+        |
+        = link_to "お問い合わせ"
 
+      %p Copyright © 2017 Booklog,Inc. All Rights Reserved.

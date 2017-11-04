@@ -1,15 +1,22 @@
 .account-page{
   background-color: #FCF8EC;
+  width: 100%;
+
+  .header{
+    width: 909px;
+    height:60px;
+    background-color: #94AEBD;
+    background-image: url(img_b)
+  }
+
   .account-page__body{
-    margin: 40px 190px 100px;
-    width: 980px;
-    height: 1022px;
+    margin: 0 auto;
+    width: 600px;
 
   .body{
-    position: relative;
-    margin: 40px auto 100px;
-    padding: 0;
+    margin: 0 auto 80px;
     background: none;
+    width: 100%;
 
     .body__top {
       width: 980px;
@@ -33,7 +40,7 @@
         font-size: 14px;
         line-height: 1.7em;
       }
-      }
+    }
 
       .body__top__footer {
         h2 {
@@ -74,11 +81,12 @@
         }
       }
     }
+
     .body__middle{
       height: 700px;
       width: 600px;
 
-      h2{
+      h2 {
         font-size: 16px;
         font-weight: bold;
         margin-bottom: 5px;
@@ -88,7 +96,8 @@
         border-top:  5px #333 solid;
         background-color: white;
         width: 600px;
-  }
+        line-height: 1.4em;
+      }
 
 
       &__id {
@@ -104,7 +113,7 @@
 
       &__comment{
         width: 550px;
-        height: 83px;
+        height: 89px;
         overflow: auto;
         clear: both;
         background-color: #f0f0f0;
@@ -131,29 +140,129 @@
         clear: both;
         display: table-cell;
         vertical-align: middle;
-        font-size: 14px;
-
       }
-    }
 
       .left-content{
         float: left;
         width: 160px;
-        height: 69px;
+        height: 70px;
         text-align: left;
         padding: 25px;
         background-color: #e8f6f5;
         font-size: 13px;
         font-weight: bold;
         border-bottom: 1px #cdcdcd solid;
+
+        h5 {
+          text-align: left;
+          color: #656565;
+          font-size: 13px;
+          font-weight: bold;
+        }
       }
 
       .right-content{
         float: left;
         width: 340px;
-        height: 110px;
-        padding: 10px 0 0 10px;
+        height: 70px;
+        padding: 25px;
+        font-size: 13px;
+        border-bottom: 1px #cdcdcd solid;
+
+      .registration-info {
+        width: 320px;
+        height: 21px;
+        background-color: white;
+        padding: 7px;
+        border: 1px #1e1e1e solid;
+        font-size: 14px;
+        border-radius: 3px;
       }
+
+      ul {
+        margin: 5px 10px 0 20px;
+
+        li {
+          list-style: circle;
+          font-size: 11px;
+          color: #333;
+          margin-bottom: 3px;
+        }
+      }
+
+      .gender {
+        margin-right: 10px;
+      }
+
+      select {
+        font-size: 14px;
+        height: 30px;
+        border: 1px #1e1e1e solid;
+
+        &__year {
+          width: 67px;
+        }
+
+        &__month, &__day {
+          width: 44px;
+        }
+      }
+    }
   }
+
+    .body__under {
+      text-align: center;
+      padding-top:100px;
+
+      &__terms-condition {
+        font-size: 14px;
+        color: #333;
+        margin: 20px 0 20px 0;
+
+        .link-condition {
+          text-decoration: none;
+          color: #4ea6cc;
+        }
+      }
+
+      &__blue-btn {
+        font-size: 20px;
+        background-color: #55acee;
+        padding: 20px;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+    .footer{
+      font-size: 12px;
+      padding: 30px 0;
+      margin: 0 auto;
+
+      a {
+        display: inline-block;
+        color: #333;
+        padding: 0 2px;
+        font-size: 10px;
+
+        &:hover {
+          opacity: 0.7;
+          text-decoration: none;
+        }
+      }
+
+      p {
+        text-align: center;
+        padding-top: 5px;
+      }
+    }
   }
 }
