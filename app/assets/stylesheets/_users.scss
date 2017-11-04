@@ -3,10 +3,24 @@
   width: 100%;
 
   .header{
-    width: 909px;
+    width: 100%;
     height:60px;
     background-color: #94AEBD;
-    background-image: url(img_b)
+
+    .booklog-icon {
+       margin: 0 auto;
+       width: 60px;
+
+        &:hover {
+        opacity: 0.5;
+       }
+
+       img {
+       width: 60px;
+       height: 60px;
+
+       }
+    }
   }
 
   .account-page__body{
