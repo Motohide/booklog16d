@@ -26,10 +26,11 @@
 
 
 .form-wrapper {
+  float: left;
   clear: both;
   background-color: #e8f6f5;
-  margin: 5px 0px 35px;
-  width: 600px;
+  margin: 5px 0px 0;
+  width: 650px;
 
   &__top {
     background-color: #FEFBF0;
@@ -122,9 +123,8 @@
 }
 
 .btn-wrapper {
-  padding-bottom: 40px;
-  width: 600px;
-  margin: 0 auto;
+  padding: 40px;
+  background-color: #FEFBF0;;
 
   .update-btn {
     background-color: #4ea6cc;
@@ -134,6 +134,63 @@
     color: white;
     text-align: center;
     width: 172px;
+    margin: 0 auto;
   }
 }
 
+.side-bar {
+  float: left;
+  margin: 10px 0 10px 30px;
+  width: 270px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+
+  &__title {
+    margin: 0 0 15px;
+    border: 3px #4ea6cc solid;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #555;
+  }
+
+
+  &__subtitle {
+    padding: 6px 17px;
+    background-color: #f0f0f0;
+    color: #888;
+    border: 3px #cdcdcd solid;
+    border-bottom: 1px #cdcdcd solid;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__list {
+    font-size: 12px;
+
+    ul {
+      margin-bottom: 20px;
+    }
+
+    li {
+      background-color: #fff;
+      border-left: 3px #cdcdcd solid;
+      border-right: 3px #cdcdcd solid;
+      border-bottom: 1px #cdcdcd solid;
+      list-style: none;
+      display: block;
+      padding: 10px 17px;
+      font-weight: bold;
+      color: #555;
+
+      &:last-child {
+        border-bottom: 3px #cdcdcd solid;
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+}
