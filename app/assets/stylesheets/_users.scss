@@ -33,7 +33,6 @@
     width: 100%;
 
     .body__top {
-      width: 980px;
       height: 200px;
       margin-bottom: 50px;
 
@@ -68,7 +67,6 @@
 
            li {
             display: inline-block;
-            width: 300px;
             margin-bottom: 30px;
             float: left;
             text-align: center;
@@ -79,17 +77,26 @@
               }
 
               .twitter {
+                width: 290px;
                 background-color: #55acee;
                 padding: 15px 0;
                 margin-right: 8px;
                 border-radius: 5px;
+
+                &:hover {
+                  background-color: black;
+                }
               }
 
               .facebook {
+                width: 290px;
                 background-color: #455A93;
                 padding: 15px 0;
-                margin-left: 8px;
                 border-radius:5px;
+
+                &:hover {
+                  background-color: black;
+                }
               }
            }
         }
@@ -97,7 +104,6 @@
     }
 
     .body__middle{
-      height: 700px;
       width: 600px;
 
       h2 {
@@ -226,7 +232,6 @@
 
     .body__under {
       text-align: center;
-      padding-top:100px;
 
       &__terms-condition {
         font-size: 14px;
@@ -236,27 +241,35 @@
         .link-condition {
           text-decoration: none;
           color: #4ea6cc;
+
+          &:hover {
+            color: #da4740;
+          }
         }
       }
 
       &__blue-btn {
-        font-size: 20px;
-        background-color: #55acee;
-        padding: 20px;
-        border-radius: 5px;
+        margin-top: 20px;
 
-        &:hover {
-          background-color: black;
+        a{
+          width: 600px;
+          font-size: 20px;
+          background-color: #55acee;
+          padding: 20px 0;
+          border-radius: 5px;
+          color: white;
+          text-decoration: none;
+          display: block;
+          &:hover {
+            background-color: black;
+          }
         }
-      }
-      a{
-        color: white;
-        text-decoration: none;
+
       }
     }
   }
 
-    .footer{
+    .account-page__footer{
       font-size: 12px;
       padding: 30px 0;
       margin: 0 auto;

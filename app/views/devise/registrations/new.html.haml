@@ -15,11 +15,9 @@
           %h2 SNSアカウントでブクログを始める
           %ul.social-network
             %li
-              .twitter
-                = link_to "twitterで新規登録", "", class:"fa fa-twitter"
+              = link_to "twitterで新規登録", "", class:"fa fa-twitter twitter"
             %li
-              .facebook
-                = link_to "facebookで新規登録", "", class:"fa fa-facebook-official"
+              = link_to "facebookで新規登録", "", class:"fa fa-facebook-official facebook"
 
       .body__middle
         %h2 メールアドレスでブクログを始める。
@@ -89,10 +87,9 @@
           = link_to "ブクログの利用規約", "", class:"link-condition"
           %span.link-text をお読みいただき、確認ページにお進みください。
         .body__under__blue-btn
-          %a
-          = link_to "規約に同意して確認ページに進む"
+          = link_to "規約に同意して確認ページに進む", ""
 
-    .footer
+    .account-page__footer
       %ul
         %a
         = link_to "WEB本棚サビースブクログ"
