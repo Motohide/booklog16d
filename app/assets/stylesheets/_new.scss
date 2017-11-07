@@ -9,52 +9,57 @@ h1 {
     padding: 25px 400px 25px;
   }
 
-  .title-box {
+  .registration-form {
+    .label {
     width: 600px;
     overflow: auto;
     padding-bottom: 25px;
   }
 
-  .author-box {
-    width: 600px;
-    overflow: auto;
-    clear: both;
-    padding-bottom: 25px;
-  }
-
-  .image-box {
+    .input {
     width: 600px;
     overflow: auto;
     clear: both;
     padding-bottom: 25px;
   }
 
-  .publisher-box {
-    width: 600px;
-    overflow: auto;
-    clear: both;
-    padding-bottom: 25px;
+  // .image-box {
+  //   width: 600px;
+  //   overflow: auto;
+  //   clear: both;
+  //   padding-bottom: 25px;
+  // }
+
+  // .publisher-box {
+  //   width: 600px;
+  //   overflow: auto;
+  //   clear: both;
+  //   padding-bottom: 25px;
+  // }
+
+  // .release-box {
+  //   width: 600px;
+  //   overflow: auto;
+  //   clear: both;
+  //   padding-bottom: 25px;
+  // }
+
+
+
   }
 
-  .release-box {
-    width: 600px;
-    overflow: auto;
-    clear: both;
-    padding-bottom: 25px;
-  }
 
 
+  // .left-content {
+  //   float: left;
+  //   width: 160px;
+  // }
 
-  .left-content {
-    float: left;
-    width: 160px;
-  }
+  // .right-content {
+  //   float: left;
+  //   width: calc(100% - 160px);
+  // }
 
-  .right-content {
-    float: left;
-    width: calc(100% - 160px);
-  }
-
-  .registration-btn {
-    clear: both;
-  }
+  // .registration-btn {
+  //   clear: both;
+  // }
