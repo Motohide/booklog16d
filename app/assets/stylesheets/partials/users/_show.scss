@@ -1,0 +1,176 @@
+.profile-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  overflow: auto;
+  width:650px;
+
+  &__menu {
+    width: 90px;
+    float: left;
+    margin-right: 30px;
+
+    &__image {
+      width: 90px;
+      height: 90px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    &__list {
+      background-color: white;
+      letter-spacing: -.4em;
+
+      li {
+        letter-spacing: normal;
+        padding-top: 1px;
+        padding-bottom: 10px;
+        display: inline-block;
+
+        a {
+         color: white;
+        }
+      }
+
+      &-book {
+        border-radius: 3px 0 0 0;
+        padding-left: 14px;
+        padding-right: 14px;
+        margin-right: 4px;
+        background-color: #cdcdcd;
+      }
+
+      &-timeline {
+        border-radius: 0 3px 0 0;
+        padding-left: 14px;
+        padding-right: 14px;
+        background-color: #cdcdcd;
+      }
+
+      &-user {
+        border-radius: 0 0 0 3px;
+        padding-left: 15px;
+        padding-right: 17px;
+        margin-right: 4px;
+        margin-top: 4px;
+        background-color: black;
+      }
+
+      &-more {
+        border-radius: 0 0 3px 0;
+        padding-left: 15px;
+        padding-right: 14px;
+        margin-top: 4px;
+        background-color: #cdcdcd;
+      }
+    }
+  }
+
+  &__info {
+    float: left;
+
+    &__title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    &__name {
+      margin-bottom: 35px;
+      font-size: 14px;
+    }
+
+    &__status {
+      margin: 5px 0;
+      li {
+          display: inline-block;
+          text-align: center;
+          font-size: 11px;
+          color: #a1a1a1;
+          border-right: 1px silver solid;
+          padding: 0 15px;
+
+          &:last-child {
+            border-right: none;
+          }
+
+        a {
+          color: #4ea6cc;
+          font-size: 16px;
+        }
+      }
+    }
+
+
+    &__following {
+        width: 495px;
+      .follow-this-user-btn {
+        padding: 8px;
+        border: 1px #f0f0f0 solid;
+        font-size: 10px;
+        border-radius: 3px;
+        width: 90px;
+        text-align: center;
+        display: inline-block;
+        color: #cdcdcd;
+      }
+      .follow__count {
+        display: inline-block;
+
+        a {
+          color: black;
+          font-size: 16px;
+
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &__share-btns {
+      display: inline-block;
+      float: right;
+      background-color: #f0f0f0;
+      padding: 10px 15px;
+      border-radius: 3px;
+      color: #a1a1a1;
+      font-size: 12px;
+      text-decoration: none;
+      width: 100px;
+      text-align: center;
+
+      .fa-twitter-square {
+        color: #67ABE8;
+      }
+      .fa-facebook-square {
+        color: #3F5A93;
+      }
+      li {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.setting-btn {
+  float: right;
+  border-radius: 3px;
+  padding: 5px 9px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #a1a1a1;
+  background-color: #f0f0f0;
+}
+
+.user-birth-date {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.right-contents__show {
+  float: left;
+  font-size: 13px;
+  width: calc(100% - 230px);
+  background-color: white;
+  padding: 25px;
+}

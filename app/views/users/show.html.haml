@@ -1,0 +1,157 @@
+= render 'shared/header'
+.body
+
+  .wrapper
+    %ul.breadcrumbs
+      %li.breadcrumbs__home
+        %a{href:""} 仮
+      %li.breadcrumbs__home
+        %a{href:""} > 仮
+      %li.breadcrumbs__current-page
+        >  仮です
+
+    .profile-wrapper
+      .profile-wrapper__menu
+        = image_tag "user-icon.png",class:"profile-wrapper__menu__image"
+        %ul.profile-wrapper__menu__list
+          %li.profile-wrapper__menu__list-book
+            = link_to "", "", class:"fa fa-book"
+          %li.profile-wrapper__menu__list-timeline
+            = link_to "", "", class:"fa fa-clock-o"
+        %ul.profile-wrapper__menu__list
+          %li.profile-wrapper__menu__list-user
+            = link_to "", "", class:"fa fa-user"
+          %li.profile-wrapper__menu__list-more
+            = link_to "", "", class:"fa fa-plus"
+
+      .profile-wrapper__info
+        .profile-wrapper__info__title
+          プロフィール
+        .profile-wrapper__info__name
+          ユーザーネームさん
+        %ul.profile-wrapper__info__status
+          %li
+            登録アイテム
+            %br
+            = link_to "7", ""
+          %li
+            レビュー
+            %br
+            = link_to "1", ""
+          %li
+            レビュー率
+            %br
+            = link_to "14.3%", ""
+          %li
+            フレーズ
+            %br
+            = link_to "1", ""
+        .profile-wrapper__info__following
+          %span.follow-this-user-btn
+            あなたの本棚
+          .follow__count
+            %a{href:"", class:"following__count__number"}
+              1223
+              %span
+                フォロー
+          .follow__count
+            %a{href:"", class:"follower__count__number"}
+              55556
+              %span
+                フォロワー
+          %a{href:"",class:"profile-wrapper__info__share-btns"}
+            %li.fa.fa-twitter-square
+            %li.fa.fa-facebook-square
+            %li シェア
+      = link_to "","",class:"fa fa-cog setting-btn"
+
+
+
+    .form-wrapper
+      .form-wrapper__top
+        .user-birth-date
+          1900年1月1日生まれの男性
+      .input-row
+        .left-contents
+          名前
+        .right-contents__show
+          ユーザーの名前
+
+      .input-row
+        .left-contents
+          本棚の名前
+        .right-contents__show
+          ユーザーの名前の本棚
+
+      .input-row
+        .left-contents
+          本棚の紹介文
+        .right-contents__show
+          本棚の紹介文
+      .input-row
+        .left-contents
+          性別
+        .right-contents__show
+          男性
+      .input-row
+        .left-contents
+          生年月日
+        .right-contents__show
+          1900年1月1日生まれ
+
+
+
+    .side-bar
+      .advertisement
+      .side-bar__title
+        いろいろな設定
+      .side-bar__list
+        %p.side-bar__subtitle
+          本棚の設定
+        %ul
+          %li
+            %a{href:""} 本棚の基本設定
+          %li
+            %a{href:""} タイムラインの設定
+          %li
+            %a{href:""} 本棚の非公開設定
+          %li
+            %a{href:""} プロフィールの設定
+          %li
+            %a{href:""} アカウント情報
+          %li
+            %a{href:""}
+              レビュー掲載範囲の設定
+              %i.fa.fa-twitter-square.mini-twitter-icon
+              %i.fa.fa-facebook-square.mini-facebook-icon
+          %li
+            %a{href:""} パスワードの変更
+          %li
+            %a{href:""} 退会
+
+        %p.side-bar__subtitle
+          外部サービス連携
+        %ul
+          %li
+            %a{href:""} SNSアカウント設定
+          %li
+            %a{href:""} Amazonアフィリエイト設定
+          %li
+            %a{href:""} 投稿ログ
+
+        %p.side-bar__subtitle
+          通知設定
+        %ul
+          %li
+            %a{href:""} 通知設定
+          %li
+            %a{href:""} 新刊通知キーワード設定
+
+        %p.side-bar__subtitle
+          読書目標
+        %ul
+          %li
+            %a{href:""} 読書目標の設定
+
+/ 上記のul部分は後でgemを調べて実装する
+= render 'shared/footer'
