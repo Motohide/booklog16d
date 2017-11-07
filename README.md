@@ -40,6 +40,9 @@ http://booklog.jp/
   |image|string|-|-|-|
   |author|string|-|-|null: false|
   |publisher|string|-|-|null: false|
+  |release_year|integer|-|-|-|
+  |release_month|integer|-|-|-|
+  |release_day|integer|-|-|-|
 
 #### Association
   - has_many :reviews
