@@ -22,6 +22,33 @@
   color: #4ea6cc;
   text-decoration: none;
   float: right;
+
+  &:hover {
+    color: $hover-red-color
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: 15px;
+
+  font-size: 12px;
+  &__home {
+    display: inline-block;
+
+    a {
+      color: #4ea6cc;
+      text-decoration: none;
+
+      &:hover {
+        color: #a1a1a1;
+      }
+    }
+  }
+
+  &__current-page {
+    display: inline-block;
+    color: #a1a1a1;
+  }
 }
 
 
@@ -124,7 +151,7 @@
 
 .btn-wrapper {
   padding: 40px;
-  background-color: #FEFBF0;;
+  background-color: #FEFBF0;
 
   .update-btn {
     background-color: #4ea6cc;
@@ -135,6 +162,12 @@
     text-align: center;
     width: 172px;
     margin: 0 auto;
+    text-decoration: none;
+    display:block;
+
+    &:hover {
+      background-color: black;
+    }
   }
 }
 
@@ -182,10 +215,28 @@
       border-right: 3px #cdcdcd solid;
       border-bottom: 1px #cdcdcd solid;
       list-style: none;
-      display: block;
-      padding: 10px 17px;
       font-weight: bold;
-      color: #555;
+
+      .mini-twitter-icon {
+        font-size: 19px;
+        color: #2298cc;
+      }
+
+      .mini-facebook-icon {
+        font-size: 19px;
+        color: #3b5998;
+      }
+
+      &:hover {
+       background-color: #f0f0f0;
+      }
+
+      a{
+        text-decoration: none;
+        color: #555;
+        padding: 10px 17px;
+      display: block;
+      }
 
       &:last-child {
         border-bottom: 3px #cdcdcd solid;

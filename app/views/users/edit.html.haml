@@ -1,12 +1,12 @@
 = render 'shared/header'
 .body
-  %ul.breadcrumbs
-    %li
-      仮
-    %li
-      仮です
 
   .wrapper
+    %ul.breadcrumbs
+      %li.breadcrumbs__home
+        %a{href:""} 仮
+      %li.breadcrumbs__current-page
+        >  仮です
     .profile-setting
       プロフィールの設定
     .lead
@@ -94,7 +94,7 @@
           %input.right-contents__website{type:"text", placeholder: "http://booklog.jugem.jp"}
 
       .btn-wrapper
-        .update-btn
+        %a{href:"", class:"update-btn"}
           プロフィールタグを更新する
 
 
@@ -106,32 +106,49 @@
         %p.side-bar__subtitle
           本棚の設定
         %ul
-          %li 本棚の基本設定
-          %li タイムライの設定
-          %li 本棚の非公開設定
-          %li プロフィールの設定
-          %li アカウント情報
-          %li レビュー掲載範囲の設定
-          %li パスワードの変更
-          %li 退会
+          %li
+            %a{href:""} 本棚の基本設定
+          %li
+            %a{href:""} タイムラインの設定
+          %li
+            %a{href:""} 本棚の非公開設定
+          %li
+            %a{href:""} プロフィールの設定
+          %li
+            %a{href:""} アカウント情報
+          %li
+            %a{href:""}
+              レビュー掲載範囲の設定
+              %i.fa.fa-twitter-square.mini-twitter-icon
+              %i.fa.fa-facebook-square.mini-facebook-icon
+          %li
+            %a{href:""} パスワードの変更
+          %li
+            %a{href:""} 退会
 
         %p.side-bar__subtitle
           外部サービス連携
         %ul
-          %li SNSアカウント設定
-          %li Amazonアフィリエイト設定
-          %li 投稿ログ
+          %li
+            %a{href:""} SNSアカウント設定
+          %li
+            %a{href:""} Amazonアフィリエイト設定
+          %li
+            %a{href:""} 投稿ログ
 
         %p.side-bar__subtitle
           通知設定
         %ul
-          %li 通知設定
-          %li 新刊通知キーワード設定
+          %li
+            %a{href:""} 通知設定
+          %li
+            %a{href:""} 新刊通知キーワード設定
 
         %p.side-bar__subtitle
           読書目標
         %ul
-          %li 読書目標の設定
+          %li
+            %a{href:""} 読書目標の設定
 
 / 上記のul部分は後でgemを調べて実装する
 = render 'shared/footer'
