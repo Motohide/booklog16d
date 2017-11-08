@@ -1,0 +1,44 @@
+.body
+  %h1 作品登録
+
+  .wrapper
+    .title-box
+      .left-content
+        %h5 作品のタイトル
+      .right-content
+        %input
+
+    .author-box
+      .left-content
+        %h5 作品の著者
+      .right-content
+        %input
+
+    .image-box
+      .left-content
+        %h5 作品の画像
+      .right-content
+        %input{ type: "file"}
+
+    .publisher-box
+      .left-content
+        %h5 作品の出版社
+      .right-content
+        %input
+
+    .release-box
+      .left-content
+        %h5 作品の発売日
+      .right-content
+        %select.release-date__year
+          %option
+        年
+        %select.release-date__month
+          %option
+        月
+        %select.release-date__day
+          %option
+        日
+
+    .registration-btn
+      = link_to "登録する", ""
