@@ -27,6 +27,10 @@
         padding-bottom: 10px;
         display: inline-block;
 
+        &:hover {
+          opacity: 0.6;
+        }
+
         a {
          color: white;
         }
@@ -97,6 +101,10 @@
         a {
           color: #4ea6cc;
           font-size: 16px;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
@@ -124,6 +132,10 @@
           span {
             font-size: 12px;
           }
+
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
@@ -139,6 +151,10 @@
       width: 100px;
       text-align: center;
 
+      &:hover {
+        opacity: 0.6;
+      }
+
       .fa-twitter-square {
         color: #67ABE8;
       }
@@ -152,6 +168,91 @@
   }
 }
 
+.section-row {
+  background-color: #FEFBF0;
+  padding-bottom: 20px;
+
+  &__title {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+
+    a {
+      font-size: 12px;
+      font-weight: bold;
+      color: #4ea6cc;
+      text-decoration: none;
+
+      &:hover {
+        color: $hover-red-color;
+      }
+    }
+  }
+
+  &__biography {
+    padding: 10px;
+    font-size: 12px;
+    background-color: #f0f0f0;
+  }
+
+  &__edit-link {
+    font-size: 12px;
+    color: #4ea6cc;
+    text-decoration: none;
+
+    &:hover {
+      color: $hover-red-color;
+    }
+  }
+
+  &__favorite-ranking {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+
+    tr {
+      border: 1px silver solid;
+    }
+
+    &-1 {
+      background-color: #da4740;
+    }
+
+    &-2 {
+      background-color: #f58c29;
+    }
+
+    &-3 {
+      background-color: #89c600;
+    }
+
+    th {
+      font-size: 12px;
+      padding: 0 4px;
+      color: white;
+    }
+
+    td {
+      padding: 5px 15px;
+      text-align: center;
+      padding: 5px 15px;
+      font-size: 11px;
+      width: 52px;
+      height:52px;
+      background-color: white;
+
+      a {
+        text-decoration: none;
+        color: #4ea6cc;
+
+        &:hover {
+          color: $hover-red-color;
+        }
+      }
+    }
+  }
+}
+
 .setting-btn {
   float: right;
   border-radius: 3px;
@@ -160,11 +261,16 @@
   text-decoration: none;
   color: #a1a1a1;
   background-color: #f0f0f0;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .user-birth-date {
-  margin: 20px 0;
+  padding: 20px 0;
   font-size: 14px;
+  border-bottom: 5px black solid;
 }
 
 .right-contents__show {
