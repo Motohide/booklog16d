@@ -1,9 +1,18 @@
 @import "./reset";
 @import "font-awesome";
-@import "./users";
-@import "./footer";
-@import "./header";
-@import "./products";
+
+@import "./pages/products/index";
+@import "./pages/products/new";
+
+
+@import "./pages/shared/footer";
+@import "./pages/shared/header";
+
+
+
+@import "./pages/users/devise";
 @import "./pages/users/edit";
 @import "./pages/users/show";
-@import "./new";
+
+
+
