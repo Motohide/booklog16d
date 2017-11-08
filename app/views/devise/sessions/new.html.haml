@@ -1,25 +1,51 @@
-.header
-  .booklog-icon
-    = image_tag "img_booklog.png"
+#account-page.account-page
+  .header
+    .booklog-icon
+      = image_tag "img_booklog.png"
+  .account-page__body
+    .body
+      .body__top
+        .body__top__header
+          %h1 ログイン
+          %p
+            ようこそ、ブクログへ。 ブクログに登録している方は、下記からログインしてください。 まだ登録していない方はこちらから登録してください。登録は半熟たまごがゆであがるくらい（5分くらい）でできます。もちろん、無料です。
 
-.account-page__footer
-  %ul
-    %a
-    = link_to "WEB本棚サビースブクログ"
-    %a
-    |
-    = link_to "新規登録"
-    %a
-    |
-    = link_to "ブクログについて"
-    %a
-    |
-    = link_to "ブクログ特集"
-    %a
-    |
-    = link_to "お知らせブログ"
-    %a
-    |
-    = link_to "お問い合わせ"
+        .body__top__sign-in-field
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .body__top__sign-in-field__input
+              = f.label :email, "メールアドレス",class:"body__top__sign-in-field__input-left"
+              = f.email_field :email, autofocus: true,class:"body__top__sign-in-field__input-right"
+            .body__top__sign-in-field__input
+              = f.label :password, "パスワード",class:"body__top__sign-in-field__input-left"
+              = f.password_field :password, autocomplete: "off",class:"body__top__sign-in-field__input-right"
+            .actions
+              = f.submit "ログイン",class:"body__top__sign-in-field__submit-btn"
+        .body__top__footer
+          %h2 SNSアカウントでログイン
+          %ul.social-network
+            %li
+              = link_to "twitterでログイン", "", class:"fa fa-twitter twitter"
+            %li
+              = link_to "facebookでログイン", "", class:"fa fa-facebook-official facebook"
 
-  %p Copyright © 2017 Booklog,Inc. All Rights Reserved.
+      .account-page__footer
+        %ul
+          %a
+          = link_to "WEB本棚サ-ビスブクログ"
+          %a
+          |
+          = link_to "新規登録"
+          %a
+          |
+          = link_to "ブクログについて"
+          %a
+          |
+          = link_to "ブクログ特集"
+          %a
+          |
+          = link_to "お知らせブログ"
+          %a
+          |
+          = link_to "お問い合わせ"
+
+        %p Copyright © 2017 Booklog,Inc. All Rights Reserved.
