@@ -50,6 +50,15 @@
         color: #333;
         font-size: 14px;
         line-height: 1.7em;
+
+        a {
+          color: #4ea6cc;
+          text-decoration: none;
+
+          &:hover {
+            color: #da4740;
+          }
+        }
       }
     }
 
@@ -81,13 +90,32 @@
           display: block;
           padding: 20px;
           text-align: center;
-          border-radius: 2px;
+          border-radius: 5px;
           background-color: #62a5c8;
           font-size: 20px;
           margin: 0 auto;
           border: none;
           color: white;
           width: 100%;
+          margin-bottom: 10px;
+
+          &:hover {
+            background-color: black;
+          }
+        }
+
+        &__forget {
+          padding-top: 10px;
+          text-align: center;
+          li {
+            display: inline;
+            font-size: 12px;
+            padding: 0 5px;
+
+            a {
+             color: #333;
+            }
+          }
         }
       }
 
@@ -135,6 +163,22 @@
                 }
               }
             }
+
+          .create-new-account-btn {
+            background-color: #da4740;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 5px;
+            text-decoration: none;
+
+            &:hover {
+              background-color: black;
+            }
+          }
         }
       }
     }
