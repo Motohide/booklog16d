@@ -1,7 +1,7 @@
 .body
   %h1 作品登録
   = form_for @product do |f|
-    .wrapper
+    .registration-wrapper
       .registration-form__title-box
         .registration-form__left-content
           .field-label
@@ -24,7 +24,7 @@
             = f.label :image, "画像", class: "registration-form__label"
         .registration-form__right-content
           .field-label
-            = f.file_field :image, placeholder: "画像を入力してください", class: "registration-form__input"
+            = f.file_field :image, placeholder: "", class: "registration-form"
 
       .registration-form__publisher-box
         .registration-form__left-content
@@ -40,10 +40,9 @@
             = f.label :release_date, "発売日", class: "registration-form__label"
         .registration-form__right-content
           .field-label
-            = raw sprintf(f.date_select( :release_date, class: "release-date", date_separator:'%s'), '年', '月') + '日'
+            = f.date_select(:release_date, {}, use_month_numbers: true, class: "release-date")
 
-      .registration-form__publisher-box
-        .registration-form__left-content
-        .registration-form__right-content
+      .button
+        .registration-form
           .field-label
-            = f.submit "name": "commit", "value": "登録する", "data-disable-with": "登録する", class: "registration-form__btn"
+            = f.submit "登録する", class: "registration-form__btn"

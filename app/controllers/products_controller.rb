@@ -11,6 +11,8 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       redirect_to :root
+    else
+      render :new
     end
   end
 
@@ -22,6 +24,6 @@ class ProductsController < ApplicationController
 
 private
   def product_params
-    params.require(:product).permit(:name, :image, :author, :pulisher, :release_date)
+    params.require(:product).permit(:name, :image, :author, :publisher, :release_date)
   end
 end
