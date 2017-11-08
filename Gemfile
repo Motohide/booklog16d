@@ -20,6 +20,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml-rails'
+gem 'fog'
 
 
 group :development, :test do

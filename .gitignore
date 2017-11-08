@@ -23,3 +23,5 @@
 public/uploads/product/image
 
 public/uploads/tmp
+
+config/secrets.yml
