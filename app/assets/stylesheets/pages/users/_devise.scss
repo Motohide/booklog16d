@@ -330,11 +330,12 @@
       &__blue-btn {
         margin-top: 20px;
 
-        a{
+        input{
           width: 600px;
           font-size: 20px;
           background-color: #55acee;
           padding: 20px 0;
+          border-style: none;
           border-radius: 5px;
           color: white;
           text-decoration: none;

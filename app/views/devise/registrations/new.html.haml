@@ -3,7 +3,7 @@
     .booklog-icon
       = image_tag "img_booklog.png"
   .account-page__body
-    .body
+    = form_for(resource, as: resource_name, url: registration_path(resource_name),html: {class: 'body'}) do |f|
       .body__top
         .body__top__header
           %h1 ブクログの新規登録
@@ -19,7 +19,7 @@
             %li
               = link_to "facebookで新規登録", "", class:"fa fa-facebook-official facebook"
 
-      = form_for(resource, as: resource_name, url: registration_path(resource_name),html: {class: 'body__middle'}) do |f|
+      .body__middle
         %h2 メールアドレスでブクログを始める。
         .body-wrapper
           .body__middle__id
@@ -69,17 +69,7 @@
               %h5 誕生日
             .body__middle__birth-day__right-content
             .right-content
-              %select.date-of-birth__year
-                %option 1990
-                %option 1991
-              年
-              %select.date-of-birth__month
-                %option 12
-                %option 11
-              月
-              %select.date-of-birth__day
-                %option 31
-              日
+              = f.date_select :birth_date, {use_month_numbers: true, start_year: 1901, end_year: Time.now.year}
 
       .body__under
         .body__under__terms-condition
@@ -87,7 +77,7 @@
           = link_to "ブクログの利用規約", "", class:"link-condition"
           %span.link-text をお読みいただき、確認ページにお進みください。
         .body__under__blue-btn
-          = link_to "規約に同意して確認ページに進む", ""
+          = f.submit "規約に同意して確認ページに進む"
 
     .account-page__footer
       %ul
