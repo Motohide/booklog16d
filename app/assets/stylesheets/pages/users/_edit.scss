@@ -124,9 +124,14 @@
       color: silver;
     }
 
-    &__date-of-birthday {
-      padding: 25px;
-      font-size: 13px;
+    &__birthdate {
+      display: block;
+      margin: 25px 0 25px 25px;
+    }
+
+    &__prefecture {
+      display: block;
+      margin: 25px 0 25px 25px;
     }
 
     select {
@@ -160,7 +165,7 @@
     padding: 10px 20px;
     color: white;
     text-align: center;
-    width: 172px;
+    border-style: none;
     margin: 0 auto;
     text-decoration: none;
     display:block;
