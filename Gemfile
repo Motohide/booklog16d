@@ -20,7 +20,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml-rails'
-
+gem 'jp_prefecture'
 
 group :development, :test do
   gem 'byebug', platform: :mri

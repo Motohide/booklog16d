@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109070954) do
+ActiveRecord::Schema.define(version: 20171109101759) do
 
   create_table "bookshelves", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20171109070954) do
     t.string   "nickname"
     t.integer  "gender"
     t.string   "avatar"
-    t.integer  "prefecture"
+    t.integer  "prefecture_code"
     t.string   "hometown"
     t.string   "website"
     t.string   "biography"
