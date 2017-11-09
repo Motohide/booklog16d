@@ -60,7 +60,7 @@
   width: 650px;
 
   &__top {
-    background-color: #FEFBF0;
+    background-color: $background-beige-color;
     overflow: auto;
   }
 
@@ -151,7 +151,7 @@
 
 .btn-wrapper {
   padding: 40px;
-  background-color: #FEFBF0;
+  background-color: $background-beige-color;
 
   .update-btn {
     background-color: #4ea6cc;
