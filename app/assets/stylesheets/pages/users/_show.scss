@@ -41,14 +41,14 @@
         padding-left: 14px;
         padding-right: 14px;
         margin-right: 4px;
-        background-color: #cdcdcd;
+        background-color: $border-gray-color;
       }
 
       &-timeline {
         border-radius: 0 3px 0 0;
         padding-left: 14px;
         padding-right: 14px;
-        background-color: #cdcdcd;
+        background-color: $border-gray-color;
       }
 
       &-user {
@@ -65,7 +65,7 @@
         padding-left: 15px;
         padding-right: 14px;
         margin-top: 4px;
-        background-color: #cdcdcd;
+        background-color: $border-gray-color;
       }
     }
   }
@@ -90,7 +90,7 @@
           display: inline-block;
           text-align: center;
           font-size: 11px;
-          color: #a1a1a1;
+          color: $text-darkgray-color;
           border-right: 1px silver solid;
           padding: 0 15px;
 
@@ -114,13 +114,13 @@
         width: 495px;
       .follow-this-user-btn {
         padding: 8px;
-        border: 1px #f0f0f0 solid;
+        border: 1px $menu-gray-color solid;
         font-size: 10px;
         border-radius: 3px;
         width: 90px;
         text-align: center;
         display: inline-block;
-        color: #cdcdcd;
+        color: $border-gray-color;
       }
       .follow__count {
         display: inline-block;
@@ -142,10 +142,10 @@
     &__share-btns {
       display: inline-block;
       float: right;
-      background-color: #f0f0f0;
+      background-color: $menu-gray-color;
       padding: 10px 15px;
       border-radius: 3px;
-      color: #a1a1a1;
+      color: $text-darkgray-color;
       font-size: 12px;
       text-decoration: none;
       width: 100px;
@@ -192,7 +192,7 @@
   &__biography {
     padding: 10px;
     font-size: 12px;
-    background-color: #f0f0f0;
+    background-color: $menu-gray-color;
   }
 
   &__edit-link {
@@ -215,7 +215,7 @@
     }
 
     &-1 {
-      background-color: #da4740;
+      background-color: $hover-red-color;
     }
 
     &-2 {
@@ -259,8 +259,8 @@
   padding: 5px 9px;
   font-size: 18px;
   text-decoration: none;
-  color: #a1a1a1;
-  background-color: #f0f0f0;
+  color: $text-darkgray-color;
+  background-color: $menu-gray-color;
 
   &:hover {
     opacity: 0.6;

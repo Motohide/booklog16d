@@ -85,13 +85,13 @@
   }
 
   .section-line {
-    border-top: 1px #cdcdcd solid;
+    border-top: 1px $border-gray-color solid;
     padding-top: 5px;
     margin-top: 5px;
   }
 
   .footer-navi {
-    color: #a1a1a1;
+    color: $text-darkgray-color;
 
     li {
       font-size: 12px;

@@ -56,7 +56,7 @@
           text-decoration: none;
 
           &:hover {
-            color: #da4740;
+            color: $hover-red-color;
           }
         }
       }
@@ -165,7 +165,7 @@
             }
 
           .create-new-account-btn {
-            background-color: #da4740;
+            background-color: $hover-red-color;
             color: white;
             padding: 15px;
             width: calc(100% - 30px);
@@ -216,8 +216,8 @@
         height: 89px;
         overflow: auto;
         clear: both;
-        background-color: #f0f0f0;
-        border-bottom: 1px #cdcdcd solid;
+        background-color: $menu-gray-color;
+        border-bottom: 1px $border-gray-color solid;
         font-size: 13px;
         padding: 15px 25px;
       }
@@ -251,7 +251,7 @@
         background-color: #e8f6f5;
         font-size: 13px;
         font-weight: bold;
-        border-bottom: 1px #cdcdcd solid;
+        border-bottom: 1px $border-gray-color solid;
 
         h5 {
           text-align: left;
@@ -267,7 +267,7 @@
         height: 70px;
         padding: 25px;
         font-size: 13px;
-        border-bottom: 1px #cdcdcd solid;
+        border-bottom: 1px $border-gray-color solid;
 
       .registration-info {
         width: 320px;
@@ -323,7 +323,7 @@
           color: #4ea6cc;
 
           &:hover {
-            color: #da4740;
+            color: $hover-red-color;
           }
         }
       }
