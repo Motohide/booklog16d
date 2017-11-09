@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :gender, :birth_year, :birth_month, :birth_day, :avatar, :prefecture, :hometown, :website, :biography,:job])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :gender, :birth_year, :birth_month, :birth_day, :avatar, :prefecture, :hometown, :website, :biography,:job])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :gender, :birth_date, :avatar, :prefecture, :hometown, :website, :biography,:job])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :gender, :birth_date, :avatar, :prefecture, :hometown, :website, :biography,:job])
   end
 end
