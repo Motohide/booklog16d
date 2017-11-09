@@ -4,4 +4,10 @@ class UsersController < ApplicationController
 
   def my_books
   end
+
+  def edit
+  end
+
+  def update
+  end
 end

@@ -1,0 +1,247 @@
+.profile-setting {
+  font-size: 34px;
+  color: #1e1e1e;
+  line-height: 38px;
+  margin-bottom: 10px;
+}
+
+.lead {
+  font-size: 14px;
+  color: #1e1e1e;
+  margin: 20px 0;
+}
+
+.form-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.link_to_mypage {
+  font-size: 12px;
+  color: #4ea6cc;
+  text-decoration: none;
+  float: right;
+
+  &:hover {
+    color: $hover-red-color
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: 15px;
+
+  font-size: 12px;
+  &__home {
+    display: inline-block;
+
+    a {
+      color: #4ea6cc;
+      text-decoration: none;
+
+      &:hover {
+        color: $text-darkgray-color;
+      }
+    }
+  }
+
+  &__current-page {
+    display: inline-block;
+    color: $text-darkgray-color;
+  }
+}
+
+
+.form-wrapper {
+  float: left;
+  clear: both;
+  background-color: #e8f6f5;
+  margin: 5px 0px 0;
+  width: 650px;
+
+  &__top {
+    background-color: $background-beige-color;
+    overflow: auto;
+  }
+
+  .left-contents {
+    width: 130px;
+    float: left;
+    padding: 25px 25px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #656565;
+
+    &__biography {
+      height: 225px;
+    }
+  }
+
+  .right-contents {
+    float: left;
+    font-size: 13px;
+    background-color: white;
+    width: calc(100% - 180px);
+
+    input {
+      border-radius: 3px;
+      padding: 7px;
+
+      &[type="text"] {
+        margin: 25px 0 25px 25px;
+        border: 1px #1e1e1e solid;
+        width: calc(100% - 50px);
+      }
+
+      &[type="file"] {
+        margin: 25px 0 25px 25px;
+        width: calc(100% - 50px);
+      }
+
+      &[type="radio"] {
+        margin: 32px 0 25px; ;
+      }
+    }
+
+    span {
+      margin-left: 25px;
+    }
+
+    textarea {
+      margin: 25px 24px 0;
+      width: calc(100% - 50px);
+    }
+
+    &__biography {
+      height: 200px;
+      margin: 0;
+    }
+
+    ul {
+      margin: 0 0 25px 40px;
+      list-style: circle;
+      font-size: 11px;
+      color: silver;
+    }
+
+    &__date-of-birthday {
+      padding: 25px;
+      font-size: 13px;
+    }
+
+    select {
+      font-size: 14px;
+    }
+
+    .prefecture-name {
+      margin: 25px 25px 26px;
+    }
+  }
+
+  .input-row {
+    clear: both;
+    border-bottom: 1px $border-gray-color solid;
+    overflow: auto;
+
+    &__nickname {
+     border-top: 5px #333 solid;
+    }
+  }
+}
+
+.btn-wrapper {
+  padding: 40px;
+  background-color: $background-beige-color;
+
+  .update-btn {
+    background-color: #4ea6cc;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    width: 172px;
+    margin: 0 auto;
+    text-decoration: none;
+    display:block;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
+.side-bar {
+  float: left;
+  margin: 10px 0 10px 30px;
+  width: 270px;
+  padding: 15px;
+  background-color: $menu-gray-color;
+  border-radius: 10px;
+
+  &__title {
+    margin: 0 0 15px;
+    border: 3px #4ea6cc solid;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #555;
+  }
+
+
+  &__subtitle {
+    padding: 6px 17px;
+    background-color: $menu-gray-color;
+    color: #888;
+    border: 3px $border-gray-color solid;
+    border-bottom: 1px $border-gray-color solid;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__list {
+    font-size: 12px;
+
+    ul {
+      margin-bottom: 20px;
+    }
+
+    li {
+      background-color: #fff;
+      border-left: 3px $border-gray-color solid;
+      border-right: 3px $border-gray-color solid;
+      border-bottom: 1px $border-gray-color solid;
+      list-style: none;
+      font-weight: bold;
+
+      .mini-twitter-icon {
+        font-size: 19px;
+        color: #2298cc;
+      }
+
+      .mini-facebook-icon {
+        font-size: 19px;
+        color: #3b5998;
+      }
+
+      &:hover {
+       background-color: $menu-gray-color;
+      }
+
+      a{
+        text-decoration: none;
+        color: #555;
+        padding: 10px 17px;
+        display: block;
+      }
+
+      &:last-child {
+        border-bottom: 3px $border-gray-color solid;
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+}

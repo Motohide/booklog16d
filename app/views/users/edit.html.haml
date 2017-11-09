@@ -1,0 +1,154 @@
+= render 'shared/header'
+.body
+
+  .wrapper
+    %ul.breadcrumbs
+      %li.breadcrumbs__home
+        %a{href:""} 仮
+      %li.breadcrumbs__current-page
+        >  仮です
+    .profile-setting
+      プロフィールの設定
+    .lead
+      プロフィール、プロフィールタグ、お気に入りベスト3を設定します。
+
+    .form-wrapper
+      .form-wrapper__top
+        .form-title
+          基本設定
+        %a.link_to_mypage{href:"" }
+          プロフィールの確認
+      .input-row.input-row__nickname
+        .left-contents
+          ニックネーム
+        .right-contents
+          %input.right-contents__nickname{type:"text"}
+
+      .input-row.input-row__image
+        .left-contents
+          プロフィール画像
+        .right-contents
+          %input.right-contents__image{type:"file"}
+
+      .input-row.input-row__biography
+        .left-contents.left-contents__biography
+          自己紹介
+        .right-contents
+          %textarea.right-contents__biography
+          %ul
+            %li 1000文字以内 / HTMLタグ使用不可
+
+      .input-row.input__gender
+        .left-contents
+          性別
+        .right-contents
+          %span
+            %input{ type: "radio", id: "gender1", name:"gender"}
+            %label 男性
+          %span
+            %input{ type: "radio", id: "gender2", name:"gender"}
+            %label 女性
+          %span
+            %input{ type: "radio", id: "gender3", name:"gender"}
+            %label 秘密
+
+      .input-row.input__birthday
+        .left-contents
+          誕生日
+        .right-contents
+          .right-contents__date-of-birthday
+            %select.birth-year
+              %option 1990
+              %option 1991
+            年
+            %select.birth-month
+              %option 12
+              %option 11
+            月
+            %select.birth-day
+              %option 28
+              %option 29
+            日
+
+      .input-row.input__job
+        .left-contents
+          職業
+        .right-contents
+          %input.right-contents__prefecture{type:"text", placeholder: "書店員、大学生"}
+
+      .input-row.input__prefecture
+        .left-contents
+          都道府県
+        .right-contents
+          %select.prefecture-name
+
+      .input-row.input__hometown
+        .left-contents
+          ホームタウン
+        .right-contents
+          %input.right-contents__prefecture{type:"text", placeholder: "渋谷、大名"}
+      .input-row.input__website
+        .left-contents
+          あなたのウェブサイト
+        .right-contents
+          %input.right-contents__website{type:"text", placeholder: "http://booklog.jugem.jp"}
+
+      .btn-wrapper
+        %a{href:"", class:"update-btn"}
+          プロフィールタグを更新する
+
+
+    .side-bar
+      .advertisement
+      .side-bar__title
+        いろいろな設定
+      .side-bar__list
+        %p.side-bar__subtitle
+          本棚の設定
+        %ul
+          %li
+            %a{href:""} 本棚の基本設定
+          %li
+            %a{href:""} タイムラインの設定
+          %li
+            %a{href:""} 本棚の非公開設定
+          %li
+            %a{href:""} プロフィールの設定
+          %li
+            %a{href:""} アカウント情報
+          %li
+            %a{href:""}
+              レビュー掲載範囲の設定
+              %i.fa.fa-twitter-square.mini-twitter-icon
+              %i.fa.fa-facebook-square.mini-facebook-icon
+          %li
+            %a{href:""} パスワードの変更
+          %li
+            %a{href:""} 退会
+
+        %p.side-bar__subtitle
+          外部サービス連携
+        %ul
+          %li
+            %a{href:""} SNSアカウント設定
+          %li
+            %a{href:""} Amazonアフィリエイト設定
+          %li
+            %a{href:""} 投稿ログ
+
+        %p.side-bar__subtitle
+          通知設定
+        %ul
+          %li
+            %a{href:""} 通知設定
+          %li
+            %a{href:""} 新刊通知キーワード設定
+
+        %p.side-bar__subtitle
+          読書目標
+        %ul
+          %li
+            %a{href:""} 読書目標の設定
+
+/ 上記のul部分は後でgemを調べて実装する
+= render 'shared/footer'

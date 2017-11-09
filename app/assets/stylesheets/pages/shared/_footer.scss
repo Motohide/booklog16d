@@ -1,6 +1,7 @@
 .footer {
   background-color: #E4E4E4;
   padding: 30px 0 5px;
+  clear: both;
 
   .SNS-btn {
     border-radius: 3px;
@@ -84,13 +85,13 @@
   }
 
   .section-line {
-    border-top: 1px #cdcdcd solid;
+    border-top: 1px $border-gray-color solid;
     padding-top: 5px;
     margin-top: 5px;
   }
 
   .footer-navi {
-    color: #a1a1a1;
+    color: $text-darkgray-color;
 
     li {
       font-size: 12px;

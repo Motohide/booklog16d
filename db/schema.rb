@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20171107051405) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "nickname",                            null: false
+    t.string   "nickname"
     t.integer  "gender"
     t.integer  "birth_year"
     t.integer  "birth_month"

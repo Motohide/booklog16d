@@ -1,10 +1,10 @@
 .account-page{
   background-color: #FCF8EC;
   width: 100%;
+  height: 100%;
 
   .header{
     width: 100%;
-    height:60px;
     background-color: #94AEBD;
 
     .booklog-icon {
@@ -32,7 +32,6 @@
     width: 100%;
 
     .body__top {
-      height: 200px;
       margin-bottom: 50px;
 
       .body__top__header {
@@ -51,8 +50,74 @@
         color: #333;
         font-size: 14px;
         line-height: 1.7em;
+
+        a {
+          color: #4ea6cc;
+          text-decoration: none;
+
+          &:hover {
+            color: $hover-red-color;
+          }
+        }
       }
     }
+
+      &__sign-in-field {
+        background-color: white;
+        border-radius: 3px;
+        margin-bottom: 40px;
+        padding: 40px 30px;
+
+        &__input {
+          margin-left: 30px;
+          margin-bottom: 20px;
+          overflow: auto;
+
+          &-left {
+            vertical-align: middle;
+          }
+
+          &-right {
+            width: calc(100% - 142px);
+            float: right;
+            padding: 7px;
+            border: 1px #1e1e1e solid;
+            border-radius: 3px;
+          }
+        }
+
+        &__submit-btn {
+          display: block;
+          padding: 20px;
+          text-align: center;
+          border-radius: 5px;
+          background-color: #62a5c8;
+          font-size: 20px;
+          margin: 0 auto;
+          border: none;
+          color: white;
+          width: 100%;
+          margin-bottom: 10px;
+
+          &:hover {
+            background-color: black;
+          }
+        }
+
+        &__forget {
+          padding-top: 10px;
+          text-align: center;
+          li {
+            display: inline;
+            font-size: 12px;
+            padding: 0 5px;
+
+            a {
+             color: #333;
+            }
+          }
+        }
+      }
 
       .body__top__footer {
         h2 {
@@ -98,6 +163,22 @@
                 }
               }
             }
+
+          .create-new-account-btn {
+            background-color: $hover-red-color;
+            color: white;
+            padding: 15px;
+            width: calc(100% - 30px);
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 5px;
+            text-decoration: none;
+
+            &:hover {
+              background-color: black;
+            }
+          }
         }
       }
     }
@@ -135,8 +216,8 @@
         height: 89px;
         overflow: auto;
         clear: both;
-        background-color: #f0f0f0;
-        border-bottom: 1px #cdcdcd solid;
+        background-color: $menu-gray-color;
+        border-bottom: 1px $border-gray-color solid;
         font-size: 13px;
         padding: 15px 25px;
       }
@@ -170,7 +251,7 @@
         background-color: #e8f6f5;
         font-size: 13px;
         font-weight: bold;
-        border-bottom: 1px #cdcdcd solid;
+        border-bottom: 1px $border-gray-color solid;
 
         h5 {
           text-align: left;
@@ -186,7 +267,7 @@
         height: 70px;
         padding: 25px;
         font-size: 13px;
-        border-bottom: 1px #cdcdcd solid;
+        border-bottom: 1px $border-gray-color solid;
 
       .registration-info {
         width: 320px;
@@ -242,7 +323,7 @@
           color: #4ea6cc;
 
           &:hover {
-            color: #da4740;
+            color: $hover-red-color;
           }
         }
       }
