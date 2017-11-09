@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171107051405) do
+ActiveRecord::Schema.define(version: 20171109055729) do
 
   create_table "bookshelves", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -67,12 +67,13 @@ ActiveRecord::Schema.define(version: 20171107051405) do
     t.integer  "birth_year"
     t.integer  "birth_month"
     t.integer  "birth_day"
-    t.string   "image"
+    t.string   "avatar"
     t.integer  "prefecture"
     t.string   "hometown"
     t.string   "website"
     t.string   "biography"
     t.string   "job"
+    t.boolean  "admin"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
