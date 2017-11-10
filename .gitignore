@@ -19,3 +19,9 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+public/uploads/product/image
+
+public/uploads/tmp
+
+config/secrets.yml

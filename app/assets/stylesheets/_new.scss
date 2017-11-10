@@ -1,0 +1,62 @@
+h1 {
+  font-size: 34px;
+  text-align: center;
+}
+
+  .registration-wrapper {
+    width: 600px;
+    height: 768px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+  .registration-form {
+
+    &__label {
+      overflow: auto;
+      display: block;
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      color: #656565;
+    }
+
+    &__input {
+      width: 300px;
+      height: 20px;
+      overflow: auto;
+      clear: both;
+      padding: 7px;
+      border: 1px #cdcdcd solid;
+      border-radius: 3px;
+    }
+
+    &__left-content {
+      float: left;
+      width: 160px;
+      height: 40px;
+      padding: 25px;
+      background-color: #e8f6f5;
+      border-bottom: 1px #cdcdcd solid;
+    }
+
+    &__right-content {
+      float: right;
+      height: 40px;
+      width: 340px;
+      padding: 25px;
+      background-color: white;
+      border-bottom: 1px #cdcdcd solid;
+      font-size: 13px;
+    }
+
+    &__btn {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 20px 240px;
+      color: #fff;
+      background-color: #38aef0;
+      border: 1px #cdcdcd solid;
+      border-radius: 5px;
+    }
+  }
+}

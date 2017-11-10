@@ -1,44 +1,48 @@
 .body
   %h1 作品登録
+  = form_for @product do |f|
+    .registration-wrapper
+      .registration-form__title-box
+        .registration-form__left-content
+          .field-label
+            = f.label :name, "タイトル", class: "registration-form__label"
+        .registration-form__right-content
+          .field-label
+            = f.text_field :name, placeholder: "タイトルを入力してください", class: "registration-form__input"
 
-  .wrapper
-    .title-box
-      .left-content
-        %h5 作品のタイトル
-      .right-content
-        %input
+      .registration-form__author-box
+        .registration-form__left-content
+          .field-label
+            = f.label :author, "著者", class: "registration-form__label"
+        .registration-form__right-content
+          .field-label
+            = f.text_field :author, placeholder: "著者を入力してください", class: "registration-form__input"
 
-    .author-box
-      .left-content
-        %h5 作品の著者
-      .right-content
-        %input
+      .registration-form__image-box
+        .registration-form__left-content
+          .field-label
+            = f.label :image, "画像", class: "registration-form__label"
+        .registration-form__right-content
+          .field-label
+            = f.file_field :image, placeholder: "", class: "registration-form"
 
-    .image-box
-      .left-content
-        %h5 作品の画像
-      .right-content
-        %input{ type: "file"}
+      .registration-form__publisher-box
+        .registration-form__left-content
+          .field-label
+            = f.label :publisher, "出版社", class: "registration-form__label"
+        .registration-form__right-content
+          .field-label
+            = f.text_field :publisher, placeholder: "出版社を入力してください", class: "registration-form__input"
 
-    .publisher-box
-      .left-content
-        %h5 作品の出版社
-      .right-content
-        %input
+      .registration-form__release-box
+        .registration-form__left-content
+          .field-label
+            = f.label :release_date, "発売日", class: "registration-form__label"
+        .registration-form__right-content
+          .field-label
+            = f.date_select(:release_date, {}, use_month_numbers: true, class: "release-date")
 
-    .release-box
-      .left-content
-        %h5 作品の発売日
-      .right-content
-        %select.release-date__year
-          %option
-        年
-        %select.release-date__month
-          %option
-        月
-        %select.release-date__day
-          %option
-        日
-
-    .registration-btn
-      = link_to "登録する", ""
+      .button
+        .registration-form
+          .field-label
+            = f.submit "登録する", class: "registration-form__btn"
