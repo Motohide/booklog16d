@@ -22,15 +22,13 @@ ActiveRecord::Schema.define(version: 20171109101759) do
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",          null: false
+    t.string   "name",         null: false
     t.string   "image"
-    t.string   "author",        null: false
-    t.string   "publisher",     null: false
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "release_year"
-    t.integer  "release_month"
-    t.integer  "release_day"
+    t.string   "author",       null: false
+    t.string   "publisher",    null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.date     "release_date"
     t.index ["name"], name: "index_products_on_name", using: :btree
   end
 

@@ -22,6 +22,7 @@ gem 'mini_magick'
 gem 'haml-rails'
 gem 'jp_prefecture'
 gem 'active_decorator'
+gem 'fog'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -30,6 +31,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'pry-rails'
 end
 
 group :development do
