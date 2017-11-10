@@ -19,8 +19,16 @@ set :keep_releases, 5
 set :linked_files, %w{ config/secrets.yml }
 
 after 'deploy:publishing', 'deploy:restart'
-namespace :deploy do
-  task :restart do
+  namespace :deploy do
+    desc 'db_seed'
+    task :db_seed do
+      on roles(:db) do |host|
+        with rails_env: fetch(rails_env) do
+          within current_path do
+            execute :bundle, :exec, :rake, 'db:seed'
+          end
+        end
+      end
     invoke 'unicorn:restart'
   end
 end
