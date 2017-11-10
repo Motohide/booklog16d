@@ -12,7 +12,7 @@
 
     .profile-wrapper
       .profile-wrapper__menu
-        = image_tag "user-icon.png",class:"profile-wrapper__menu__image"
+        = image_tag @user.avatar,class:"profile-wrapper__menu__image"
         %ul.profile-wrapper__menu__list
           %li.profile-wrapper__menu__list-book
             = link_to "", "", class:"fa fa-book"
