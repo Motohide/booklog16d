@@ -1,0 +1,27 @@
+- if user.prefecture_code.present?
+  .input-row
+    .left-contents
+      都道府県
+    .right-contents__show
+      = user.prefecture.name
+
+- if user.hometown.present?
+  .input-row
+    .left-contents
+      ホームタウン
+    .right-contents__show
+      = user.hometown
+
+- if user.job.present?
+  .input-row
+    .left-contents
+      職業
+    .right-contents__show
+      = user.job
+
+- if user.website.present?
+  .input-row
+    .left-contents
+      ウェブサイト
+    .right-contents__show
+      = user.website
