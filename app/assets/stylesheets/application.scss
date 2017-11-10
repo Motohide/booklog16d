@@ -1,9 +1,6 @@
 @import "./reset";
 @import "font-awesome";
 
-
-@import "./new";
-
 @import "./modules/color";
 @import "./modules/flash";
 
@@ -12,6 +9,7 @@
 @import "./pages/shared/_wrapper";
 
 @import "./pages/products/index";
+@import "./pages/products/new";
 
 @import "./pages/users/devise";
 @import "./pages/users/edit";
