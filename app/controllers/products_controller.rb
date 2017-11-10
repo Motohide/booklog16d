@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :admin_user,only:[:new, :create]
 
   def index
   end
@@ -25,5 +26,9 @@ class ProductsController < ApplicationController
 private
   def product_params
     params.require(:product).permit(:name, :image, :author, :publisher, :release_date)
+  end
+
+  def admin_user
+    redirect_to :root unless current_user.admin?
   end
 end
