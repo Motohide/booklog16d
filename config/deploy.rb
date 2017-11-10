@@ -1,6 +1,8 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.10.0"
 
+
+
 set :branch, "user-function"
 set :application, "booklog16d"
 set :repo_url, "git://github.com/Motohide/booklog16d.git"
@@ -19,6 +21,7 @@ set :keep_releases, 5
 set :linked_files, %w{ config/secrets.yml }
 
 after 'deploy:publishing', 'deploy:restart'
+SSHKit.config.command_map[:rake] = 'bundle exec rake'
   namespace :deploy do
     desc 'db_seed'
     task :db_seed do
