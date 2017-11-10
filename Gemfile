@@ -23,6 +23,7 @@ gem 'haml-rails'
 gem 'jp_prefecture'
 gem 'active_decorator'
 gem 'fog'
+gem 'seed-fu'
 
 group :development, :test do
   gem 'byebug', platform: :mri
