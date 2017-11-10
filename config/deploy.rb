@@ -2,7 +2,6 @@
 lock "~> 3.10.0"
 
 set :branch, "user-function"
-set :branch, "Create-products-function"
 set :application, "booklog16d"
 set :repo_url, "git://github.com/Motohide/booklog16d.git"
 
