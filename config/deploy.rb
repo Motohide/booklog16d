@@ -29,6 +29,7 @@ after 'deploy:publishing', 'deploy:restart'
           end
         end
       end
+    end
     invoke 'unicorn:restart'
   end
 end
