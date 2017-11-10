@@ -21,6 +21,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml-rails'
 gem 'jp_prefecture'
+gem 'active_decorator'
 
 group :development, :test do
   gem 'byebug', platform: :mri
