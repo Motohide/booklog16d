@@ -2,9 +2,9 @@ module UserDecorator
 
   def set_gender
     if gender = 1
-      "の男性"
+      "男性"
     elsif gender = 2
-      "の女性"
+      "女性"
     end
   end
 
