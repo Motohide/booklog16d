@@ -30,6 +30,7 @@ after 'deploy:publishing', 'deploy:restart'
         end
       end
     end
+  task :restart do
     invoke 'unicorn:restart'
   end
 end
