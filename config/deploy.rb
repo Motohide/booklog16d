@@ -18,8 +18,6 @@ set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 set :linked_files, %w{ config/secrets.yml }
 
-before 'deploy:publishing', 'db:seed_fu'
-
 after 'deploy:publishing', 'deploy:restart'
   namespace :deploy do
   task :restart do
