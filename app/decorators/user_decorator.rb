@@ -1,10 +1,12 @@
 module UserDecorator
 
   def set_gender
-    if gender = 1
+    if gender == 1
       "男性"
-    elsif gender = 2
+    elsif gender == 2
       "女性"
+    else
+      "非公開"
     end
   end
 
