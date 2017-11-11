@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only:[:show, :edit,:update]
+  before_action :check_user, only:[:edit, :update]
 
   def show
   end
@@ -11,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def update
-      if @user.update(update_params)
+      if current_user.id == @user.id && @user.update(update_params)
         redirect_to :root, notice: 'プロフィールを編集しました'
       else
         render 'edit'
@@ -27,4 +28,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def check_user
+    if @user.id != current_user.id
+      redirect_to user_path(current_user)
+    end
+  end
 end
