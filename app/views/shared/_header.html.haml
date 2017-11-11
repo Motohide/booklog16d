@@ -2,7 +2,7 @@
   .header__wrapper
     .global-navi-wrapper
       %ul.global-navi.global-navi__left
-        %li.booklog-icon
+        = image_tag "img_booklog.png",class:"booklog-icon"
         %li.global-navi__ranking
           = link_to "ランキング", "", class:"link_to-cancel"
         %li.global-navi__release
@@ -15,16 +15,34 @@
         %input.search__input
         .search__search-btn
           %i.fa.fa-search
-      %ul.global-navi.global-navi__right
-        %li.global-navi__mypage
-        %li.global-navi__home
-          = link_to "", "", class:"fa fa-home link_to-cancel"
-        %li.global-navi__bookshelf
-          = link_to "", "", class:"fa fa-book link_to-cancel"
-        %li.global-navi__timeline
-          = link_to "", "", class:"fa fa-clock-o link_to-cancel"
-        %li.global-navi__dropdown-menu-click
-          = link_to "", "", class:"fa fa-bars link_to-cancel"
+      - if user_signed_in?
+        %ul.global-navi.global-navi__right
+          %li.global-navi__mypage
+          %li
+            = link_to "ログアウト", destroy_user_session_path,method: :DELETE, class:"devise-btns user-sign_out-btn"
+          %li.global-navi__home
+            = link_to "", profile_user_path(current_user), class:"fa fa-home link_to-cancel"
+          %li.global-navi__bookshelf
+            = link_to "", "", class:"fa fa-book link_to-cancel"
+          %li.global-navi__timeline
+            = link_to "", "", class:"fa fa-clock-o link_to-cancel"
+          %li.global-navi__dropdown-menu-click
+            = link_to "", "", class:"fa fa-bars link_to-cancel"
+      - else
+        %ul.global-navi.global-navi__right
+          %li.global-navi__mypage
+          %li
+            %span.devise-btns.user-create-btn
+              = link_to "新規登録", new_user_registration_path
+              %i.fa.fa-facebook-square
+              %i.fa.fa-twitter-square
+
+          %li
+            = link_to "ログイン", new_user_session_path,class:"devise-btns user-sign_in-btn"
+          %li.global-navi__dropdown-menu-click
+            = link_to "", "", class:"fa fa-bars link_to-cancel"
+
+
   %ul.info
     %li.icon NEW
     %li.news-text

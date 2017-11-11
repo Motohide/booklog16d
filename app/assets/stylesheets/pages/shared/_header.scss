@@ -1,6 +1,51 @@
 .header {
 font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
 
+.devise-btns {
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.user-create-btn {
+  background-color: $hover-red-color;
+
+  &:hover {
+    background-color: black;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .fa-facebook-square{
+    color: #4a62ac;
+  }
+
+  .fa-twitter-square{
+    color: #4ea6cc;
+
+  }
+}
+
+.user-sign_in-btn {
+  background-color: #1e1e1e;
+
+  &:hover {
+    background-color: #4ea6cc;
+  }
+}
+.user-sign_out-btn {
+  background-color: #1e1e1e;
+
+  &:hover {
+    background-color: $hover-red-color;
+  }
+}
+
 .header__wrapper {
  position: fixed;
  width: 100vw;
@@ -12,7 +57,6 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
     overflow: auto;
 
     .booklog-icon {
-      background-image: url(img_booklog.png);
       background-size: contain;
       float: left;
       width: 60px;

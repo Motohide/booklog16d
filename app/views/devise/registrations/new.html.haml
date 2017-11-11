@@ -1,9 +1,10 @@
+= render 'shared/flash'
 #account-page.account-page
   .header
     .booklog-icon
       = image_tag "img_booklog.png"
   .account-page__body
-    .body
+    = form_for(resource, as: resource_name, url: registration_path(resource_name),html: {class: 'body'}) do |f|
       .body__top
         .body__top__header
           %h1 ブクログの新規登録
@@ -24,9 +25,9 @@
         .body-wrapper
           .body__middle__id
             .left-content
-              %h5 ブクログID
+              %h5 ニックネーム
             .right-content
-              %input.registration-info
+              = f.text_field :nickname ,class:"registration-info"
               %ul.id-condition
                 %li 半角英数小文字 3 ~ 16 文字
 
@@ -36,7 +37,7 @@
               %h5 パスワード
             .body__middle__password__right-content
             .right-content
-              %input.registration-info
+              = f.password_field :password, autocomplete: "off",class:"registration-info"
               %ul.password-condition
                 %li 半角英数・記号5～16文字
 
@@ -49,7 +50,7 @@
               %h5 メールアドレス
             .body__middle__e-mail__right-content
             .right-content
-              %input.registration-info{type: "text", placeholder: "連絡な可能なメールアドレス"}
+              = f.email_field :email, class:"registration-info", placeholder: "連絡な可能なメールアドレス"
 
           .body__middle__gender
             .body__middle__gender__left-content
@@ -57,10 +58,10 @@
               %h5 性別
             .body__middle__gender__right-content
             .right-content
-              %input{ type: "radio", class: "checkbox-gender"}
+              = f.radio_button :gender,1 ,class: "checkbox-gender"
               %label.gender 男性
 
-              %input{ type: "radio", class: "checkbox-gender"}
+              = f.radio_button :gender,2 ,class: "checkbox-gender"
               %label.gender 女性
 
           .body__middle__birth-day
@@ -69,17 +70,7 @@
               %h5 誕生日
             .body__middle__birth-day__right-content
             .right-content
-              %select.date-of-birth__year
-                %option 1990
-                %option 1991
-              年
-              %select.date-of-birth__month
-                %option 12
-                %option 11
-              月
-              %select.date-of-birth__day
-                %option 31
-              日
+              = f.date_select :birth_date, {use_month_numbers: true, start_year: 1901, end_year: Time.now.year}
 
       .body__under
         .body__under__terms-condition
@@ -87,12 +78,12 @@
           = link_to "ブクログの利用規約", "", class:"link-condition"
           %span.link-text をお読みいただき、確認ページにお進みください。
         .body__under__blue-btn
-          = link_to "規約に同意して確認ページに進む", ""
+          = f.submit "規約に同意して確認ページに進む"
 
     .account-page__footer
       %ul
         %a
-        = link_to "WEB本棚サビースブクログ"
+        = link_to "WEB本棚サービスブクログ"
         %a
         |
         = link_to "新規登録"

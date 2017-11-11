@@ -1,7 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.10.0"
 
-set :branch, "Create-products-function"
 set :application, "booklog16d"
 set :repo_url, "git://github.com/Motohide/booklog16d.git"
 
@@ -19,7 +18,7 @@ set :keep_releases, 5
 set :linked_files, %w{ config/secrets.yml }
 
 after 'deploy:publishing', 'deploy:restart'
-namespace :deploy do
+  namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end

@@ -1,4 +1,5 @@
 = render 'shared/header'
+= render 'shared/flash'
 .body
 
   .wrapper
@@ -12,7 +13,7 @@
     .lead
       プロフィール、プロフィールタグ、お気に入りベスト3を設定します。
 
-    .form-wrapper
+    = form_for(@user, html: {class:"form-wrapper"}) do |f|
       .form-wrapper__top
         .form-title
           基本設定
@@ -22,19 +23,19 @@
         .left-contents
           ニックネーム
         .right-contents
-          %input.right-contents__nickname{type:"text"}
+          = f.text_field :nickname, class:"right-contents__nickname"
 
       .input-row.input-row__image
         .left-contents
           プロフィール画像
         .right-contents
-          %input.right-contents__image{type:"file"}
+          = f.file_field :avatar, class:"right-contents__image"
 
       .input-row.input-row__biography
         .left-contents.left-contents__biography
           自己紹介
         .right-contents
-          %textarea.right-contents__biography
+          = f.text_area :biography, class:"right-contents__biography"
           %ul
             %li 1000文字以内 / HTMLタグ使用不可
 
@@ -43,60 +44,48 @@
           性別
         .right-contents
           %span
-            %input{ type: "radio", id: "gender1", name:"gender"}
+            = f.radio_button :gender,1 ,class: "checkbox-gender"
             %label 男性
           %span
-            %input{ type: "radio", id: "gender2", name:"gender"}
+            = f.radio_button :gender,2 ,class: "checkbox-gender"
             %label 女性
           %span
-            %input{ type: "radio", id: "gender3", name:"gender"}
+            = f.radio_button :gender,0 ,class: "checkbox-gender"
             %label 秘密
 
       .input-row.input__birthday
         .left-contents
           誕生日
         .right-contents
-          .right-contents__date-of-birthday
-            %select.birth-year
-              %option 1990
-              %option 1991
-            年
-            %select.birth-month
-              %option 12
-              %option 11
-            月
-            %select.birth-day
-              %option 28
-              %option 29
-            日
+          .right-contents__birthdate
+            = f.date_select :birth_date, {use_month_numbers: true, start_year: 1901, end_year: Time.now.year}
 
       .input-row.input__job
         .left-contents
           職業
         .right-contents
-          %input.right-contents__prefecture{type:"text", placeholder: "書店員、大学生"}
+          = f.text_field :job, class:"right-contents__job", placeholder:"書店員、大学生"
 
       .input-row.input__prefecture
         .left-contents
           都道府県
         .right-contents
-          %select.prefecture-name
+          .right-contents__prefecture
+            = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name
 
       .input-row.input__hometown
         .left-contents
           ホームタウン
         .right-contents
-          %input.right-contents__prefecture{type:"text", placeholder: "渋谷、大名"}
+          = f.text_field :hometown ,class:"right-contents__prefecture", placeholder: "渋谷、大名"
       .input-row.input__website
         .left-contents
           あなたのウェブサイト
         .right-contents
-          %input.right-contents__website{type:"text", placeholder: "http://booklog.jugem.jp"}
+          = f.text_field :website, class:"right-contents__website", placeholder: "http://booklog.jugem.jp"
 
       .btn-wrapper
-        %a{href:"", class:"update-btn"}
-          プロフィールタグを更新する
-
+        = f.submit "プロフィールタグを更新する", class:"update-btn"
 
     .side-bar
       .advertisement

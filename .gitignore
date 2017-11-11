@@ -20,6 +20,7 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+public/uploads/user/avatar
 public/uploads/product/image
 
 public/uploads/tmp

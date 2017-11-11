@@ -1,4 +1,5 @@
 = render 'shared/header'
+= render 'shared/flash'
 .body
 
   .wrapper
@@ -12,7 +13,10 @@
 
     .profile-wrapper
       .profile-wrapper__menu
-        = image_tag "user-icon.png",class:"profile-wrapper__menu__image"
+        - if @user.avatar.present?
+          = image_tag @user.avatar,class:"profile-wrapper__menu__image"
+        - else
+          = image_tag "user-icon.png",class:"profile-wrapper__menu__image"
         %ul.profile-wrapper__menu__list
           %li.profile-wrapper__menu__list-book
             = link_to "", "", class:"fa fa-book"
@@ -28,7 +32,7 @@
         .profile-wrapper__info__title
           プロフィール
         .profile-wrapper__info__name
-          ユーザーネームさん
+          = @user.nickname
         %ul.profile-wrapper__info__status
           %li
             登録アイテム
@@ -63,23 +67,27 @@
             %li.fa.fa-twitter-square
             %li.fa.fa-facebook-square
             %li シェア
-      = link_to "","",class:"fa fa-cog setting-btn"
+      = link_to "",edit_user_path(current_user),class:"fa fa-cog setting-btn"
 
     .form-wrapper
       .form-wrapper__top
         .user-birth-date
-          1900年1月1日生まれの男性
+          = @user.set_birth_date
+          生まれ
+          = @user.set_gender
+
       .input-row
         .left-contents
           名前
         .right-contents__show
-          ユーザーの名前
+          = @user.nickname
 
       .input-row
         .left-contents
           本棚の名前
         .right-contents__show
-          ユーザーの名前の本棚
+          = @user.nickname
+          の本棚
 
       .input-row
         .left-contents
@@ -90,18 +98,20 @@
         .left-contents
           性別
         .right-contents__show
-          男性
+          = @user.set_gender
       .input-row
         .left-contents
           生年月日
         .right-contents__show
-          1900年1月1日生まれ
+          = @user.set_birth_date
+          生まれ
+      = render "user-data", user: @user
 
       .section-row
         .section-row__title
           プロフィール
         .section-row__biography
-          ここにプロフィールの文章が入ります
+          = @user.biography
 
       .section-row
         .section-row__title
