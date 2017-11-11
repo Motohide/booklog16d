@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def update
       if current_user.id == @user.id && @user.update(update_params)
-        redirect_to :root, notice: 'プロフィールを編集しました'
+        redirect_to user_path(current_user), notice: 'プロフィールを編集しました'
       else
         render 'edit'
       end
