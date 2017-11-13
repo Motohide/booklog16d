@@ -1,0 +1,93 @@
+.my_books {
+  height: 100%;
+  background-color: #fff;
+}
+
+.my_books_page {
+  padding: 10px 20px 0;
+  float: left;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.user-header {
+  width: 1000px;
+  height:200px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.bookshelf-header {
+  background-color: #cdcdcd;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 20px;
+
+  &__menu {
+    line-height: 45px;
+    font-size: 12px;
+    text-align: right;
+    color: white;
+
+    li {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+
+    a {
+
+      text-decoration: none;
+      color: #fff;
+    }
+
+    span {
+      width: 90px;
+      padding: 10px;
+      background-color: #a1a1a1;
+      border-radius: 3px;
+
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+
+    &__filter {
+     color: #666;
+     width: 50px;
+    }
+
+    &__show-filter {
+     border-radius: 3px 0 0 3px;
+    }
+
+    &__icon {
+      i {
+        width: 30px;
+      }
+
+      &__close {
+      border-radius: 0 3px 3px 0;
+      opacity: 0.4;
+    }
+
+        &__table {
+          padding-left: 20px;
+        }
+
+        &__arrow {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+
+.bookshelf-wrapper {
+  width: 100%;
+  height: 661px;
+  background-image: url(bookshelf/maple_left.png), url(bookshelf/maple_right.png);
+  background-repeat: repeat-y, repeat-y;
+  background-position: top left, top right;
+}
