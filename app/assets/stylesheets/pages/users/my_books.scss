@@ -1,12 +1,12 @@
 .my_books {
   height: 100%;
-  background-color: #fff;
+  background-color: #f0f0f0;
 }
 
 .my_books_page {
-  padding: 10px 20px 0;
+  padding: 0 20px 10px;
   float: left;
-  width: 100%;
+  width: calc(100% - 40px);
   background-color: #f0f0f0;
 }
 
@@ -21,10 +21,10 @@
 .bookshelf-header {
   background-color: #cdcdcd;
   width: 100%;
-  padding: 0 20px;
   margin-top: 20px;
 
   &__menu {
+    padding-right: 20px;
     line-height: 45px;
     font-size: 12px;
     text-align: right;
