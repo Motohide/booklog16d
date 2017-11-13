@@ -89,7 +89,17 @@
   height: 661px;
   background-image: url(bookshelf/maple_left.png), url(bookshelf/maple_right.png);
   background-repeat: repeat-y, repeat-y;
-  background-position: top left, top right;
+  background-position: left top, right top;
   background-size: 39px 225px, 39px 225px;
   background-color: #E8B572;
+}
+
+.bookshelf-main {
+  height: 676px;
+  background-image: url(bookshelf/maple_shadow_left.png), url(bookshelf/maple_shadow_right.png), url(bookshelf/maple_center.png);
+  background-repeat: repeat-y, repeat-y, repeat;
+  // background-position:
+  margin: 0 39px;
+  padding-top: 30px;
+  background-size: 16px 225px, 16px 225px, 500px 225px;
 }
