@@ -62,11 +62,50 @@
               サイトに貼り付ける
           .product-wrapper__more__info
             Amazon.co.jp ・本 (192ページ)  / ISBN・EAN: 9784405082168
-      .row-title
-
-      .row-title
+      .review-wrapper
+        .row-title
+          この本を読んでいる人は、こんな本も本棚に登録しています。
 
       .review-wrapper
+        .row-title
+          YOGAポーズの教科書の感想・レビュー・書評
 
+        %ul.review-wrapper__sort-by-rating
+          %li
+            %a{href:""} すべてのレビュー
+          %li
+            %a{href:""} 評価★5
+          %li
+            %a{href:""} 評価★4
+          %li
+            %a{href:""} 評価★3
+          %li
+            %a{href:""} 評価★2
+          %li
+            %a{href:""} 評価★1
+
+        %ul.review-area
+          %li
+            .review-area__user-icon
+              = image_tag "user-icon",class:"review-area__user-image"
+            .review-area__summary
+              .review-area__summary__user-info
+                = current_user.nickname
+                2017年10月15日
+              .review-area__summary__rating
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+              .review-area__summary__review-text
+                %p
+                  当たり前の事をどこまでもどこまでも追いかけて考えると、物事の大事な根っこの部分にぶつかり発見する。
+              .review-area__summary__reaction
+                = image_tag "btn/like-btn",class:"review-area__summary__reaction-like"
+                %span.like-count
+                  23
+                .review-area__summary__reaction-comment
+                  コメントする
 
 = render 'shared/footer'

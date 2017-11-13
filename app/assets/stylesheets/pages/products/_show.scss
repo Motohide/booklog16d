@@ -133,3 +133,103 @@
     }
   }
 }
+
+.row-title {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 15px;
+  padding: 0 0 8px;
+  width: 100%;
+  border-bottom: 5px #333 solid;
+}
+
+.review-wrapper {
+
+  &__sort-by-rating {
+    text-align: center;
+    font-size: 12px;
+    margin: 15px 0;
+
+
+    li {
+      padding-right: 15px;
+      display: inline-block;
+
+      a {
+        color: #bbb;
+      }
+    }
+  }
+}
+
+
+.review-area {
+  font-size: 12px;
+
+  &__user-icon {
+    float:left;
+    display: block;
+  }
+
+  &__user-image {
+    height: 30px;
+    width:30px;
+    padding: 2px;
+    border: 1px #cdcdcd solid;
+  }
+
+  &__summary {
+    margin-left: 12px;
+    float: left;
+    background-color: white;
+
+    &__user-info {
+      padding: 9px 20px ;
+      background-color: $menu-gray-color;
+    }
+
+    &__rating {
+      padding: 20px 20px 0;
+      color: $star-orange-color;
+    }
+
+    &__review-text {
+      width: 560px;
+      padding: 20px;
+      margin-bottom: 10px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &__reaction {
+      margin: 30px 0 20px;
+      overflow: auto;
+      position: relative;
+
+      &-like {
+        float: left;
+        height: 25px;
+        width: 115px;
+        padding: 0 0 0 20px;
+      }
+
+      .like-count {
+        border: 1px #cdcdcd solid;
+        margin-left: 10px;
+        float: left;
+        position: absolute;
+        padding: 2px 0 3px;
+      }
+
+      &-comment {
+        height: 25px;
+        font-size: 12px;
+        float: right;
+        padding-right: 20px;
+      }
+    }
+  }
+}
