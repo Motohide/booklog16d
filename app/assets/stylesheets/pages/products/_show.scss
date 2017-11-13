@@ -1,0 +1,135 @@
+.wrapper-product-show {
+  width: 650px;
+}
+
+.product-wrapper {
+  border-top: 7px #ede9c5 solid;
+  background-color: white;
+  overflow: auto;
+
+  &__title {
+    padding: 15px 20px 20px;
+    margin: 0 0 10px;
+    color: #1e1e1e;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 38px;
+    word-break: normal;
+  }
+
+  &__image {
+    width: 169px;
+    height: 198px;
+    padding: 0 0 10px 20px;
+    float: left;
+  }
+
+  &__info {
+    margin-bottom: 25px;
+    padding: 0 20px 0 30px;
+    float: left;
+    font-size: 12px;
+    width: 410px;
+
+    &__status {
+      margin: 10px 0 15px;
+
+      li {
+        display: inline-block;
+
+        span {
+          font-size: 15px;
+          font-weight: bold;
+          padding: 0 2px 0 3px;
+        }
+      }
+
+      .fa-user {
+        font-size: 17px;
+        color: $hover-red-color;
+      }
+
+      .fa-star {
+        font-size: 17px;
+        color: $star-orange-color;
+      }
+
+      .fa-comment {
+        font-size: 17px;
+        color: #4ea6cc;
+      }
+    }
+
+
+    &__author {
+      a {
+        font-size: 14px;
+        color: #4ea6cc;
+      }
+    }
+
+    &__publisher {
+      margin: 10px 0 15px;
+
+      .company-name {
+        font-size: 14px;
+      }
+
+      .release-date {
+        font-size: 12px;
+      }
+    }
+
+    &__btn-amazon {
+      width: 212px;
+      height: 42px;
+    }
+
+    &__btn-others {
+      margin-top: 20px;
+      width: 360px;
+
+      li {
+        padding: 10px 7px 0 0;
+        display: inline-block;
+
+        a {
+          border-radius: 3px;
+          display: block;
+          border: 1px #cdcdcd solid;
+        }
+
+        .main-shop-btn {
+          padding: 7px 9px 5px;
+          width: 90px;
+          height: 17px;
+        }
+
+        .other-shop-btn {
+          width: 108px;
+          height: 29px;
+        }
+      }
+    }
+  }
+
+  &__more {
+    color: #bbb;
+    overflow: auto;
+    padding: 0 20px 20px;
+    font-size: 12px;
+    clear: both;
+
+    &__link {
+      float :left;
+
+      a {
+        color: #bbb;
+      }
+    }
+
+    &__info {
+      float :right;
+    }
+  }
+}

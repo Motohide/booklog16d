@@ -1,0 +1,72 @@
+= render 'shared/header'
+= render 'shared/flash'
+
+.body
+  .wrapper
+    %ul.breadcrumbs
+      %li.breadcrumbs__home
+        %a{href:""} 仮
+      %li.breadcrumbs__home
+        %a{href:""} > 仮
+      %li.breadcrumbs__current-page
+        >  仮です
+
+    .wrapper-product-show
+      .product-wrapper
+        .product-wrapper__title
+          = @product.name
+        = image_tag @product.image,class:"product-wrapper__image"
+        .product-wrapper__info
+          %ul.product-wrapper__info__status
+            %li
+              %i.fa.fa-user
+              %span 40
+              人登録
+            %li
+              %i.fa.fa-star
+              %span 4.50
+              評価
+            %li
+              %i.fa.fa-comment
+              %span 40
+              人レビュー
+          .product-wrapper__info__author
+            著者:
+            = link_to @product.author,""
+          .product-wrapper__info__publisher
+            %span.company-name
+              = @product.publisher
+            %span.release-date
+              = @product.release_date.strftime("(%Y年%m月%d日発売)")
+          = image_tag "amazon-btn",class:"product-wrapper__info__btn-amazon"
+          %ul.product-wrapper__info__btn-others
+            %li
+              %a
+                = image_tag "btn/honto_logo.png",class:"main-shop-btn"
+            %li
+              %a
+                = image_tag "btn/rakuten_logo.png",class:"main-shop-btn"
+            %li
+              %a
+                = image_tag "btn/bol_logo.png",class:"main-shop-btn"
+            %li
+              %a
+                = image_tag "btn/calil_logo.png",class:"main-shop-btn"
+            %li
+              %a
+                = image_tag "btn/other_store.png",class:"other-shop-btn"
+        .product-wrapper__more
+          .product-wrapper__more__link
+            %a{href:""}
+              %i.fa.fa-file-code-o
+              サイトに貼り付ける
+          .product-wrapper__more__info
+            Amazon.co.jp ・本 (192ページ)  / ISBN・EAN: 9784405082168
+      .row-title
+
+      .row-title
+
+      .review-wrapper
+
+
+= render 'shared/footer'
