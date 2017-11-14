@@ -261,17 +261,20 @@
   text-align: center;
 
   &__list {
+    margin: 0 15px;
     display: inline-block;
     font-size: 12px;
 
 
     span {
+      border-radius: 3px 3px 0 0;
       display: block;
       background-color: #FFF;
     }
 
     &-facebook {
       width: 72px;
+      margin-bottom: 10px;
     }
 
     &-hatena {
