@@ -261,8 +261,22 @@
   text-align: center;
 
   &__list {
-    width: 72px;
     display: inline-block;
+    font-size: 12px;
+
+
+    span {
+      display: block;
+      background-color: #FFF;
+    }
+
+    &-facebook {
+      width: 72px;
+    }
+
+    &-hatena {
+      width: 84px;
+    }
   }
 
   .twitter-btn {

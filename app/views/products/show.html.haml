@@ -141,10 +141,16 @@
         %ul.social-btn-box-area
           %li.social-btn-box-area__list
             = image_tag "btn/btn_tweet_box.png",class:"twitter-btn"
-          %li.social-btn-box-area__list
+          %li.social-btn-box-area__list.social-btn-box-area__list-facebook
+            %span
+              15
             = image_tag "btn/FB-like-btn.png",class:"facebook-btn"
+            %span
+              15
             = image_tag "btn/FB-share-btn.png",class:"facebook-btn"
-          %li.social-btn-box-area__list
+          %li.social-btn-box-area__list.social-btn-box-area__list-hatena
+            %span
+              15
             = image_tag "btn/hatena-bookmark-btn.png",class:"hatena-btn"
 
 = render 'shared/footer'
