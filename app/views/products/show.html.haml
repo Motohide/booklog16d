@@ -102,10 +102,49 @@
                 %p
                   当たり前の事をどこまでもどこまでも追いかけて考えると、物事の大事な根っこの部分にぶつかり発見する。
               .review-area__summary__reaction
-                = image_tag "btn/like-btn",class:"review-area__summary__reaction-like"
+                %a{href:""}
+                  = image_tag "btn/like-btn",class:"review-area__summary__reaction-like"
                 %span.like-count
                   23
-                .review-area__summary__reaction-comment
+                %a{href:"", class:"review-area__summary__reaction-comment"}
                   コメントする
+          %li
+            .review-area__user-icon
+              = image_tag "user-icon",class:"review-area__user-image"
+            .review-area__summary
+              .review-area__summary__user-info
+                = current_user.nickname
+                2017年10月15日
+              .review-area__summary__rating
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+              .review-area__summary__review-text
+                %p
+                  当たり前の事をどこまでもどこまでも追いかけて考えると、物事の大事な根っこの部分にぶつかり発見する。
+              .review-area__summary__reaction
+                %a{href:""}
+                  = image_tag "btn/like-btn",class:"review-area__summary__reaction-like"
+                %span.like-count
+                  23
+                %a{href:"", class:"review-area__summary__reaction-comment"}
+                  コメントする
+
+        %ul.review-more-btns
+          %li.review-more-btns-amazon
+            = image_tag "btn/btn_read_more_amazon.png",class:"review-more-btn"
+          %li.review-more-btns-rakuten
+            = image_tag "btn/btn_read_more_rakuten.png",class:"review-more-btn"
+
+        %ul.social-btn-box-area
+          %li.social-btn-box-area__list
+            = image_tag "btn/btn_tweet_box.png",class:"twitter-btn"
+          %li.social-btn-box-area__list
+            = image_tag "btn/FB-like-btn.png",class:"facebook-btn"
+            = image_tag "btn/FB-share-btn.png",class:"facebook-btn"
+          %li.social-btn-box-area__list
+            = image_tag "btn/hatena-bookmark-btn.png",class:"hatena-btn"
 
 = render 'shared/footer'

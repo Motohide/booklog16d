@@ -165,6 +165,7 @@
 
 
 .review-area {
+  overflow: auto;
   font-size: 12px;
 
   &__user-icon {
@@ -180,9 +181,12 @@
   }
 
   &__summary {
+    border-radius: 2px;
+    border: 1px silver solid;
     margin-left: 12px;
     float: left;
     background-color: white;
+    margin-bottom: 20px;
 
     &__user-info {
       padding: 9px 20px ;
@@ -221,15 +225,56 @@
         margin-left: 10px;
         float: left;
         position: absolute;
-        padding: 2px 0 3px;
+        padding: 2px 5px 3px;
       }
 
       &-comment {
+        color: $text-darkgray-color;
         height: 25px;
         font-size: 12px;
         float: right;
         padding-right: 20px;
       }
     }
+  }
+}
+
+.review-more-btns {
+  text-align: center;
+
+  .review-more-btn {
+    width: 300px;
+    height: 40px;
+  }
+
+  &-amazon {
+  display: inline-block;
+  margin-right: 30px;
+  }
+
+  &-rakuten {
+  display: inline-block;
+  }
+}
+
+.social-btn-box-area {
+  text-align: center;
+
+  &__list {
+    width: 72px;
+    display: inline-block;
+  }
+
+  .twitter-btn {
+    width: 56px;
+  }
+
+  .facebook-btn {
+    width: 72px;
+
+  }
+
+  .hatena-btn {
+    width: 84px;
   }
 }
