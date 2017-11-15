@@ -20,16 +20,17 @@
           .reacquire
             = link_to "再取得"
         .book-introduce__info
-          %h2
-            = link_to "ランチ酒", "", class:"book-introduce__info__title"
-          %p.book-introduce__info__author 原田ひ香
-          %ul.book-introduce__info__btn
-            %li
-              = link_to "みんなのレビュー"
-            %li
-              Amazon.co.jpで詳細を見る
-            %li
-              ブログで紹介
+          .book-introduce__info__title
+            = link_to "ランチ酒", ""
+          .book-introduce__info__author 原田ひ香
+          .book-introduce__info__btn
+            %ul
+              %li
+                = link_to "みんなのレビュー"
+              %li
+                = link_to "Amazon.co.jpで詳細を見る"
+              %li
+                = link_to "ブログで紹介"
 
       .review-main__review-form
         .input-block__reading-status
