@@ -12,104 +12,107 @@
         >  仮です
 
     .review-body
-      .review-main
-        %h1 登録情報の編集・削除
-        .book-introduce
-          .book-introduce__image
-            = image_tag "books/image-book.png"
-          .book-introduce__info
-            %h2.book-introduce__info__title ランチ酒
-            %p.book-introduce__info__author 原田ひ香
-            %ul.book-introduce__info__btn
+      %h1 登録情報の編集・削除
+      .book-introduce
+        .book-introduce__image
+          %a{href:""}
+            = image_tag "books/image-book.jpg"
+          .reacquire
+            = link_to "再取得"
+        .book-introduce__info
+          %h2
+            = link_to "ランチ酒", "", class:"book-introduce__info__title"
+          %p.book-introduce__info__author 原田ひ香
+          %ul.book-introduce__info__btn
+            %li
+              = link_to "みんなのレビュー"
+            %li
+              Amazon.co.jpで詳細を見る
+            %li
+              ブログで紹介
+
+      .review-main__review-form
+        .input-block__reading-status
+          .left-contents
+            読書状況
+          .right-contents__review
+            %ul
+              %li 未設定
+              %li 読みたい
+              %li 今読んでいる
+              %li 読み終わった
+              %li 積読
+
+        .input-block__evaluation
+          .left-contents
+            評価
+          .right-contents__review
+            %ul
               %li
-                みんなのレビュー
+                = image_tag "star-on.png"
+                = image_tag "star-on.png"
+                = image_tag "star-on.png"
               %li
-                Amazon.co.jpで詳細を見る
-              %li
-                ブログで紹介
+                = image_tag "star_clear.png"
 
-        .review-main__review-form
-          .input-block__reading-status
-            .left-contents
-              読書状況
-            .right-contents__review
-              %ul
-                %li 未設定
-                %li 読みたい
-                %li 今読んでいる
-                %li 読み終わった
-                %li 積読
+        .input-block__catagory
+          .left-contents
+            カテゴリ
+          .right-contents__review
+            %select
+              %option 未設定
+            .add-catagory
+              %i.fa.fa-plus-circle
+              = link_to "新規追加", ""
 
-          .input-block__evaluation
-            .left-contents
-              評価
-            .right-contents__review
-              %ul
-                %li
-                  = image_tag "star_on.png"
-                  = image_tag "star_on.png"
-                  = image_tag "star_on.png"
-                %li
-                  = image_tag "images/star_clear.png"
-
-          .input-block__catagory
-            .left-contents
-              カテゴリ
-            .right-contents__review
-              %select
-                %option 未設定
-              .add-catagory
-                %i.fa.fa-plus-circle
-                = link_to "新規追加", ""
-
-          .input-block__impression
-            .left-contents
-              レビュー・感想
-            .right-contents__review
-              .impression-text
-                %textarea{placeholder: "レビューや感想を書く"}
-              .checkbox
-                %input{type: "checkbox"}
-                %label ネタバレの内容を含む
-
-          .input-block__sns
-            .left-contents
-              SNS投稿設定
-            .right-contents__review
-              .twitter
-                .twitter-left
-                  %i.fa.fa-twitter-square
-                  %span 投稿未設定
-                .twitter-right
-                  = link_to "設定を変更する", ""
-              .facebook
-                .facebook-left
-                  %i.fa.fa-facebook-square
-                  %span 投稿未設定
-                .twitter-right
-                  = link_to "設定を変更する", ""
-
-          .input-block__tag
-            .left-contents
-              タグ
-            .right-contents__review
-              .tag-text
-                %textarea{placeholder: "例：ドラえもん"}
-                %p タグはスペース区切りで複数入力できます。
-
-          .input-block__note
-            .left-contents
-              読書メモ(非公開)
-            .right-contents__review
-              %textarea{placeholder: "メモ"}
-              %p HTMLタグ使用不可 / あなた以外は見ることができません
-
-          .input-block__option
-            .left-contents
-              オプション
-            .right-contents__review
+        .input-block__impression
+          .left-contents
+            レビュー・感想
+          .right-contents__review
+            .impression-text
+              %textarea{placeholder: "レビューや感想を書く"}
+            .checkbox
               %input{type: "checkbox"}
-              %label 非公開で登録
+              %label ネタバレの内容を含む
+
+        .input-block__sns
+          .left-contents
+            SNS投稿設定
+          .right-contents__review
+            .twitter
+              .twitter-left
+                %i.fa.fa-twitter-square
+                %span 投稿未設定
+              .twitter-right
+                = link_to "設定を変更する", ""
+            .facebook
+              .facebook-left
+                %i.fa.fa-facebook-square
+                %span 投稿未設定
+              .twitter-right
+                = link_to "設定を変更する", ""
+
+        .input-block__tag
+          .left-contents
+            タグ
+          .right-contents__review
+            .tag-text
+              %textarea{placeholder: "例：ドラえもん"}
+              %p タグはスペース区切りで複数入力できます。
+
+        .input-block__note
+          .left-contents
+            読書メモ(非公開)
+          .right-contents__review
+            %textarea{placeholder: "メモ"}
+            %p HTMLタグ使用不可 / あなた以外は見ることができません
+
+        .input-block__option
+          .left-contents
+            オプション
+          .right-contents__review
+            %input{type: "checkbox"}
+            %label 非公開で登録
 
           .button
             = link_to "登録情報を変更する", type: "submit"

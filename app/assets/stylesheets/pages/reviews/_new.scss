@@ -1,25 +1,49 @@
-.input-block{
-  clear: both;
-  border-bottom: 1px $border-gray-color solid;
-  overflow: auto;
-
-  .left-contents{
-    width: 130px;
-    float: left;
-    padding: 25px 25px;
-    font-weight: bold;
-    font-size: 13px;
-    color: #656565;
-  }
-
-  .right-contents__review{
-    float: left;
-    height: 40px;
-    width: 340px;
-    padding: 25px;
-    background-color: white;
-    border-bottom: 1px #cdcdcd solid;
-    font-size: 13px;
-    text-align: center;
-  }
+.review-body {
+  float: left;
+  width: 650px;
 }
+
+h1 {
+  text-align: left;
+  margin-bottom: 10px;
+  line-height: 38px;
+}
+
+.book-introduce {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-top:5px #333 solid;
+
+  &__image {
+  width: 51px;
+  float: left;
+  margin-right: 30px;
+  }
+
+  &__info {
+    h2 {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 10px;
+
+      a {
+        color: #1e1e1e;
+        }
+      }
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .reacquire {
+    text-align: center;
+    margin-top: 15px;
+
+  a {
+    color: #1e1e1e;
+    font-size: 12px;
+   }
+  }
