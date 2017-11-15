@@ -10,6 +10,7 @@ h1 {
 }
 
 .book-introduce {
+  overflow: auto;
   margin-bottom: 20px;
   padding: 20px;
   background-color: #f0f0f0;
@@ -21,29 +22,72 @@ h1 {
   margin-right: 30px;
   }
 
+ .reacquire {
+  text-align: center;
+  margin-top: 15px;
+
+  a {
+    color: #1e1e1e;
+    font-size: 12px;
+
+  &:hover {
+    text-decoration: none;
+    }
+  }
+}
+
   &__info {
-    h2 {
+    float: left;
+
+    &__title {
       font-size: 14px;
       font-weight: bold;
       margin-bottom: 10px;
 
       a {
         color: #1e1e1e;
+
+        &:hover {
+          text-decoration: none;
+          color: #4ea6cc
+      }
+    }
+  }
+
+    &__author {
+      margin-bottom: 15px;
+      font-size: 12px;
+    }
+
+    &__btn {
+      li {
+        float: left;
+        padding-right: 10px;
+      }
+
+      .item-info-btn {
+        text-decoration: none;
+        padding: 10px 15px;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 12px;
+
+        &:hover {
+          background-color: #1e1e1e;
+        }
+
+        &-red {
+          background-color: #da4740;
+        }
+
+        &-yellow {
+          background-color: #f5b629;
+        }
+
+        &-blue {
+          background-color: #4ea6cc;
         }
       }
     }
-
-    p {
-      font-size: 12px;
-    }
   }
-
-  .reacquire {
-    text-align: center;
-    margin-top: 15px;
-
-  a {
-    color: #1e1e1e;
-    font-size: 12px;
-   }
-  }
+}
