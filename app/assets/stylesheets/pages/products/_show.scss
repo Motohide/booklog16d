@@ -331,3 +331,48 @@
     }
   }
 }
+
+.user-status-area {
+  margin-top: 50px;
+
+  &__user-row {
+    margin-bottom: 20px;
+
+    li {
+      padding-bottom: 15px;
+      width: 212px;
+      display: inline-block;
+
+      &:hover {
+        background-color: white;
+      }
+
+      a {
+        color: #333;
+        overflow: auto;
+        display: block;
+      }
+    }
+
+    .user-text {
+      float: left;
+      padding: 0 5px 0 10px;
+
+      &__name {
+        margin-bottom: 5px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      &__rating {
+        color: $border-gray-color;
+        font-size: 10px;
+      }
+
+      &__created_at {
+        color: $border-gray-color;
+        font-size: 10px;
+      }
+    }
+  }
+}
