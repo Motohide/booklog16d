@@ -86,8 +86,8 @@
 
         %ul.review-area
           %li
-            .review-area__user-icon
-              = image_tag "user-icon",class:"review-area__user-image"
+            .user-icon
+              = image_tag "user-icon",class:"user-image"
             .review-area__summary
               .review-area__summary__user-info
                 = current_user.nickname
@@ -109,8 +109,8 @@
                 %a{href:"", class:"review-area__summary__reaction-comment"}
                   コメントする
           %li
-            .review-area__user-icon
-              = image_tag "user-icon",class:"review-area__user-image"
+            .user-icon
+              = image_tag "user-icon",class:"user-image"
             .review-area__summary
               .review-area__summary__user-info
                 = current_user.nickname
@@ -152,5 +152,68 @@
             %span
               15
             = image_tag "btn/hatena-bookmark-btn.png",class:"hatena-btn"
+
+        .additional-info-area
+          %h2.area-title
+            作者の名前の作品一覧
+          %ul.additional-info-area__book-list.additional-info-area__book-list-left
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+          %ul.additional-info-area__book-list.additional-info-area__book-list-right
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+            %li
+              = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
+          %p.additional-info-area__link
+            %a{href:""} 尾田栄一郎の作品ランキング・新刊情報
+
+        .additional-info-area
+          %h2.area-title
+            外部サイトの商品情報・レビュー
+          %p.additional-info-area__link
+            %a{href:""} Amazonでレビューを見る
+          %p.additional-info-area__link
+            %a{href:""} カーリルで図書館の貸し出し状況を見る
+          %p.additional-info-area__link
+            %a{href:""} Webcat Plus(国立情報学研究所)で図書情報を見る
+
+        .user-status-area
+          .user-status-area__reading-status-box
+            %h2.area-title
+              #{@product.name}を本棚に登録しているひと
+            %ul
+              %li
+              %li
+              %li
+          .user-status-area__reading-status-box
+            %h2.area-title
+              #{@product.name}を「読みたい」で本棚に登録しているひと
+          .user-status-area__reading-status-box
+            %h2.area-title
+              #{@product.name}を「いま読んでる」で本棚に登録しているひと
+          .user-status-area__reading-status-box
+            %h2.area-title
+              #{@product.name}を「読み終わった」で本棚に登録しているひと
+          .user-status-area__reading-status-box
+            %h2.area-title
+              #{@product.name}を「積読」で本棚に登録しているひと
 
 = render 'shared/footer'
