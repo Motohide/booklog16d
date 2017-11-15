@@ -23,14 +23,13 @@
           .book-introduce__info__title
             = link_to "ランチ酒", ""
           .book-introduce__info__author 原田ひ香
-          .book-introduce__info__btn
-            %ul
-              %li
-                = link_to "みんなのレビュー"
-              %li
-                = link_to "Amazon.co.jpで詳細を見る"
-              %li
-                = link_to "ブログで紹介"
+          %ul.book-introduce__info__btn
+            %li
+              = link_to "みんなのレビュー", "", class:"item-info-btn item-info-btn-red"
+            %li
+              = link_to "Amazon.co.jpで詳細を見る", "", class:"item-info-btn item-info-btn-yellow"
+            %li
+              = link_to "ブログで紹介","",  class:"item-info-btn item-info-btn-blue"
 
       .review-main__review-form
         .input-block__reading-status
