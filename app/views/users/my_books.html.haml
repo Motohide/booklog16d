@@ -62,11 +62,12 @@
               55556
               %span
                 フォロワー
-          %a{href:"",class:"profile-wrapper__info__share-btns"}
-            %li.fa.fa-twitter-square
-            %li.fa.fa-facebook-square
-            %li シェア
-      = link_to "",edit_user_path(current_user),class:"fa fa-cog setting-btn"
+      .setting-sns
+        = link_to "",edit_user_path(current_user),class:"fa fa-cog setting-btn"
+        %a{href:"",class:"sns_fb-twitter"}
+          %li.fa.fa-twitter-square
+          %li.fa.fa-facebook-square
+          %li シェア
 
   .bookshelf-header
     %ul.bookshelf-header__menu
