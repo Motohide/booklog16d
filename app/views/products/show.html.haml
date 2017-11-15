@@ -15,7 +15,8 @@
       .product-wrapper
         .product-wrapper__title
           = @product.name
-        = image_tag @product.image,class:"product-wrapper__image"
+        = link_to "" do
+          = image_tag @product.image,class:"product-wrapper__image"
         .product-wrapper__info
           %ul.product-wrapper__info__status
             %li
@@ -38,22 +39,23 @@
               = @product.publisher
             %span.release-date
               = @product.release_date.strftime("(%Y年%m月%d日発売)")
-          = image_tag "amazon-btn",class:"product-wrapper__info__btn-amazon"
+          = link_to "" do
+            = image_tag "amazon-btn",class:"product-wrapper__info__btn-amazon"
           %ul.product-wrapper__info__btn-others
             %li
-              %a
+              = link_to "" do
                 = image_tag "btn/honto_logo.png",class:"main-shop-btn"
             %li
-              %a
+              = link_to "" do
                 = image_tag "btn/rakuten_logo.png",class:"main-shop-btn"
             %li
-              %a
+              = link_to "" do
                 = image_tag "btn/bol_logo.png",class:"main-shop-btn"
             %li
-              %a
+              = link_to "" do
                 = image_tag "btn/calil_logo.png",class:"main-shop-btn"
             %li
-              %a
+              = link_to "" do
                 = image_tag "btn/other_store.png",class:"other-shop-btn"
         .product-wrapper__more
           .product-wrapper__more__link
@@ -134,24 +136,30 @@
 
         %ul.review-more-btns
           %li.review-more-btns-amazon
-            = image_tag "btn/btn_read_more_amazon.png",class:"review-more-btn"
+            = link_to "" do
+              = image_tag "btn/btn_read_more_amazon.png",class:"review-more-btn"
           %li.review-more-btns-rakuten
-            = image_tag "btn/btn_read_more_rakuten.png",class:"review-more-btn"
+            = link_to "" do
+              = image_tag "btn/btn_read_more_rakuten.png",class:"review-more-btn"
 
         %ul.social-btn-box-area
           %li.social-btn-box-area__list
-            = image_tag "btn/btn_tweet_box.png",class:"twitter-btn"
+            = link_to "" do
+              = image_tag "btn/btn_tweet_box.png",class:"twitter-btn"
           %li.social-btn-box-area__list.social-btn-box-area__list-facebook
-            %span
-              15
-            = image_tag "btn/FB-like-btn.png",class:"facebook-btn"
-            %span
-              15
-            = image_tag "btn/FB-share-btn.png",class:"facebook-btn"
+            = link_to "" do
+              %span
+                15
+                = image_tag "btn/FB-like-btn.png",class:"facebook-btn"
+            = link_to "" do
+              %span
+                15
+                = image_tag "btn/FB-share-btn.png",class:"facebook-btn"
           %li.social-btn-box-area__list.social-btn-box-area__list-hatena
-            %span
-              15
-            = image_tag "btn/hatena-bookmark-btn.png",class:"hatena-btn"
+            = link_to "" do
+              %span
+                15
+                = image_tag "btn/hatena-bookmark-btn.png",class:"hatena-btn"
 
         .additional-info-area
           %h2.area-title
