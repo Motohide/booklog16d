@@ -18,6 +18,38 @@
   border-radius: 8px;
 }
 
+.setting-sns {
+  margin-left: 870px;
+}
+
+.sns_fb-twitter {
+  display: inline-block;
+  float: right;
+  background-color: $menu-gray-color;
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: $text-darkgray-color;
+  font-size: 12px;
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  margin-top: 120px;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      .fa-twitter-square {
+        color: #67ABE8;
+      }
+      .fa-facebook-square {
+        color: #3F5A93;
+      }
+      li {
+        display: inline-block;
+      }
+    }
+
 .bookshelf-header {
   background-color: #cdcdcd;
   width: 100%;
@@ -99,6 +131,7 @@
   background-repeat: repeat-y, repeat-y, repeat;
   margin: 0 39px;
   padding-top: 30px;
+  padding-left: 15px;
   background-size: 16px 225px, 16px 225px, 500px 225px;
 }
 
