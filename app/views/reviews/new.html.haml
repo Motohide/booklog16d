@@ -1,0 +1,111 @@
+= render 'shared/header'
+
+.body
+
+  .wrapper
+    %ul.breadcrumbs
+      %li.breadcrumbs__home
+        %a{href:""} 仮
+      %li.breadcrumbs__home
+        %a{href:""} > 仮
+      %li.breadcrumbs__current-page
+        >  仮です
+
+      .input-row
+        .left-contents
+          読書状況
+        .right-contents__show
+          a
+
+      .input-row
+        .left-contents
+          評価
+        .right-contents__show
+          星
+
+      .input-row
+        .left-contents
+          カテゴリ
+        .right-contents__show
+          未設定
+      .input-row
+        .left-contents
+          レビュー・感想
+        .right-contents__show
+          あ
+      .input-row
+        .left-contents
+          SNS投稿設定
+        .right-contents__show
+          アイコン
+
+      .input-row
+        .left-contents
+          タグ
+        .right-contents
+          d
+      .input-row
+        .left-contents
+          登録日時
+        .right-contents
+          s
+      .input-row
+        .left-contents
+          読書メモ(非公開)
+        .right-contents
+      .input-row
+        .left-contents
+          オプション
+        .right-contents
+          f
+
+      .button
+        .registration-form
+          .field-label
+            更新する
+    .side-bar
+      .advertisement
+      .side-bar__title
+        本の登録・編集
+      .side-bar__list
+        %p.side-bar__subtitle
+          本を登録する
+        %ul
+          %li
+            %a{href:""} キーワードで検索
+          %li
+            %a{href:""} タグから検索
+          %li
+            %a{href:""} まとめて登録(ISBN)
+          %li
+            %a{href:""} ブックーマークレットで登録
+          %li
+            %a{href:""} オリジナルアイテム登録
+
+        %p.side-bar__subtitle
+          本を編集する
+        %ul
+          %li
+            %a{href:""} 本の並び替え
+          %li
+            %a{href:""} カテゴリの編集・削除
+          %li
+            %a{href:""} タグの編集・削除
+          %li
+            %a{href:""} 読書状況まとめて変更
+          %li
+            %a{href:""} コメント一覧
+          %li
+            %a{href:""} まとめて削除
+
+        %p.side-bar__subtitle
+          外部で活用する
+        %ul
+          %li
+            まとめて紹介リンク作成
+          %li
+            本棚ブログパーツ
+          %li
+            エクスポート
+
+= render 'shared/footer'
