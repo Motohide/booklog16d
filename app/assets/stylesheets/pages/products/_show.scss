@@ -1,3 +1,11 @@
+.book-btn {
+  display: block;
+  margin: 15px auto 0;
+  width: 130px;
+  height: 41px;
+  background-image: url(/images/common-btns.png);
+}
+
 .wrapper-product-show {
   width: 650px;
 }
@@ -24,11 +32,14 @@
     word-break: normal;
   }
 
+  &__left {
+    float: left;
+    margin: 0 0 10px 20px;
+  }
+
   &__image {
     width: 169px;
     height: 198px;
-    margin: 0 0 10px 20px;
-    float: left;
 
     &:hover {
       border-radius: 4px;

@@ -15,8 +15,10 @@
       .product-wrapper
         .product-wrapper__title
           = @product.name
-        = link_to "" do
-          = image_tag @product.image,class:"product-wrapper__image"
+        .product-wrapper__left
+          = link_to "" do
+            = image_tag @product.image,class:"product-wrapper__image"
+          = link_to "", "", class:"book-btn"
         .product-wrapper__info
           %ul.product-wrapper__info__status
             %li
