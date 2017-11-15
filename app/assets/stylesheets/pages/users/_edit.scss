@@ -19,7 +19,7 @@
 
 .link_to_mypage {
   font-size: 12px;
-  color: #4ea6cc;
+  color: $link-lightblue-color;
   text-decoration: none;
   float: right;
 
@@ -36,7 +36,7 @@
     display: inline-block;
 
     a {
-      color: #4ea6cc;
+      color: $link-lightblue-color;
       text-decoration: none;
 
       &:hover {
@@ -159,7 +159,7 @@
   background-color: $background-beige-color;
 
   .update-btn {
-    background-color: #4ea6cc;
+    background-color: $link-lightblue-color;
     font-size: 12px;
     border-radius: 5px;
     padding: 10px 20px;
@@ -186,7 +186,7 @@
 
   &__title {
     margin: 0 0 15px;
-    border: 3px #4ea6cc solid;
+    border: 3px $link-lightblue-color solid;
     text-align: center;
     background-color: white;
     border-radius: 10px;

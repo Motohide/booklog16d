@@ -26,7 +26,7 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
   }
 
   .fa-twitter-square{
-    color: #4ea6cc;
+    color: $link-lightblue-color;
 
   }
 }
@@ -35,7 +35,7 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
   background-color: #1e1e1e;
 
   &:hover {
-    background-color: #4ea6cc;
+    background-color: $link-lightblue-color;
   }
 }
 .user-sign_out-btn {

@@ -52,7 +52,7 @@
         line-height: 1.7em;
 
         a {
-          color: #4ea6cc;
+          color: $link-lightblue-color;
           text-decoration: none;
 
           &:hover {
@@ -319,7 +319,7 @@
 
         .link-condition {
           text-decoration: none;
-          color: #4ea6cc;
+          color: $link-lightblue-color;
 
           &:hover {
             color: $hover-red-color;
