@@ -98,6 +98,40 @@ h1 {
 
 .right-contents {
 
+  &__edit-status {
+    padding: 25px 20px;
+    font-size: 0;
+
+    input {
+      display: none;
+      border: none;
+    }
+
+    label.status-text {
+      display: inline-block;
+      font-size: 12px;
+      padding: 7px 15px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px #1e1e1e solid;
+      border-right: 0;
+      background-color: #fff;
+      cursor: pointer;
+
+    }
+  }
+
+  label:first-of-type.status-text {
+    border-radius: 3px 0 0 3px;
+    color: #fff;
+    background-color: #1e1e1e;
+  }
+
+  label:last-of-type {
+    border-right: 1px #1e1e1e solid;
+    border-radius: 0 3px 3px 0;
+  }
+
   &__rating {
     font-size: 13px;
     padding: 25px;
@@ -127,6 +161,7 @@ h1 {
 
     select {
       width: 200px;
+      height: 30px;
     }
   }
 
