@@ -31,23 +31,24 @@
             %li
               = link_to "ブログで紹介","",  class:"item-info-btn item-info-btn-blue"
 
+      .review-title
+        = link_to "あなたのレビューを見る"
       .form-wrapper.review-form
         .input-row.input-row__reading-status
           .left-contents
             読書状況
           .right-contents
-            .edit-status
+            .right-contents__edit-status
+              %input{ type: "radio", name:"aaaa"}
+              %label.status-text{name:"aaaa"} 未設定
               %input{ type: "radio"}
-              %label 未設定
+              %label.status-text 読みたい
               %input{ type: "radio"}
-              %label 読みたい
+              %label.status-text 今読んでいる
               %input{ type: "radio"}
-              %label 今読んでいる
+              %label.status-text 読み終わった
               %input{ type: "radio"}
-              %label 読み終わった
-              %input{ type: "radio"}
-              %label 積読
-              %input{ type: "radio"}
+              %label.status-text 積読
 
         .input-row.input-row__evaluation
           .left-contents
@@ -67,8 +68,9 @@
                 %select
                   %option 未設定
               .right-contents__add-catagory
-                %i.fa.fa-plus-circle
-                = link_to "新規追加", ""
+                %a{href:""}
+                  %i.fa.fa-plus-circle
+                  新規追加
 
         .input-row.input-row__impression
           .left-contents.left-contents__biography
@@ -114,7 +116,7 @@
           .left-contents.left-contents__biography
             読書メモ(非公開)
           .right-contents
-            %textarea{placeholder: "メモ", class:"left-contents__biography"}
+            %textarea{ placeholder: "自分用のメモを入力。例）山下書店で買った、高橋さんがおすすめされた、図書館にあったなど", class:"left-contents__biography"}
             %ul
               %li HTMLタグ使用不可 / あなた以外は見ることができません
 
@@ -171,10 +173,10 @@
           外部で活用する
         %ul
           %li
-            まとめて紹介リンク作成
+            %a{href:""} まとめて紹介リンク作成
           %li
-            本棚ブログパーツ
+            %a{href:""} 本棚ブログパーツ
           %li
-            エクスポート
+            %a{href:""} エクスポート
 
   = render 'shared/footer'
