@@ -92,7 +92,12 @@ h1 {
   }
 }
 
+.input-row__reading-status {
+  border-top: 5px #1e1e1e solid;
+}
+
 .right-contents {
+
   &__rating {
     font-size: 13px;
     padding: 25px;
@@ -135,7 +140,7 @@ h1 {
   }
 
   .checkbox {
-    margin: 10px 0 10px 24px;
+    margin: 10px 0;
   }
 
   .social-network-area {
