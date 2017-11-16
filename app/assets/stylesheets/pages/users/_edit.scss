@@ -110,6 +110,9 @@
     textarea {
       margin: 25px 24px 0;
       width: calc(100% - 50px);
+      padding: 7px;
+      border:1px #1e1e1e solid;
+      border-radius: 3px;
     }
 
     &__biography {
