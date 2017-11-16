@@ -1,6 +1,9 @@
 = render 'shared/header'
 = render 'shared/flash'
 
+- content_for(:head) do
+  %meta{name:"turbolinks-cache-control", content:"no-cache"}
+
 .body
   .wrapper
     %ul.breadcrumbs
@@ -69,6 +72,23 @@
       .review-wrapper
         .row-title
           この本を読んでいる人は、こんな本も本棚に登録しています。
+
+        %ul.main-thumb
+          %li
+            = image_tag "book__review__karioki.jpg"
+          %li
+            = image_tag "karioki2.jpg"
+          %li
+            = image_tag "karioki3.jpg"
+          %li
+            = image_tag "karioki4.jpg"
+          %li
+            = image_tag "karioki5.jpg"
+        #arrows
+          .slick-next
+              = image_tag ""
+          .slick-prev
+              = image_tag ""
 
       .review-wrapper
         .row-title

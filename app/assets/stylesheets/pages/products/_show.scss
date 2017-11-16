@@ -1,3 +1,19 @@
+.btn-retsu {
+  float: left;
+  width: 20px;
+  height: 80px;
+}
+
+.main-thumb {
+  width: 600px;
+
+  button {
+    display: block;
+    float: left;
+    height: 80px;
+  }
+}
+
 .book-btn {
   display: block;
   margin: 15px auto 0;
@@ -187,6 +203,7 @@
 }
 
 .review-wrapper {
+  overflow: auto;
 
   &__sort-by-rating {
     text-align: center;
