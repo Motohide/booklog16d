@@ -31,11 +31,11 @@
             %li
               = link_to "ブログで紹介","",  class:"item-info-btn item-info-btn-blue"
 
-      .review-main__review-form
-        .input-block__reading-status
+      .form-wrapper.review-form
+        .input-row.input-row__reading-status
           .left-contents
             読書状況
-          .right-contents__review
+          .right-contents
             %ul
               %li 未設定
               %li 読みたい
@@ -43,10 +43,10 @@
               %li 読み終わった
               %li 積読
 
-        .input-block__evaluation
+        .input-row.input-row__evaluation
           .left-contents
             評価
-          .right-contents__review
+          .right-contents
             %ul
               %li
                 = image_tag "star-on.png"
@@ -55,30 +55,32 @@
               %li
                 = image_tag "star_clear.png"
 
-        .input-block__catagory
+        .input-row.input-row__catagory
           .left-contents
             カテゴリ
-          .right-contents__review
+          .right-contents
             %select
               %option 未設定
             .add-catagory
               %i.fa.fa-plus-circle
               = link_to "新規追加", ""
 
-        .input-block__impression
-          .left-contents
+        .input-row.input-row__impression
+          .left-contents.left-contents__biography
             レビュー・感想
-          .right-contents__review
+          .right-contents
             .impression-text
-              %textarea{placeholder: "レビューや感想を書く"}
+              %textarea{placeholder: "レビューや感想を書く", class:"left-contents__biography"}
             .checkbox
               %input{type: "checkbox"}
               %label ネタバレの内容を含む
+            %ul
+              %li HTMLタグ使用不可
 
-        .input-block__sns
+        .input-row.input-row__sns
           .left-contents
             SNS投稿設定
-          .right-contents__review
+          .right-contents
             .twitter
               .twitter-left
                 %i.fa.fa-twitter-square
@@ -92,30 +94,33 @@
               .twitter-right
                 = link_to "設定を変更する", ""
 
-        .input-block__tag
+        .input-row.input-row__tag
           .left-contents
             タグ
-          .right-contents__review
+          .right-contents
             .tag-text
               %textarea{placeholder: "例：ドラえもん"}
               %p タグはスペース区切りで複数入力できます。
 
-        .input-block__note
-          .left-contents
+        .input-row.input-row__note
+          .left-contents.left-contents__biography
             読書メモ(非公開)
-          .right-contents__review
-            %textarea{placeholder: "メモ"}
-            %p HTMLタグ使用不可 / あなた以外は見ることができません
+          .right-contents
+            %textarea{placeholder: "メモ", class:"left-contents__biography"}
+            %ul
+              %li HTMLタグ使用不可 / あなた以外は見ることができません
 
-        .input-block__option
+        .input-row.input-row__option
           .left-contents
             オプション
-          .right-contents__review
+          .right-contents
             %input{type: "checkbox"}
             %label 非公開で登録
+            %ul
+              %li 非公開で登録された本は、本棚の所有者以外は閲覧できません。
 
-          .button
-            = link_to "登録情報を変更する", type: "submit"
+        .btn-wrapper
+          %input{value: "登録情報を変更する", type: "submit", class:"update-btn"}
 
     .side-bar
       .advertisement
