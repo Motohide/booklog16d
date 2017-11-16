@@ -47,23 +47,22 @@
           .left-contents
             評価
           .right-contents
-            %ul
-              %li
-                = image_tag "star-on.png"
-                = image_tag "star-on.png"
-                = image_tag "star-on.png"
-              %li
-                = image_tag "star_clear.png"
+            .right-contents__rating
+              - 5.times do
+                = image_tag "rating/star-off.png", class:"star"
+              = image_tag "rating/star_clear.png", class:"star-clear"
 
         .input-row.input-row__catagory
           .left-contents
             カテゴリ
           .right-contents
-            %select
-              %option 未設定
-            .add-catagory
-              %i.fa.fa-plus-circle
-              = link_to "新規追加", ""
+            .right-contents__catagory
+              .right-contents__setting
+                %select
+                  %option 未設定
+              .right-contents__add-catagory
+                %i.fa.fa-plus-circle
+                = link_to "新規追加", ""
 
         .input-row.input-row__impression
           .left-contents.left-contents__biography
@@ -81,18 +80,19 @@
           .left-contents
             SNS投稿設定
           .right-contents
-            .twitter
-              .twitter-left
-                %i.fa.fa-twitter-square
-                %span 投稿未設定
-              .twitter-right
-                = link_to "設定を変更する", ""
-            .facebook
-              .facebook-left
-                %i.fa.fa-facebook-square
-                %span 投稿未設定
-              .twitter-right
-                = link_to "設定を変更する", ""
+            .social-network-area
+              .social-network.twitter
+                .social-network__left
+                  %i.fa.fa-twitter-square
+                  %span 投稿未設定
+                .social-network__right
+                  = link_to "設定を変更する", ""
+              .social-network.facbook
+                .social-network__left
+                  %i.fa.fa-facebook-square
+                  %span 投稿未設定
+                .social-network__right
+                  = link_to "設定を変更する", ""
 
         .input-row.input-row__tag
           .left-contents
@@ -100,7 +100,8 @@
           .right-contents
             .tag-text
               %textarea{placeholder: "例：ドラえもん"}
-              %p タグはスペース区切りで複数入力できます。
+              %ul
+                %li タグはスペース区切りで複数入力できます。
 
         .input-row.input-row__note
           .left-contents.left-contents__biography
