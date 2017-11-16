@@ -115,10 +115,12 @@
           .left-contents
             オプション
           .right-contents
-            %input{type: "checkbox"}
-            %label 非公開で登録
-            %ul
-              %li 非公開で登録された本は、本棚の所有者以外は閲覧できません。
+            .right-contents__nonpublic
+              %label
+                %input{type: "checkbox"}
+                非公開で登録
+              %ul
+                %li 非公開で登録された本は、本棚の所有者以外は閲覧できません。
 
         .btn-wrapper
           %input{value: "登録情報を変更する", type: "submit", class:"update-btn"}
