@@ -39,6 +39,7 @@
   }
 
   &__sort {
+    margin: 10px 0 20px;
 
     &-btn {
       text-decoration: none;
@@ -52,9 +53,147 @@
   }
 }
 
+.tab-menu {
+
+  li {
+    font-size: 12px;
+    position: relative;
+    float: left;
+    margin: 0 11px 0 0;
+    height: 35px;
+    text-align: center;
+    line-height: 36px;
+
+
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 0 12px 0 10px;
+      min-width: 70px;
+      border-top: 1px #cdcdcd solid;
+      border-right: 1px #cdcdcd solid;
+      border-left: 1px #cdcdcd solid;
+      background: #fff;
+      color: #555;
+    }
+  }
+}
+
+
+
+
+
 .search-wrapper {
   float: left;
   clear: both;
-  margin: 5px 0px 0;
-  width: 650px;
+  margin: 2px 0px 0;
+  width: 640px;
+  border: 5px solid #1e1e1e;
+  background-color: white;
+
+  &__order {
+    background-color: #e8f6f5;
+    padding: 15px;
+
+    li {
+      font-size: 12px;
+      display: inline;
+    }
+
+    &-title {
+      font-weight: bold;
+    }
+
+    &-recommend {
+      font-weight: bold;
+      color: $hover-red-color;
+    }
+
+    &-release-date {
+      text-decoration: none;
+      font-weight: bold;
+      color: $text-lightblue-color;
+    }
+  }
+
+  &__result {
+    overflow: auto;
+    border-top: 5px solid #1e1e1e;
+
+    &-top {
+      padding-left: 20px;
+      border-bottom: 1px #cdcdcd solid;
+
+      .product-name {
+        padding-top: 10px;
+        margin-bottom: 10px;
+
+        a {
+          font-weight: 700;
+          font-size: 14px;
+          color: #1e1e1e;
+        }
+      }
+
+      .count-who-registerd-this-product {
+        margin-bottom: 15px;
+        font-size: 12px;
+        font-weight: bold;
+        color: $hover-red-color;
+      }
+
+      .product-info {
+        padding: 0 10px 10px 0px;
+
+        span {
+          font-size: 12px;
+
+          &:after {
+            content: " /";
+          }
+
+          &:last-child {
+            &:after {
+              content: "";
+            }
+          }
+        }
+
+
+      }
+    }
+
+    &-image {
+      background-color: $menu-gray-color;
+      padding: 30px 0;
+      width: 190px;
+      text-align: center;
+      float: left;
+    }
+
+    &-register {
+      float: left;
+      width: calc(100% - 190px);
+      padding: 45px 0;
+      height: 100%;
+
+      .add-product-btn {
+        margin: 10px auto 30px;
+        display: block;
+        width: 207px;
+        height: 57px;
+        background-image: url(/images/list_common.gif);
+        background-position: 0px -115px;
+
+        &-secretly {
+          margin: 0 auto;
+          display: block;
+          width: 144px;
+          height: 41px;
+          background-image: url(/images/list_common.gif);
+          background-position: -212px -115px;
+        }
+      }
+    }
+  }
 }

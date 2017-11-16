@@ -34,10 +34,57 @@
       = link_to "新刊情報","",class:"search-area__sort-btn"
       = link_to "電子書籍","",class:"search-area__sort-btn"
 
-    .search-wrapper
-      YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+    %ul.tab-menu
+      %li
+        = link_to "すべての本",""
+      %li
+        = link_to "紙の本",""
+      %li
+        = link_to "Kindle",""
 
-    //何かformwrapperに代わるいい感じのwrapperを作り、float::leftさせる
+    .search-wrapper
+      %ul.search-wrapper__order
+        %li.search-wrapper__order-title
+          並び:
+        %li.search-wrapper__order-recommend
+          おすすめ順
+        %li
+          = link_to "発売日順","",class:"search-wrapper__order-release-date"
+      .search-wrapper__result
+        .search-wrapper__result-top
+          .product-name
+            = link_to "テニスクラシックBreak 2017年 12 月号 [雑誌]",""
+          .count-who-registerd-this-product
+            1人が登録
+          .product-info
+            %span 雑誌
+            %span 2017年11月4日
+            %span
+              = image_tag "store/amazon-mini.gif"
+              Amazon.co.jpで見る
+        .search-wrapper__result-image
+          = image_tag "karioki2.jpg"
+        .search-wrapper__result-register
+          = link_to "", "", class:"add-product-btn"
+          = link_to "", "", class:"add-product-btn-secretly"
+      .search-wrapper__result
+        .search-wrapper__result-top
+          .product-name
+            = link_to "テニスクラシックBreak 2017年 12 月号 [雑誌]",""
+          .count-who-registerd-this-product
+            1人が登録
+          .product-info
+            %span 雑誌
+            %span 2017年11月4日
+            %span
+              = image_tag "store/amazon-mini.gif"
+              Amazon.co.jpで見る
+        .search-wrapper__result-image
+          = image_tag "karioki2.jpg"
+        .search-wrapper__result-register
+          = link_to "", "", class:"add-product-btn"
+          = link_to "", "", class:"add-product-btn-secretly"
+    //上のadd-product-btn のところはbackground-imageでやる
 
 
     .side-bar
