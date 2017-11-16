@@ -168,10 +168,15 @@ h1 {
   &__add-catagory {
     float: left;
     font-size: 12px;
+    padding-top: 5px;
   }
 
   a {
     color: #1e1e1e;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   .checkbox {
