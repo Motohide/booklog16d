@@ -10,6 +10,16 @@
         >  仮です
     .profile-setting
       本の検索
+
+    .search-area
+      = form_tag "search", method: :GET do
+        = text_field_tag :keyword, "", class:"search-area__input", placeholder:"作品・著者名で検索して本棚で登録"
+        = select_tag :service_id, options_for_select([["Amazon.co.jp", "1"], ["Amazon.com", "2"], ["パブー", "3"], ["iTunes Store", "4"], ["青空文庫", "5"], ["電子書籍(一般書)", "6"], ["電子書籍(技術書)", "7"]])
+        = select_tag :genre, options_for_select([["本", "1"], ["Kindleストア", "2"], ["洋書", "3"], ["DVD", "4"], ["音楽", "5"], ["ゲーム", "6"], ["すべての商品", "7"]])
+        = button_tag "" , class: 'submit-btn', type: :submit do
+          %i.fa.fa-search
+
+
     .lead
       まずは商品名、著者名、出版社名などを入力して検索してください。
       %br
@@ -22,54 +32,49 @@
     .side-bar
       .advertisement
       .side-bar__title
-        いろいろな設定
+        本の登録・編集
       .side-bar__list
         %p.side-bar__subtitle
-          本棚の設定
+          本を登録する
         %ul
           %li
-            %a{href:""} 本棚の基本設定
+            %a{href:""} キーワードで検索
           %li
-            %a{href:""} タイムラインの設定
+            %a{href:""} タグから検索
           %li
-            %a{href:""} 本棚の非公開設定
+            %a{href:""} まとめて登録(ISBN)
           %li
-            %a{href:""} プロフィールの設定
+            %a{href:""} ブックマックレートで登録
           %li
-            %a{href:""} アカウント情報
-          %li
-            %a{href:""}
-              レビュー掲載範囲の設定
-              %i.fa.fa-twitter-square.mini-twitter-icon
-              %i.fa.fa-facebook-square.mini-facebook-icon
-          %li
-            %a{href:""} パスワードの変更
-          %li
-            %a{href:""} 退会
+            %a{href:""} オリジナルアイテム登録
 
         %p.side-bar__subtitle
-          外部サービス連携
+          編集する
         %ul
           %li
-            %a{href:""} SNSアカウント設定
+            %a{href:""} 本の並び替え
           %li
-            %a{href:""} Amazonアフィリエイト設定
+            %a{href:""} カテゴリの編集・削除
           %li
-            %a{href:""} 投稿ログ
+            %a{href:""} タグの編集・削除
+          %li
+            %a{href:""} 読書状況まとめて変更
+          %li
+            %a{href:""} コメント一覧
+          %li
+            %a{href:""} まとめて削除
+
+
 
         %p.side-bar__subtitle
-          通知設定
+          外部で活用する
         %ul
           %li
-            %a{href:""} 通知設定
+            %a{href:""} まとめて紹介リンク作成
           %li
-            %a{href:""} 新刊通知キーワード設定
-
-        %p.side-bar__subtitle
-          読書目標
-        %ul
+            %a{href:""} 本棚ブログパーツ作成
           %li
-            %a{href:""} 読書目標の設定
+            %a{href:""} エクスポート
 
 / 上記のul部分は後でgemを調べて実装する
 = render 'shared/footer'
