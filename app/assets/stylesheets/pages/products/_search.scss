@@ -1,0 +1,33 @@
+.search-area {
+
+  &__input {
+
+    font-size: 14px;
+    width: 230px;
+    border-radius: 3px;
+    border: 1px #1e1e1e solid;
+    padding: 7px;
+  }
+
+  select {
+    margin-left: 10px;
+    font-size: 14px;
+    border: 1px #1e1e1e solid;
+    height: 30px;
+  }
+
+  .submit-btn {
+    height: 37px;
+    padding: 0 30px;
+    margin-left: 10px;
+    background-color: $link-lightblue-color;
+    color: white;
+    border-style: none;
+
+
+    i {
+      display: inline-block;
+      font-size: 17px;
+    }
+  }
+}
