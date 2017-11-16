@@ -1,5 +1,7 @@
 @import "./reset";
 @import "font-awesome";
+@import 'slick';
+@import 'slick-theme';
 
 @import "./modules/color";
 @import "./modules/flash";
@@ -17,5 +19,4 @@
 @import "./pages/users/edit";
 @import "./pages/users/show";
 
-@import 'slick';
-@import 'slick-theme';
+

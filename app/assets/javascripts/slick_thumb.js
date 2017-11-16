@@ -4,7 +4,13 @@ $(document).on('turbolinks:load',function() {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    Arrows: true
+    appendArrows: $('#arrows')
   });
 
+    $('.slick-next').on('click', function () {
+        slick.slickNext();
+    });
+    $('.slick-prev').on('click', function () {
+        slick.slickPrev();
+    });
 });

@@ -73,22 +73,23 @@
         .row-title
           この本を読んでいる人は、こんな本も本棚に登録しています。
 
-        %ul.main-thumb
-          %li
-            = image_tag "book__review__karioki.jpg"
-          %li
-            = image_tag "karioki2.jpg"
-          %li
-            = image_tag "karioki3.jpg"
-          %li
-            = image_tag "karioki4.jpg"
-          %li
-            = image_tag "karioki5.jpg"
-        #arrows
-          .slick-next
-              = image_tag ""
-          .slick-prev
-              = image_tag ""
+        .slick_container
+          %ul.main-thumb
+            %li
+              = image_tag "book__review__karioki.jpg"
+            %li
+              = image_tag "karioki2.jpg"
+            %li
+              = image_tag "karioki3.jpg"
+            %li
+              = image_tag "karioki4.jpg"
+            %li
+              = image_tag "karioki5.jpg"
+          #arrows
+            .slick-next
+              = image_tag "btn/arrow-right-enable.png"
+            .slick-prev
+              = image_tag "btn/arrow-left-enable.png"
 
       .review-wrapper
         .row-title
