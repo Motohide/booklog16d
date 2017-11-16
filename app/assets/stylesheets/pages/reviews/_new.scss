@@ -92,6 +92,17 @@ h1 {
   }
 }
 
+.review-title {
+  float: right;
+  font-size: 12px;
+
+  a {
+    text-decoration: none;
+    color: #4ea6cc;
+    font-weight: bold;
+  }
+}
+
 .input-row__reading-status {
   border-top: 5px #1e1e1e solid;
 }
