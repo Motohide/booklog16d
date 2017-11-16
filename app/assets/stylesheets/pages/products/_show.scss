@@ -1,31 +1,5 @@
-.slick_container {
-    width:650px; /* 任意の値 */
-    margin:0 auto; /* 任意の値 */
-    position:relative;
-}
-
- .slick-prev, .slick-next {
-    width:64px;
-    height:64px
-}
-.slick-prev:before, .slick-next:before {
-    content:"";
-}
-button.slick-prev, button.slick-next {
-    z-index:2;
-}
-.slick-prev{left:0px; /* 任意の値 */}
-.slick-next{right:0px; /* 任意の値 */}
-
-.slick-arrow{z-index:10;/* 値は適当に */}
-
-
-
-
-
 .main-thumb {
-  width: 600px;
-  overflow: auto;
+  width: 528px;
 }
 
 .book-btn {

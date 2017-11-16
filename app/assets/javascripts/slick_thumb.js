@@ -6,11 +6,4 @@ $(document).on('turbolinks:load',function() {
     slidesToScroll: 3,
     appendArrows: $('#arrows')
   });
-
-    $('.slick-next').on('click', function () {
-        slick.slickNext();
-    });
-    $('.slick-prev').on('click', function () {
-        slick.slickPrev();
-    });
 });
