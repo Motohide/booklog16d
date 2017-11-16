@@ -36,12 +36,18 @@
           .left-contents
             読書状況
           .right-contents
-            %ul
-              %li 未設定
-              %li 読みたい
-              %li 今読んでいる
-              %li 読み終わった
-              %li 積読
+            .edit-status
+              %input{ type: "radio"}
+              %label 未設定
+              %input{ type: "radio"}
+              %label 読みたい
+              %input{ type: "radio"}
+              %label 今読んでいる
+              %input{ type: "radio"}
+              %label 読み終わった
+              %input{ type: "radio"}
+              %label 積読
+              %input{ type: "radio"}
 
         .input-row.input-row__evaluation
           .left-contents
