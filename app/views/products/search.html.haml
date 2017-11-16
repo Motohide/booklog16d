@@ -19,13 +19,24 @@
         = button_tag "" , class: 'submit-btn', type: :submit do
           %i.fa.fa-search
 
-
     .lead
       まずは商品名、著者名、出版社名などを入力して検索してください。
       %br
       例えば...村上春樹や 宇多田ヒカルや ジブリなど。
 
-    .form-wrapper
+    %h3.search-area__tags
+      <検索キーワード>の作品ランキング・新刊情報・電子書籍
+
+    .search-area__sort
+      = link_to "おすすめ順","",class:"search-area__sort-btn"
+      = link_to "人気順","",class:"search-area__sort-btn"
+      = link_to "レビュー数順","",class:"search-area__sort-btn"
+      = link_to "新刊情報","",class:"search-area__sort-btn"
+      = link_to "電子書籍","",class:"search-area__sort-btn"
+
+    .search-wrapper
+      YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
     //何かformwrapperに代わるいい感じのwrapperを作り、float::leftさせる
 
 
