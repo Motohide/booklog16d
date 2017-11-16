@@ -91,3 +91,86 @@ h1 {
     }
   }
 }
+
+.right-contents {
+  &__rating {
+    font-size: 13px;
+    padding: 25px;
+  }
+
+  img {
+    width: 20px;
+    height: 19px;
+  }
+
+  img.star-clear {
+    width: 62px;
+    height: 18px;
+    border:1px #a1a1a1 solid;
+    border-radius: 3px;
+    margin-left: 5px;
+  }
+
+  &__catagory {
+    overflow: auto;
+    padding: 25px;
+  }
+
+  &__setting {
+    float: left;
+    padding-right: 15px;
+
+    select {
+      width: 200px;
+    }
+  }
+
+  &__add-catagory {
+    float: left;
+    font-size: 12px;
+  }
+
+  a {
+    color: #1e1e1e;
+  }
+
+  .checkbox {
+    margin: 10px 0 10px 24px;
+  }
+
+  .social-network-area {
+    padding: 22px 25px;
+  }
+
+  .social-network {
+    margin: 10px 0;
+    overflow: auto;
+
+    &__left {
+      float: left;
+
+      .fa {
+        font-size: 19px;
+        vertical-align: middle;
+      }
+
+      .fa.fa-twitter-square {
+      color: #2298cc;
+    }
+
+      .fa.fa-facebook-square {
+        color: #3b5998;
+      }
+
+      span {
+        margin-left: 10px;
+      }
+    }
+
+    &__right {
+      float: right;
+    }
+
+
+  }
+}
