@@ -1,155 +1,39 @@
-.profile-wrapper {
+.my_books {
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.main-page {
+  padding: 0 20px 10px;
+  float: left;
+  width: calc(100% - 40px);
+  background-color: #f0f0f0;
+}
+
+.user-header {
+  width: 1000px;
+  height: 200px;
+  padding: 15px;
   background-color: $background-white-color;
   border-radius: 8px;
-  padding: 15px;
-  overflow: auto;
-  width:650px;
+}
 
-  &__menu {
-    width: 90px;
-    float: left;
-    margin-right: 30px;
+.setting-sns {
+  margin-left: 870px;
+}
 
-    &__image {
-      width: 90px;
-      height: 90px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    &__list {
-      background-color: $background-white-color;
-      letter-spacing: -.4em;
-
-      li {
-        letter-spacing: normal;
-        padding-top: 1px;
-        padding-bottom: 10px;
-        display: inline-block;
-
-        &:hover {
-          opacity: 0.6;
-        }
-
-        a {
-         color: $text-white-color;
-        }
-      }
-
-      &-book {
-        border-radius: 3px 0 0 0;
-        padding-left: 14px;
-        padding-right: 14px;
-        margin-right: 4px;
-        background-color: $border-gray-color;
-      }
-
-      &-timeline {
-        border-radius: 0 3px 0 0;
-        padding-left: 14px;
-        padding-right: 14px;
-        background-color: $border-gray-color;
-      }
-
-      &-user {
-        border-radius: 0 0 0 3px;
-        padding-left: 15px;
-        padding-right: 17px;
-        margin-right: 4px;
-        margin-top: 4px;
-        background-color: black;
-      }
-
-      &-more {
-        border-radius: 0 0 3px 0;
-        padding-left: 15px;
-        padding-right: 14px;
-        margin-top: 4px;
-        background-color: $border-gray-color;
-      }
-    }
-  }
-
-  &__info {
-    float: left;
-
-    &__title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    &__name {
-      margin-bottom: 35px;
-      font-size: 14px;
-    }
-
-    &__status {
-      margin: 5px 0;
-      li {
-          display: inline-block;
-          text-align: center;
-          font-size: 11px;
-          color: $text-darkgray-color;
-          border-right: 1px silver solid;
-          padding: 0 15px;
-
-          &:last-child {
-            border-right: none;
-          }
-
-        a {
-          color: $link-lightblue-color;
-          font-size: 16px;
-
-          &:hover {
-            text-decoration: none;
-          }
-        }
-      }
-    }
-
-
-    &__following {
-        width: 495px;
-      .follow-this-user-btn {
-        padding: 8px;
-        border: 1px $menu-gray-color solid;
-        font-size: 10px;
-        border-radius: 3px;
-        width: 90px;
-        text-align: center;
-        display: inline-block;
-        color: $border-gray-color;
-      }
-      .follow__count {
-        display: inline-block;
-
-        a {
-          color: black;
-          font-size: 16px;
-
-          span {
-            font-size: 12px;
-          }
-
-          &:hover {
-            text-decoration: none;
-          }
-        }
-      }
-    }
-    &__share-btns {
-      display: inline-block;
-      float: right;
-      background-color: $menu-gray-color;
-      padding: 10px 15px;
-      border-radius: 3px;
-      color: $text-darkgray-color;
-      font-size: 12px;
-      text-decoration: none;
-      width: 100px;
-      text-align: center;
+.sns_fb-twitter {
+  display: inline-block;
+  float: right;
+  background-color: $menu-gray-color;
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: $text-darkgray-color;
+  font-size: 12px;
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  margin-top: 120px;
 
       &:hover {
         opacity: 0.6;
@@ -165,118 +49,99 @@
         display: inline-block;
       }
     }
-  }
-}
 
-.section-row {
-  padding: 20px 0 10px;
-  background-color: $background-beige-color;
+.bookshelf-header {
+  background-color: #cdcdcd;
+  width: 100%;
+  margin-top: 20px;
 
-  &__title {
-    margin-bottom: 10px;
-    color: #333;
-    font-weight: bold;
+  &__menu {
+    padding-right: 20px;
+    line-height: 45px;
+    font-size: 12px;
+    text-align: right;
+    color: $text-white-color;
+
+    li {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
 
     a {
-      font-size: 12px;
-      font-weight: bold;
-      color: $link-lightblue-color;
       text-decoration: none;
+      color: $text-white-color;
+    }
+
+    span {
+      width: 90px;
+      padding: 10px;
+      background-color: #a1a1a1;
+      border-radius: 3px;
 
       &:hover {
-        color: $hover-red-color;
+        opacity: 0.4;
       }
     }
   }
 
-  &__biography {
-    padding: 10px;
-    font-size: 12px;
-    background-color: $menu-gray-color;
-  }
-
-  &__edit-link {
-    font-size: 12px;
-    color: $link-lightblue-color;
-    text-decoration: none;
-
-    &:hover {
-      color: $hover-red-color;
-    }
-  }
-
-  &__favorite-ranking {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-
-    tr {
-      border: 1px silver solid;
+    &__filter {
+     color: #666;
+     width: 50px;
     }
 
-    &-1 {
-      background-color: $hover-red-color;
+    &__show-filter {
+     border-radius: 3px 0 0 3px;
     }
 
-    &-2 {
-      background-color: #f58c29;
+    &__icon {
+      i {
+        width: 30px;
+      }
+
+      &__close {
+      border-radius: 0 3px 3px 0;
+      opacity: 0.4;
     }
 
-    &-3 {
-      background-color: #89c600;
-    }
+        &__table {
+          padding-left: 20px;
+        }
 
-    th {
-      font-size: 12px;
-      padding: 0 4px;
-      color: $text-white-color;
-    }
-
-    td {
-      padding: 5px 15px;
-      text-align: center;
-      padding: 5px 15px;
-      font-size: 11px;
-      width: 52px;
-      height:52px;
-      background-color: $background-white-color;
-
-      a {
-        text-decoration: none;
-        color: $link-lightblue-color;
-
-        &:hover {
-          color: $hover-red-color;
+        &__arrow {
+          padding-left: 20px;
         }
       }
     }
   }
+
+.bookshelf-wrapper {
+  width: 100%;
+  height: 724px;
+  background-image: url(/images/bookshelf/maple_left.png), url(/images/bookshelf/maple_right.png);
+  background-repeat: repeat-y, repeat-y;
+  background-position: left top, right top;
+  background-size: 39px 225px, 39px 225px;
+  background-color: #E8B572;
 }
 
-.setting-btn {
-  float: right;
-  border-radius: 3px;
-  padding: 5px 9px;
-  font-size: 18px;
-  text-decoration: none;
-  color: $text-darkgray-color;
-  background-color: $menu-gray-color;
+.bookshelf-main {
+  height: 676px;
+  background-image: url(/images/bookshelf/maple_shadow_left.png), url(/images/bookshelf/maple_shadow_right.png), url(/images/bookshelf/maple_center.png);
+  background-repeat: repeat-y, repeat-y, repeat;
+  margin: 0 39px;
+  padding-top: 30px;
+  padding-left: 15px;
+  background-size: 16px 225px, 16px 225px, 500px 225px;
+}
 
-  &:hover {
-    opacity: 0.6;
+  .books-display {
+  padding-top: 25px;
+
+  &__book {
+    width:134px;
+    height:225px;
+    float: left;
   }
 }
 
-.user-birth-date {
-  padding: 20px 0;
-  font-size: 14px;
-  border-bottom: 5px black solid;
-}
-
-.right-contents__show {
-  float: left;
-  font-size: 13px;
-  width: calc(100% - 230px);
-  background-color: $background-white-color;
-  padding: 25px;
-}
