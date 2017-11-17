@@ -1,7 +1,6 @@
 .search-area {
 
   &__input {
-
     font-size: 14px;
     width: 230px;
     border-radius: 3px;
@@ -114,7 +113,6 @@
       font-weight: bold;
       color: $text-lightblue-color;
 
-
       &:hover {
         color: $hover-red-color;
       }
@@ -137,7 +135,6 @@
           font-weight: 700;
           font-size: 14px;
           color: #1e1e1e;
-
 
           &:hover {
             color: $text-lightblue-color;
