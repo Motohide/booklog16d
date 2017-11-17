@@ -1,0 +1,106 @@
+= render 'shared/header'
+= render 'shared/flash'
+.body
+
+  .wrapper
+    %ul.breadcrumbs
+      %li.breadcrumbs__home
+        %a{href:""} 仮
+      %li.breadcrumbs__current-page
+        >  仮です
+    .profile-setting
+      本の検索
+
+    .search-area
+      = form_tag "search", method: :GET do
+        = text_field_tag :keyword, "", class:"search-area__input", placeholder:"作品・著者名で検索して本棚で登録"
+        = select_tag :service_id, options_for_select([["Amazon.co.jp", "1"], ["Amazon.com", "2"], ["パブー", "3"], ["iTunes Store", "4"], ["青空文庫", "5"], ["電子書籍(一般書)", "6"], ["電子書籍(技術書)", "7"]])
+        = select_tag :genre, options_for_select([["本", "1"], ["Kindleストア", "2"], ["洋書", "3"], ["DVD", "4"], ["音楽", "5"], ["ゲーム", "6"], ["すべての商品", "7"]])
+        = button_tag "" , class: 'submit-btn', type: :submit do
+          %i.fa.fa-search
+
+    .lead
+      まずは商品名、著者名、出版社名などを入力して検索してください。
+      %br
+      例えば...
+      = link_to "村上春樹",""
+      や
+      = link_to "宇多田ヒカル",""
+      や
+      = link_to "ジブリ",""
+      など。
+
+    %h3.search-area__tags
+      <検索キーワード>の作品ランキング・新刊情報・電子書籍
+
+    .search-area__sort
+      = link_to "おすすめ順","",class:"search-area__sort-btn"
+      = link_to "人気順","",class:"search-area__sort-btn"
+      = link_to "レビュー数順","",class:"search-area__sort-btn"
+      = link_to "新刊情報","",class:"search-area__sort-btn"
+      = link_to "電子書籍","",class:"search-area__sort-btn"
+
+    %ul.tab-menu
+      %li
+        = link_to "すべての本",""
+      %li
+        = link_to "紙の本",""
+      %li
+        = link_to "Kindle",""
+
+    .search-wrapper
+      %ul.search-wrapper__order
+        %li.search-wrapper__order-title
+          並び:
+        %li.search-wrapper__order-recommend
+          おすすめ順
+        %li
+          = link_to "発売日順","",class:"search-wrapper__order-release-date"
+      = render "search-result"
+
+    .side-bar
+      .advertisement
+      .side-bar__title
+        本の登録・編集
+      .side-bar__list
+        %p.side-bar__subtitle
+          本を登録する
+        %ul
+          %li
+            = link_to "キーワードで検索"
+          %li
+            = link_to "タグから検索"""
+          %li
+            = link_to "まとめて登録(ISBN)"
+          %li
+            = link_to "ブックマックレートで登録"
+          %li
+            = link_to "オリジナルアイテム登録"
+
+        %p.side-bar__subtitle
+          編集する
+        %ul
+          %li
+            = link_to "本の並び替え"
+          %li
+            = link_to "カテゴリの編集・削除"
+          %li
+            = link_to "タグの編集・削除"
+          %li
+            = link_to "読書状況まとめて変更"
+          %li
+            = link_to "コメント一覧"
+          %li
+            = link_to "まとめて削除"
+
+        %p.side-bar__subtitle
+          外部で活用する
+        %ul
+          %li
+            = link_to "まとめて紹介リンク作成"
+          %li
+            = link_to "本棚ブログパーツ作成"
+          %li
+            = link_to "エクスポート"
+
+= render 'shared/footer'

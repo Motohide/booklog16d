@@ -1,0 +1,446 @@
+.main-thumb {
+  width: 528px;
+}
+
+.book-btn {
+  display: block;
+  margin: 15px auto 0;
+  width: 130px;
+  height: 41px;
+  background-image: url(/images/common-btns.png);
+}
+
+.wrapper-product-show {
+  width: 650px;
+}
+
+.area-title {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-wrapper {
+  border-top: 7px #ede9c5 solid;
+  background-color: $background-white-color;
+  overflow: auto;
+
+  &__title {
+    padding: 15px 20px 20px;
+    margin: 0 0 10px;
+    color: $border-black-color;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 38px;
+    word-break: normal;
+  }
+
+  &__left {
+    float: left;
+    margin: 0 0 10px 20px;
+  }
+
+  &__image {
+    width: 169px;
+    height: 198px;
+
+    &:hover {
+      border-radius: 4px;
+      box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.3);
+    }
+  }
+
+  &__info {
+    margin-bottom: 25px;
+    padding: 0 20px 0 30px;
+    float: left;
+    font-size: 12px;
+    width: 410px;
+
+    &__status {
+      margin: 10px 0 15px;
+
+      li {
+        display: inline-block;
+
+        span {
+          font-size: 15px;
+          font-weight: bold;
+          padding: 0 2px 0 3px;
+        }
+      }
+
+      .fa-user {
+        font-size: 17px;
+        color: $hover-red-color;
+      }
+
+      .fa-star {
+        font-size: 17px;
+        color: $star-orange-color;
+      }
+
+      .fa-comment {
+        font-size: 17px;
+        color: $link-lightblue-color;
+      }
+    }
+
+
+    &__author {
+      a {
+        font-size: 14px;
+        color: $link-lightblue-color;
+
+        &:hover {
+          color: $hover-red-color;
+        }
+      }
+    }
+
+    &__publisher {
+      margin: 10px 0 15px;
+
+      .company-name {
+        font-size: 14px;
+      }
+
+      .release-date {
+        font-size: 12px;
+      }
+    }
+
+    &__btn-amazon {
+      width: 212px;
+      height: 42px;
+
+      &:hover {
+        border-radius: 4px;
+        box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.3);
+      }
+    }
+
+    &__btn-others {
+      margin-top: 20px;
+      width: 360px;
+
+      li {
+        padding: 10px 7px 0 0;
+        display: inline-block;
+
+        a {
+          border-radius: 3px;
+          display: block;
+          border: 1px $border-gray-color solid;
+
+          &:hover {
+            border-radius: 4px;
+            border: 1px #999 solid;
+          }
+        }
+
+        .main-shop-btn {
+          padding: 7px 9px 5px;
+          width: 90px;
+          height: 17px;
+        }
+
+        .other-shop-btn {
+          width: 108px;
+          height: 29px;
+        }
+      }
+    }
+  }
+
+  &__more {
+    color: #bbb;
+    overflow: auto;
+    padding: 0 20px 20px;
+    font-size: 12px;
+    clear: both;
+
+    &__link {
+      float :left;
+
+      a {
+        color: #bbb;
+
+        &:hover {
+          text-decoration: none;
+          color: #666;
+        }
+      }
+    }
+
+    &__info {
+      float :right;
+    }
+  }
+}
+
+.row-title {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 15px;
+  padding: 0 0 8px;
+  width: 100%;
+  border-bottom: 5px #333 solid;
+}
+
+.review-wrapper {
+  overflow: auto;
+
+  &__sort-by-rating {
+    text-align: center;
+    font-size: 12px;
+    margin: 15px 0;
+
+
+    li {
+      padding-right: 15px;
+      display: inline-block;
+
+      a {
+        color: #bbb;
+      }
+    }
+  }
+}
+
+
+.review-area {
+  overflow: auto;
+  font-size: 12px;
+
+  &__summary {
+    border-radius: 2px;
+    border: 1px silver solid;
+    margin-left: 12px;
+    float: left;
+    background-color: $background-white-color;
+    margin-bottom: 20px;
+
+    &__user-info {
+      padding: 9px 20px ;
+      background-color: $menu-gray-color;
+    }
+
+    &__rating {
+      padding: 20px 20px 0;
+      color: $star-orange-color;
+    }
+
+    &__review-text {
+      width: 560px;
+      padding: 20px;
+      margin-bottom: 10px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &__reaction {
+      margin: 30px 0 20px;
+      overflow: auto;
+
+      &-like {
+        float: left;
+        height: 25px;
+        width: 115px;
+        padding: 0 0 0 20px;
+      }
+
+      .like-count {
+        border: 1px $border-gray-color solid;
+        margin-left: 10px;
+        float: left;
+        padding: 2px 5px 3px;
+      }
+
+      &-comment {
+        color: $text-darkgray-color;
+        height: 25px;
+        font-size: 12px;
+        float: right;
+        padding-right: 20px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.review-more-btns {
+  text-align: center;
+
+  .review-more-btn {
+    width: 300px;
+    height: 40px;
+  }
+
+  &-amazon {
+  display: inline-block;
+  margin-right: 30px;
+  }
+
+  &-rakuten {
+  display: inline-block;
+  }
+}
+
+.social-btn-box-area {
+  text-align: center;
+
+  &__list {
+    margin: 0 15px;
+    display: inline-block;
+    font-size: 12px;
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    span {
+      border-radius: 3px 3px 0 0;
+      display: block;
+      background-color: $background-white-color;
+    }
+
+    &-facebook {
+      width: 72px;
+      margin-bottom: 10px;
+    }
+
+    &-hatena {
+      width: 84px;
+    }
+  }
+
+  .twitter-btn {
+    width: 56px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .facebook-btn {
+    width: 72px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+  }
+
+  .hatena-btn {
+    width: 84px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.additional-info-area {
+  margin: 20px 0 4px 0;
+  padding: 20px 20px 10px;
+  background-color: $background-white-color;
+  border: 1px $border-gray-color solid;
+  overflow: auto;
+
+  &__book-list {
+    width: 290px;
+    margin-bottom: 15px;
+
+
+    &-left {
+      float: left;
+    }
+
+    &-right {
+      float: right;
+    }
+
+    li {
+      margin: 0 0 7px 20px;
+      list-style: circle;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      a {
+        color: #656565;
+        font-size: 12px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__link {
+    clear: both;
+    font-size: 12px;
+    margin-bottom: 10px;
+    a {
+      text-decoration: none;
+      color: $link-lightblue-color;
+
+      &:hover {
+        color: $hover-red-color;
+      }
+    }
+  }
+}
+
+.user-status-area {
+  margin-top: 50px;
+
+  &__user-row {
+    margin-bottom: 20px;
+
+    li {
+      padding-bottom: 15px;
+      width: 212px;
+      display: inline-block;
+
+      &:hover {
+        background-color: $background-white-color;
+      }
+
+      a {
+        color: #333;
+        overflow: auto;
+        display: block;
+      }
+    }
+
+    .user-text {
+      float: left;
+      padding: 0 5px 0 10px;
+
+      &__name {
+        margin-bottom: 5px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      &__rating {
+        color: $border-gray-color;
+        font-size: 10px;
+      }
+
+      &__created_at {
+        color: $border-gray-color;
+        font-size: 10px;
+      }
+    }
+  }
+}

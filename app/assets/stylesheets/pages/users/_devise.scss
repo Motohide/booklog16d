@@ -40,7 +40,7 @@
         font-weight: normal;
         line-height: 38px;
         margin: 0 10 0 10px;
-        color: #1e1e1e;
+        color: $border-black-color;
         padding-top: 30px;
       }
 
@@ -52,7 +52,7 @@
         line-height: 1.7em;
 
         a {
-          color: #4ea6cc;
+          color: $link-lightblue-color;
           text-decoration: none;
 
           &:hover {
@@ -63,7 +63,7 @@
     }
 
       &__sign-in-field {
-        background-color: white;
+        background-color: $background-white-color;
         border-radius: 3px;
         margin-bottom: 40px;
         padding: 40px 30px;
@@ -81,7 +81,7 @@
             width: calc(100% - 142px);
             float: right;
             padding: 7px;
-            border: 1px #1e1e1e solid;
+            border: 1px $border-black-color solid;
             border-radius: 3px;
           }
         }
@@ -95,7 +95,7 @@
           font-size: 20px;
           margin: 0 auto;
           border: none;
-          color: white;
+          color: $text-white-color;
           width: 100%;
           margin-bottom: 10px;
 
@@ -136,7 +136,7 @@
             text-align: center;
 
               .fa {
-                color: white;
+                color: $text-white-color;
                 text-decoration: none;
               }
 
@@ -166,7 +166,7 @@
 
           .create-new-account-btn {
             background-color: $hover-red-color;
-            color: white;
+            color: $text-white-color;
             padding: 15px;
             width: calc(100% - 30px);
             display: block;
@@ -194,7 +194,7 @@
 
       .body-wrapper {
         border-top:  5px #333 solid;
-        background-color: white;
+        background-color: $background-white-color;
         width: 600px;
         line-height: 1.4em;
       }
@@ -272,9 +272,9 @@
       .registration-info {
         width: 320px;
         height: 21px;
-        background-color: white;
+        background-color: $background-white-color;
         padding: 7px;
-        border: 1px #1e1e1e solid;
+        border: 1px $border-black-color solid;
         font-size: 14px;
         border-radius: 3px;
       }
@@ -296,7 +296,7 @@
       select {
         font-size: 14px;
         height: 30px;
-        border: 1px #1e1e1e solid;
+        border: 1px $border-black-color solid;
 
         &__year {
           width: 67px;
@@ -319,7 +319,7 @@
 
         .link-condition {
           text-decoration: none;
-          color: #4ea6cc;
+          color: $link-lightblue-color;
 
           &:hover {
             color: $hover-red-color;
@@ -337,7 +337,7 @@
           padding: 20px 0;
           border-style: none;
           border-radius: 5px;
-          color: white;
+          color: $text-white-color;
           text-decoration: none;
           display: block;
           &:hover {

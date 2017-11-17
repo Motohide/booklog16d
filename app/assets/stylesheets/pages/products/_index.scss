@@ -106,7 +106,7 @@
             }
         }
         .review-text {
-          background-color: #fff;
+          background-color: $background-white-color;
           font-size: 16px;
           padding: 10px 15px;
 
@@ -232,7 +232,7 @@
 
     .popular-author {
       clear: both;
-      background-color: white;
+      background-color: $background-white-color;
       border: 1px $border-gray-color solid;
       padding: 15px;
 
@@ -255,9 +255,9 @@
       .authors-name {
         float: left;
         margin: 0 4px 4px 0;
-        color: #7e7e7e;
+        color: $btn-text-gray-color;
         text-decoration: none;
-        border: 1px #CBCBCB solid;
+        border: 1px $border-dovegray-color solid;
         border-radius: 3px;
         font-size: 12px;
         padding: 3px 7px;
@@ -279,7 +279,7 @@
     &__body {
       display: inline-block;;
       text-decoration: none;
-      color: white;
+      color: $text-white-color;
       background-color: black;
       width: 60px;
       height: 19px;

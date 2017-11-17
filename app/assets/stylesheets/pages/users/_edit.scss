@@ -1,14 +1,23 @@
 .profile-setting {
   font-size: 34px;
-  color: #1e1e1e;
+  color: $border-black-color;
   line-height: 38px;
   margin-bottom: 10px;
 }
 
 .lead {
   font-size: 14px;
-  color: #1e1e1e;
+  color: $border-black-color;
   margin: 20px 0;
+
+  a {
+    text-decoration: none;
+    color: $text-lightblue-color;
+
+    &:hover {
+      color: $hover-red-color;
+    }
+  }
 }
 
 .form-title {
@@ -19,7 +28,7 @@
 
 .link_to_mypage {
   font-size: 12px;
-  color: #4ea6cc;
+  color: $link-lightblue-color;
   text-decoration: none;
   float: right;
 
@@ -36,7 +45,7 @@
     display: inline-block;
 
     a {
-      color: #4ea6cc;
+      color: $link-lightblue-color;
       text-decoration: none;
 
       &:hover {
@@ -80,7 +89,7 @@
   .right-contents {
     float: left;
     font-size: 13px;
-    background-color: white;
+    background-color: $background-white-color;
     width: calc(100% - 180px);
 
     input {
@@ -89,7 +98,7 @@
 
       &[type="text"] {
         margin: 25px 0 25px 25px;
-        border: 1px #1e1e1e solid;
+        border: 1px $border-black-color solid;
         width: calc(100% - 50px);
       }
 
@@ -159,11 +168,11 @@
   background-color: $background-beige-color;
 
   .update-btn {
-    background-color: #4ea6cc;
+    background-color: $link-lightblue-color;
     font-size: 12px;
     border-radius: 5px;
     padding: 10px 20px;
-    color: white;
+    color: $text-white-color;
     text-align: center;
     border-style: none;
     margin: 0 auto;
@@ -186,9 +195,9 @@
 
   &__title {
     margin: 0 0 15px;
-    border: 3px #4ea6cc solid;
+    border: 3px $link-lightblue-color solid;
     text-align: center;
-    background-color: white;
+    background-color: $background-white-color;
     border-radius: 10px;
     padding: 10px 15px;
     font-weight: bold;
@@ -215,7 +224,7 @@
     }
 
     li {
-      background-color: #fff;
+      background-color: $background-white-color;
       border-left: 3px $border-gray-color solid;
       border-right: 3px $border-gray-color solid;
       border-bottom: 1px $border-gray-color solid;
