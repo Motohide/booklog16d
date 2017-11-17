@@ -33,16 +33,17 @@
 
       .tab-menu
         %ul.edit-tab
+          %li.tab
+            = link_to "レビュー"
           %li
-          = link_to "レビュー"
+            = link_to "フレーズ"
           %li
-          = link_to "フレーズ"
+            = link_to "再読記録"
           %li
-          = link_to "再読記録"
-          %li
-          = link_to "削除"
+            = link_to "削除"
         .review-title
           = link_to "あなたのレビューを見る"
+
       .form-wrapper.review-form
         .input-row.input-row__reading-status
           .left-contents
