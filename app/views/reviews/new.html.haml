@@ -33,10 +33,14 @@
 
       .tab-menu
         %ul.edit-tab
-          %li レビュー
-          %li フレーズ
-          %li 再読記録
-          %li 削除
+          %li
+          = link_to "レビュー"
+          %li
+          = link_to "フレーズ"
+          %li
+          = link_to "再読記録"
+          %li
+          = link_to "削除"
         .review-title
           = link_to "あなたのレビューを見る"
       .form-wrapper.review-form

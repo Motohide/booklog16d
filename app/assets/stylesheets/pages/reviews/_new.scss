@@ -11,7 +11,7 @@ h1 {
 
 .book-introduce {
   overflow: auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 20px;
   background-color: #f0f0f0;
   border-top:5px #333 solid;
@@ -90,6 +90,32 @@ h1 {
       }
     }
   }
+}
+
+.tab-menu {
+
+  .edit-tab {
+    float: left;
+
+  li {
+    float: left;
+    margin-right: 11px;
+    text-align: center;
+    line-height: 36px;
+  }
+
+  a {
+    background-color: #fff;
+    padding: 10px 12px;
+    border-top: 1px #cdcdcd solid;
+    border-right: 1px #cdcdcd solid;
+    border-left: 1px #cdcdcd solid;
+    text-decoration: none;
+    color: #555;
+    font-size: 12px;
+  }
+}
+
 }
 
 .review-title {
