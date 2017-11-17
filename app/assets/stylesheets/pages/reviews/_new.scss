@@ -204,19 +204,19 @@ h1 {
   &__rating {
     font-size: 13px;
     padding: 25px;
-  }
 
-  img {
-    width: 20px;
-    height: 19px;
-  }
+    img {
+      width: 20px;
+      height: 19px;
+    }
 
-  img.star-clear {
-    width: 62px;
-    height: 18px;
-    border:1px #a1a1a1 solid;
-    border-radius: 3px;
-    margin-left: 5px;
+    img.star-clear {
+      width: 62px;
+      height: 18px;
+      border:1px #a1a1a1 solid;
+      border-radius: 3px;
+      margin-left: 5px;
+    }
   }
 
   &__catagory {
