@@ -33,117 +33,131 @@
 
       .tab-menu
         %ul.edit-tab
-          %li.tab
-            = link_to "レビュー"
+          %li.active
+            = link_to "レビュー", "#"
           %li
-            = link_to "フレーズ"
+            = link_to "フレーズ","#"
           %li
-            = link_to "再読記録"
+            = link_to "再読記録","#"
           %li
-            = link_to "削除"
+            = link_to "削除","#"
         .review-title
           = link_to "あなたのレビューを見る"
 
-      .form-wrapper.review-form
-        .input-row.input-row__reading-status
-          .left-contents
-            読書状況
-          .right-contents
-            .right-contents__edit-status
-              %input{ type: "radio"}
-              %label.status-text 未設定
-              %input{ type: "radio"}
-              %label.status-text 読みたい
-              %input{ type: "radio"}
-              %label.status-text 今読んでいる
-              %input{ type: "radio"}
-              %label.status-text 読み終わった
-              %input{ type: "radio"}
-              %label.status-text 積読
+      #tab-box
+        .form-wrapper.review-form.active
+          .input-row.input-row__reading-status
+            .left-contents
+              読書状況
+            .right-contents
+              .right-contents__edit-status
+                %input{ type: "radio"}
+                %label.status-text 未設定
+                %input{ type: "radio"}
+                %label.status-text 読みたい
+                %input{ type: "radio"}
+                %label.status-text 今読んでいる
+                %input{ type: "radio"}
+                %label.status-text 読み終わった
+                %input{ type: "radio"}
+                %label.status-text 積読
 
-        .input-row.input-row__evaluation
-          .left-contents
-            評価
-          .right-contents
-            .right-contents__rating
-              - 5.times do
-                = image_tag "rating/star-off.png", class:"star"
-              = image_tag "rating/star_clear.png", class:"star-clear"
+          .input-row.input-row__evaluation
+            .left-contents
+              評価
+            .right-contents
+              .right-contents__rating
+                - 5.times do
+                  = image_tag "rating/star-off.png", class:"star"
+                = image_tag "rating/star_clear.png", class:"star-clear"
 
-        .input-row.input-row__catagory
-          .left-contents
-            カテゴリ
-          .right-contents
-            .right-contents__catagory
-              .right-contents__setting
-                %select
-                  %option 未設定
-              .right-contents__add-catagory
-                %a{href:""}
-                  %i.fa.fa-plus-circle
-                  新規追加
+          .input-row.input-row__catagory
+            .left-contents
+              カテゴリ
+            .right-contents
+              .right-contents__catagory
+                .right-contents__setting
+                  %select
+                    %option 未設定
+                .right-contents__add-catagory
+                  %a{href:""}
+                    %i.fa.fa-plus-circle
+                    新規追加
 
-        .input-row.input-row__impression
-          .left-contents.left-contents__biography
-            レビュー・感想
-          .right-contents
-            .impression-text
-              %textarea{placeholder: "レビューや感想を書く", class:"left-contents__biography"}
-            .checkbox
-              %label
-                %input{type: "checkbox"}
-                ネタバレの内容を含む
-            %ul
-              %li HTMLタグ使用不可
-
-        .input-row.input-row__sns
-          .left-contents
-            SNS投稿設定
-          .right-contents
-            .social-network-area
-              .social-network.twitter
-                .social-network__left
-                  %i.fa.fa-twitter-square
-                  %span 投稿未設定
-                .social-network__right
-                  = link_to "設定を変更する", ""
-              .social-network.facbook
-                .social-network__left
-                  %i.fa.fa-facebook-square
-                  %span 投稿未設定
-                .social-network__right
-                  = link_to "設定を変更する", ""
-
-        .input-row.input-row__tag
-          .left-contents
-            タグ
-          .right-contents
-            .tag-text
-              %textarea{placeholder: "例：ドラえもん"}
+          .input-row.input-row__impression
+            .left-contents.left-contents__biography
+              レビュー・感想
+            .right-contents
+              .impression-text
+                %textarea{placeholder: "レビューや感想を書く", class:"left-contents__biography"}
+              .checkbox
+                %label
+                  %input{type: "checkbox"}
+                  ネタバレの内容を含む
               %ul
-                %li タグはスペース区切りで複数入力できます。
+                %li HTMLタグ使用不可
 
-        .input-row.input-row__note
-          .left-contents.left-contents__biography
-            読書メモ(非公開)
-          .right-contents
-            %textarea{ placeholder: "自分用のメモを入力。例）山下書店で買った、高橋さんがおすすめされた、図書館にあったなど", class:"left-contents__biography"}
-            %ul
-              %li HTMLタグ使用不可 / あなた以外は見ることができません
+          .input-row.input-row__sns
+            .left-contents
+              SNS投稿設定
+            .right-contents
+              .social-network-area
+                .social-network.twitter
+                  .social-network__left
+                    %i.fa.fa-twitter-square
+                    %span 投稿未設定
+                  .social-network__right
+                    = link_to "設定を変更する", ""
+                .social-network.facbook
+                  .social-network__left
+                    %i.fa.fa-facebook-square
+                    %span 投稿未設定
+                  .social-network__right
+                    = link_to "設定を変更する", ""
 
-        .input-row.input-row__option
-          .left-contents
-            オプション
-          .right-contents
-            .right-contents__nonpublic
-              %label
-                %input{type: "checkbox"}
-                非公開で登録
+          .input-row.input-row__tag
+            .left-contents
+              タグ
+            .right-contents
+              .tag-text
+                %textarea{placeholder: "例：ドラえもん"}
+                %ul
+                  %li タグはスペース区切りで複数入力できます。
+
+          .input-row.input-row__note
+            .left-contents.left-contents__biography
+              読書メモ(非公開)
+            .right-contents
+              %textarea{ placeholder: "自分用のメモを入力。例）山下書店で買った、高橋さんがおすすめされた、図書館にあったなど", class:"left-contents__biography"}
               %ul
-                %li 非公開で登録された本は、本棚の所有者以外は閲覧できません。
+                %li HTMLタグ使用不可 / あなた以外は見ることができません
 
-        .btn-wrapper
-          %input{value: "登録情報を変更する", type: "submit", class:"update-btn"}
+          .input-row.input-row__option
+            .left-contents
+              オプション
+            .right-contents
+              .right-contents__nonpublic
+                %label
+                  %input{type: "checkbox"}
+                  非公開で登録
+                %ul
+                  %li 非公開で登録された本は、本棚の所有者以外は閲覧できません。
+
+          .btn-wrapper
+            %input{value: "登録情報を変更する", type: "submit", class:"update-btn"}
+
+
+
+        .review-form
+        .review-form
+
+        .form-wrapper.review-form.delete-from-bookshelf
+          %p このアイテムを本棚から削除します。あなたのレビューや再読記録も削除されますが、フレーズは別途削除が必要です。
+
+          .btn-wrapper
+            %input{value: "本棚から削除する", type: "submit", class:"delete-btn "}
+
+
 
     .side-bar
       .advertisement
