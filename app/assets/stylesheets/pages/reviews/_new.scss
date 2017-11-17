@@ -97,11 +97,9 @@ h1 {
   .edit-tab {
 
   li {
-    background-color: #fff;
     border-top: 1px #cdcdcd solid;
     border-right: 1px #cdcdcd solid;
     border-left: 1px #cdcdcd solid;
-    height: 35px;
     float: left;
     margin-right: 15px;
     text-align: center;
@@ -111,28 +109,25 @@ h1 {
       border-top: 1px #4ea6cc solid;
       border-left: 1px #4ea6cc solid;
       border-right: 1px #4ea6cc solid;
-      background-color: #4ea6cc;
     }
   }
 
  a {
+    height: 34px;
     display: block;
     padding: 0 12px 0 10px;
     text-decoration: none;
     color: #555;
     font-size: 12px;
     min-width: 70px;
-
-    &:hover {
-      color: #fff;
-    }
   }
 
     li.active {
-      background-color: black;
       border-color: black;
 
       a {
+        border-color: black;
+        background-color: black;
         color: #fff;
       }
     }
