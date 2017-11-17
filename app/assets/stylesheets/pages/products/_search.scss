@@ -113,6 +113,11 @@
       text-decoration: none;
       font-weight: bold;
       color: $text-lightblue-color;
+
+
+      &:hover {
+        color: $hover-red-color;
+      }
     }
   }
 
@@ -132,14 +137,33 @@
           font-weight: 700;
           font-size: 14px;
           color: #1e1e1e;
+
+
+          &:hover {
+            color: $text-lightblue-color;
+            text-decoration: none;
+          }
         }
       }
 
-      .count-who-registerd-this-product {
+      .product-evaluation {
         margin-bottom: 15px;
         font-size: 12px;
         font-weight: bold;
         color: $hover-red-color;
+        display: inline-block;
+
+        &__count {
+          color: $hover-red-color;
+        }
+
+        &__average {
+          color: $star-orange-color;
+        }
+
+        &__review {
+          color: $text-lightblue-color;
+        }
       }
 
       .product-info {
@@ -158,8 +182,6 @@
             }
           }
         }
-
-
       }
     }
 
@@ -184,6 +206,10 @@
         height: 57px;
         background-image: url(/images/list_common.gif);
         background-position: 0px -115px;
+
+        &:hover {
+          background-position: 0px -182px;
+        }
 
         &-secretly {
           margin: 0 auto;
