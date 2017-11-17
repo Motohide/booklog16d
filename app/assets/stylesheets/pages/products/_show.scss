@@ -29,7 +29,7 @@
   &__title {
     padding: 15px 20px 20px;
     margin: 0 0 10px;
-    color: #1e1e1e;
+    color: $border-black-color;
     font-weight: normal;
     font-size: 34px;
     line-height: 38px;
@@ -132,7 +132,7 @@
         a {
           border-radius: 3px;
           display: block;
-          border: 1px #cdcdcd solid;
+          border: 1px $border-gray-color solid;
 
           &:hover {
             border-radius: 4px;
@@ -255,7 +255,7 @@
       }
 
       .like-count {
-        border: 1px #cdcdcd solid;
+        border: 1px $border-gray-color solid;
         margin-left: 10px;
         float: left;
         padding: 2px 5px 3px;
@@ -353,7 +353,7 @@
   margin: 20px 0 4px 0;
   padding: 20px 20px 10px;
   background-color: white;
-  border: 1px #cdcdcd solid;
+  border: 1px $border-gray-color solid;
   overflow: auto;
 
   &__book-list {

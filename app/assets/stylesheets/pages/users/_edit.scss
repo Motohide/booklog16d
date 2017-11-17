@@ -1,13 +1,13 @@
 .profile-setting {
   font-size: 34px;
-  color: #1e1e1e;
+  color: $border-black-color;
   line-height: 38px;
   margin-bottom: 10px;
 }
 
 .lead {
   font-size: 14px;
-  color: #1e1e1e;
+  color: $border-black-color;
   margin: 20px 0;
 
   a {
@@ -98,7 +98,7 @@
 
       &[type="text"] {
         margin: 25px 0 25px 25px;
-        border: 1px #1e1e1e solid;
+        border: 1px $border-black-color solid;
         width: calc(100% - 50px);
       }
 

@@ -40,7 +40,7 @@
         font-weight: normal;
         line-height: 38px;
         margin: 0 10 0 10px;
-        color: #1e1e1e;
+        color: $border-black-color;
         padding-top: 30px;
       }
 
@@ -81,7 +81,7 @@
             width: calc(100% - 142px);
             float: right;
             padding: 7px;
-            border: 1px #1e1e1e solid;
+            border: 1px $border-black-color solid;
             border-radius: 3px;
           }
         }
@@ -274,7 +274,7 @@
         height: 21px;
         background-color: white;
         padding: 7px;
-        border: 1px #1e1e1e solid;
+        border: 1px $border-black-color solid;
         font-size: 14px;
         border-radius: 3px;
       }
@@ -296,7 +296,7 @@
       select {
         font-size: 14px;
         height: 30px;
-        border: 1px #1e1e1e solid;
+        border: 1px $border-black-color solid;
 
         &__year {
           width: 67px;

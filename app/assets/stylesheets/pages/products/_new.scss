@@ -26,7 +26,7 @@ h1 {
       overflow: auto;
       clear: both;
       padding: 7px;
-      border: 1px #cdcdcd solid;
+      border: 1px $border-gray-color solid;
       border-radius: 3px;
     }
 
@@ -36,7 +36,7 @@ h1 {
       height: 40px;
       padding: 25px;
       background-color: #e8f6f5;
-      border-bottom: 1px #cdcdcd solid;
+      border-bottom: 1px $border-gray-color solid;
     }
 
     &__right-content {
@@ -45,7 +45,7 @@ h1 {
       width: 340px;
       padding: 25px;
       background-color: white;
-      border-bottom: 1px #cdcdcd solid;
+      border-bottom: 1px $border-gray-color solid;
       font-size: 13px;
     }
 
@@ -55,7 +55,7 @@ h1 {
       margin: 20px 240px;
       color: #fff;
       background-color: #38aef0;
-      border: 1px #cdcdcd solid;
+      border: 1px $border-gray-color solid;
       border-radius: 5px;
     }
   }

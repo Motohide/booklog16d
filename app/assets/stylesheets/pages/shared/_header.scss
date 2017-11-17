@@ -32,14 +32,14 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
 }
 
 .user-sign_in-btn {
-  background-color: #1e1e1e;
+  background-color: $border-black-color;
 
   &:hover {
     background-color: $link-lightblue-color;
   }
 }
 .user-sign_out-btn {
-  background-color: #1e1e1e;
+  background-color: $border-black-color;
 
   &:hover {
     background-color: $hover-red-color;
