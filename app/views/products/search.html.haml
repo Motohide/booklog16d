@@ -22,7 +22,13 @@
     .lead
       まずは商品名、著者名、出版社名などを入力して検索してください。
       %br
-      例えば...村上春樹や 宇多田ヒカルや ジブリなど。
+      例えば...
+      = link_to "村上春樹",""
+      や
+      = link_to "宇多田ヒカル",""
+      や
+      = link_to "ジブリ",""
+      など。
 
     %h3.search-area__tags
       <検索キーワード>の作品ランキング・新刊情報・電子書籍
@@ -50,42 +56,7 @@
           おすすめ順
         %li
           = link_to "発売日順","",class:"search-wrapper__order-release-date"
-      .search-wrapper__result
-        .search-wrapper__result-top
-          .product-name
-            = link_to "テニスクラシックBreak 2017年 12 月号 [雑誌]",""
-          .count-who-registerd-this-product
-            1人が登録
-          .product-info
-            %span 雑誌
-            %span 2017年11月4日
-            %span
-              = image_tag "store/amazon-mini.gif"
-              Amazon.co.jpで見る
-        .search-wrapper__result-image
-          = image_tag "karioki2.jpg"
-        .search-wrapper__result-register
-          = link_to "", "", class:"add-product-btn"
-          = link_to "", "", class:"add-product-btn-secretly"
-      .search-wrapper__result
-        .search-wrapper__result-top
-          .product-name
-            = link_to "テニスクラシックBreak 2017年 12 月号 [雑誌]",""
-          .count-who-registerd-this-product
-            1人が登録
-          .product-info
-            %span 雑誌
-            %span 2017年11月4日
-            %span
-              = image_tag "store/amazon-mini.gif"
-              Amazon.co.jpで見る
-        .search-wrapper__result-image
-          = image_tag "karioki2.jpg"
-        .search-wrapper__result-register
-          = link_to "", "", class:"add-product-btn"
-          = link_to "", "", class:"add-product-btn-secretly"
-    //上のadd-product-btn のところはbackground-imageでやる
-
+      = render "search-result"
 
     .side-bar
       .advertisement
