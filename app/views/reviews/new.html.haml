@@ -31,16 +31,22 @@
             %li
               = link_to "ブログで紹介","",  class:"item-info-btn item-info-btn-blue"
 
-      .review-title
-        = link_to "あなたのレビューを見る"
+      .tab-menu
+        %ul.edit-tab
+          %li レビュー
+          %li フレーズ
+          %li 再読記録
+          %li 削除
+        .review-title
+          = link_to "あなたのレビューを見る"
       .form-wrapper.review-form
         .input-row.input-row__reading-status
           .left-contents
             読書状況
           .right-contents
             .right-contents__edit-status
-              %input{ type: "radio", name:"aaaa"}
-              %label.status-text{name:"aaaa"} 未設定
+              %input{ type: "radio"}
+              %label.status-text 未設定
               %input{ type: "radio"}
               %label.status-text 読みたい
               %input{ type: "radio"}
