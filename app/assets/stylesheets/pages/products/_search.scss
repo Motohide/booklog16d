@@ -1,0 +1,218 @@
+.search-area {
+
+  &__input {
+    font-size: 14px;
+    width: 230px;
+    border-radius: 3px;
+    border: 1px $border-black-color solid;
+    padding: 7px;
+  }
+
+  select {
+    margin-left: 10px;
+    font-size: 14px;
+    border: 1px $border-black-color solid;
+    height: 30px;
+  }
+
+  .submit-btn {
+    height: 37px;
+    padding: 0 30px;
+    margin-left: 10px;
+    background-color: $link-lightblue-color;
+    color: $text-white-color;
+    border-style: none;
+
+
+    i {
+      display: inline-block;
+      font-size: 17px;
+    }
+  }
+
+  &__tags {
+    margin: 0 0 10px;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  &__sort {
+    margin: 10px 0 20px;
+
+    &-btn {
+      text-decoration: none;
+      font-size: 12px;
+      border-radius: 3px;
+      padding: 3px 7px;
+      border: 1px $border-dovegray-color solid;
+      background-color: $background-white-color;
+      color: $btn-text-gray-color;
+    }
+  }
+}
+
+.tab-menu {
+
+  li {
+    font-size: 12px;
+    position: relative;
+    float: left;
+    margin: 0 11px 0 0;
+    height: 35px;
+    text-align: center;
+    line-height: 36px;
+
+
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 0 12px 0 10px;
+      min-width: 70px;
+      border-top: 1px $border-gray-color solid;
+      border-right: 1px $border-gray-color solid;
+      border-left: 1px $border-gray-color solid;
+      background: $background-white-color;
+      color: #555;
+    }
+  }
+}
+
+.search-wrapper {
+  float: left;
+  clear: both;
+  margin: 2px 0px 0;
+  width: 640px;
+  border: 5px solid $border-black-color;
+  background-color: $background-white-color;
+
+  &__order {
+    background-color: #e8f6f5;
+    padding: 15px;
+
+    li {
+      font-size: 12px;
+      display: inline;
+    }
+
+    &-title {
+      font-weight: bold;
+    }
+
+    &-recommend {
+      font-weight: bold;
+      color: $hover-red-color;
+    }
+
+    &-release-date {
+      text-decoration: none;
+      font-weight: bold;
+      color: $text-lightblue-color;
+
+      &:hover {
+        color: $hover-red-color;
+      }
+    }
+  }
+
+  &__result {
+    overflow: auto;
+    border-top: 5px solid $border-black-color;
+
+    &-top {
+      padding-left: 20px;
+      border-bottom: 1px $border-gray-color solid;
+
+      .product-name {
+        padding-top: 10px;
+        margin-bottom: 10px;
+
+        a {
+          font-weight: 700;
+          font-size: 14px;
+          color: $border-black-color;
+
+          &:hover {
+            color: $text-lightblue-color;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .product-evaluation {
+        margin-bottom: 15px;
+        font-size: 12px;
+        font-weight: bold;
+        color: $hover-red-color;
+        display: inline-block;
+
+        &__count {
+          color: $hover-red-color;
+        }
+
+        &__average {
+          color: $star-orange-color;
+        }
+
+        &__review {
+          color: $text-lightblue-color;
+        }
+      }
+
+      .product-info {
+        padding: 0 10px 10px 0px;
+
+        span {
+          font-size: 12px;
+
+          &:after {
+            content: " /";
+          }
+
+          &:last-child {
+            &:after {
+              content: "";
+            }
+          }
+        }
+      }
+    }
+
+    &-image {
+      background-color: $menu-gray-color;
+      padding: 30px 0;
+      width: 190px;
+      text-align: center;
+      float: left;
+    }
+
+    &-register {
+      float: left;
+      width: calc(100% - 190px);
+      padding: 45px 0;
+      height: 100%;
+
+      .add-product-btn {
+        margin: 10px auto 30px;
+        display: block;
+        width: 207px;
+        height: 57px;
+        background-image: url(/images/list_common.gif);
+        background-position: 0px -115px;
+
+        &:hover {
+          background-position: 0px -182px;
+        }
+
+        &-secretly {
+          margin: 0 auto;
+          display: block;
+          width: 144px;
+          height: 41px;
+          background-image: url(/images/list_common.gif);
+          background-position: -212px -115px;
+        }
+      }
+    }
+  }
+}

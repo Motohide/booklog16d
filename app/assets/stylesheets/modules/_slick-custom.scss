@@ -1,0 +1,37 @@
+.slick_container {
+    width:650px;
+    margin:0 auto;
+    position:relative;
+
+    .customed-btn {
+      width: 32px;
+      height: 32px;
+    }
+}
+
+.slick-list {
+  left: 72px;
+}
+
+ .slick-prev, .slick-next {
+      width: 32px;
+      height: 32px;
+}
+
+.slick-prev:before, .slick-next:before {
+    content:"";
+}
+
+button.slick-prev, button.slick-next {
+    z-index:2;
+}
+.slick-prev{
+  left:0px;
+}
+.slick-next{
+  right:0px;
+}
+
+.slick-arrow{
+  z-index:10;
+}

@@ -3,7 +3,7 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
 
 .devise-btns {
   font-size: 12px;
-  color: white;
+  color: $text-white-color;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -18,7 +18,7 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
 
   a {
     text-decoration: none;
-    color: white;
+    color: $text-white-color;
   }
 
   .fa-facebook-square{
@@ -26,20 +26,20 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
   }
 
   .fa-twitter-square{
-    color: #4ea6cc;
+    color: $link-lightblue-color;
 
   }
 }
 
 .user-sign_in-btn {
-  background-color: #1e1e1e;
+  background-color: $border-black-color;
 
   &:hover {
-    background-color: #4ea6cc;
+    background-color: $link-lightblue-color;
   }
 }
 .user-sign_out-btn {
-  background-color: #1e1e1e;
+  background-color: $border-black-color;
 
   &:hover {
     background-color: $hover-red-color;
@@ -49,11 +49,12 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
 .header__wrapper {
  position: fixed;
  width: 100vw;
+z-index: 1;
 }
 
   .global-navi-wrapper {
     background-color: $globalnavi-blue-color;
-    color: white;
+    color: $text-white-color;
     overflow: auto;
 
     .booklog-icon {
@@ -74,7 +75,7 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
 
       .link_to-cancel {
         text-decoration: none;
-        color: white;
+        color: $text-white-color;
 
         &:hover {
           opacity: 0.6;
@@ -105,7 +106,7 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
 
     &__search-btn {
       float: left;
-      background-color: white;
+      background-color: $background-white-color;
       color: #666;
       height: 23px;
       padding: 2px 6px 3px;
@@ -129,7 +130,7 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
     .icon {
       padding: 2px 6px;
       font-size: 6px;
-      color: white;
+      color: $text-white-color;
       background-color: #E27A70;
       border-radius: 4px;
       font-weight: bold;
