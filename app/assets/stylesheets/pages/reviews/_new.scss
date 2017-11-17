@@ -95,24 +95,37 @@ h1 {
 .tab-menu {
 
   .edit-tab {
-    float: left;
 
   li {
-    float: left;
-    margin-right: 11px;
-    text-align: center;
-    line-height: 36px;
-  }
-
-  a {
     background-color: #fff;
-    padding: 10px 12px;
     border-top: 1px #cdcdcd solid;
     border-right: 1px #cdcdcd solid;
     border-left: 1px #cdcdcd solid;
+    height: 35px;
+    float: left;
+    margin-right: 15px;
+    text-align: center;
+    line-height: 32px;
+
+    &:hover {
+      border-top: 1px #4ea6cc solid;
+      border-left: 1px #4ea6cc solid;
+      border-right: 1px #4ea6cc solid;
+      background-color: #4ea6cc;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0 12px 0 10px;
     text-decoration: none;
     color: #555;
     font-size: 12px;
+    min-width: 70px;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }
 
@@ -126,7 +139,16 @@ h1 {
     text-decoration: none;
     color: #4ea6cc;
     font-weight: bold;
+    vertical-align: middle;
+
+    &:hover {
+      color: #da4740;
+    }
   }
+}
+
+.form-wrapper.review-form {
+  margin-top: 0;
 }
 
 .input-row__reading-status {
