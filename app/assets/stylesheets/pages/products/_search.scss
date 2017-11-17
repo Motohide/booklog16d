@@ -45,9 +45,9 @@
       font-size: 12px;
       border-radius: 3px;
       padding: 3px 7px;
-      border: 1px #cbcbcb solid;
+      border: 1px $border-dovegray-color solid;
       background-color: white;
-      color: #7e7e7e;
+      color: $btn-text-gray-color;
     }
   }
 }
