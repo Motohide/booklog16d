@@ -1,0 +1,207 @@
+= render 'shared/header'
+
+.body
+
+  .wrapper
+    %ul.breadcrumbs
+      %li.breadcrumbs__home
+        %a{href:""} 仮
+      %li.breadcrumbs__home
+        %a{href:""} > 仮
+      %li.breadcrumbs__current-page
+        >  仮です
+
+    .review-body
+      %h1 登録情報の編集・削除
+      .book-introduce
+        .book-introduce__image
+          %a{href:""}
+            = image_tag "books/image-book.jpg"
+          .reacquire
+            = link_to "再取得"
+        .book-introduce__info
+          .book-introduce__info__title
+            = link_to "ランチ酒", ""
+          .book-introduce__info__author 原田ひ香
+          %ul.book-introduce__info__btn
+            %li
+              = link_to "みんなのレビュー", "", class:"item-info-btn item-info-btn-red"
+            %li
+              = link_to "Amazon.co.jpで詳細を見る", "", class:"item-info-btn item-info-btn-yellow"
+            %li
+              = link_to "ブログで紹介","",  class:"item-info-btn item-info-btn-blue"
+
+      .tab-menu
+        %ul.edit-tab
+          %li.active
+            = link_to "レビュー", "#"
+          %li
+            = link_to "フレーズ","#"
+          %li
+            = link_to "再読記録","#"
+          %li
+            = link_to "削除","#"
+        .review-title
+          = link_to "あなたのレビューを見る"
+
+      #tab-box
+        .form-wrapper.review-form.active
+          .input-row.input-row__reading-status
+            .left-contents
+              読書状況
+            .right-contents
+              .right-contents__edit-status
+                %input{ type: "radio"}
+                %label.status-text 未設定
+                %input{ type: "radio"}
+                %label.status-text 読みたい
+                %input{ type: "radio"}
+                %label.status-text 今読んでいる
+                %input{ type: "radio"}
+                %label.status-text 読み終わった
+                %input{ type: "radio"}
+                %label.status-text 積読
+
+          .input-row.input-row__evaluation
+            .left-contents
+              評価
+            .right-contents
+              .right-contents__rating
+                - 5.times do
+                  = image_tag "rating/star-off.png", class:"star"
+                = image_tag "rating/star_clear.png", class:"star-clear"
+
+          .input-row.input-row__catagory
+            .left-contents
+              カテゴリ
+            .right-contents
+              .right-contents__catagory
+                .right-contents__setting
+                  %select
+                    %option 未設定
+                .right-contents__add-catagory
+                  %a{href:""}
+                    %i.fa.fa-plus-circle
+                    新規追加
+
+          .input-row.input-row__impression
+            .left-contents.left-contents__biography
+              レビュー・感想
+            .right-contents
+              .impression-text
+                %textarea{placeholder: "レビューや感想を書く", class:"left-contents__biography"}
+              .checkbox
+                %label
+                  %input{type: "checkbox"}
+                  ネタバレの内容を含む
+              %ul
+                %li HTMLタグ使用不可
+
+          .input-row.input-row__sns
+            .left-contents
+              SNS投稿設定
+            .right-contents
+              .social-network-area
+                .social-network.twitter
+                  .social-network__left
+                    %i.fa.fa-twitter-square
+                    %span 投稿未設定
+                  .social-network__right
+                    = link_to "設定を変更する", ""
+                .social-network.facbook
+                  .social-network__left
+                    %i.fa.fa-facebook-square
+                    %span 投稿未設定
+                  .social-network__right
+                    = link_to "設定を変更する", ""
+
+          .input-row.input-row__tag
+            .left-contents
+              タグ
+            .right-contents
+              .tag-text
+                %textarea{placeholder: "例：ドラえもん"}
+                %ul
+                  %li タグはスペース区切りで複数入力できます。
+
+          .input-row.input-row__note
+            .left-contents.left-contents__biography
+              読書メモ(非公開)
+            .right-contents
+              %textarea{ placeholder: "自分用のメモを入力。例）山下書店で買った、高橋さんがおすすめされた、図書館にあったなど", class:"left-contents__biography"}
+              %ul
+                %li HTMLタグ使用不可 / あなた以外は見ることができません
+
+          .input-row.input-row__option
+            .left-contents
+              オプション
+            .right-contents
+              .right-contents__nonpublic
+                %label
+                  %input{type: "checkbox"}
+                  非公開で登録
+                %ul
+                  %li 非公開で登録された本は、本棚の所有者以外は閲覧できません。
+
+          .btn-wrapper
+            %input{value: "登録情報を変更する", type: "submit", class:"update-btn"}
+
+
+
+        .review-form
+        .review-form
+
+        .form-wrapper.review-form.delete-from-bookshelf
+          %p このアイテムを本棚から削除します。あなたのレビューや再読記録も削除されますが、フレーズは別途削除が必要です。
+
+          .btn-wrapper
+            %input{value: "本棚から削除する", type: "submit", class:"delete-btn "}
+
+
+
+    .side-bar
+      .advertisement
+      .side-bar__title
+        本の登録・編集
+      .side-bar__list
+        %p.side-bar__subtitle
+          本を登録する
+        %ul
+          %li
+            %a{href:""} キーワードで検索
+          %li
+            %a{href:""} タグから検索
+          %li
+            %a{href:""} まとめて登録(ISBN)
+          %li
+            %a{href:""} ブックーマークレットで登録
+          %li
+            %a{href:""} オリジナルアイテム登録
+
+        %p.side-bar__subtitle
+          本を編集する
+        %ul
+          %li
+            %a{href:""} 本の並び替え
+          %li
+            %a{href:""} カテゴリの編集・削除
+          %li
+            %a{href:""} タグの編集・削除
+          %li
+            %a{href:""} 読書状況まとめて変更
+          %li
+            %a{href:""} コメント一覧
+          %li
+            %a{href:""} まとめて削除
+
+        %p.side-bar__subtitle
+          外部で活用する
+        %ul
+          %li
+            %a{href:""} まとめて紹介リンク作成
+          %li
+            %a{href:""} 本棚ブログパーツ
+          %li
+            %a{href:""} エクスポート
+
+  = render 'shared/footer'
