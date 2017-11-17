@@ -115,7 +115,7 @@ h1 {
     }
   }
 
-  a {
+ a {
     display: block;
     padding: 0 12px 0 10px;
     text-decoration: none;
@@ -127,8 +127,15 @@ h1 {
       color: #fff;
     }
   }
-}
 
+    li.active {
+      background-color: black;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
 }
 
 .review-title {
@@ -161,7 +168,7 @@ h1 {
     padding: 25px 20px;
     font-size: 0;
 
-    input {
+    input[type='radio'] {
       display: none;
       border: none;
     }
@@ -176,20 +183,22 @@ h1 {
       border-right: 0;
       background-color: #fff;
       cursor: pointer;
-
     }
   }
 
   label:first-of-type.status-text {
     border-radius: 3px 0 0 3px;
-    color: #fff;
-    background-color: #1e1e1e;
   }
 
   label:last-of-type.status-text {
     border-right: 1px #1e1e1e solid;
     border-radius: 0 3px 3px 0;
   }
+
+   label.checked {
+      color: #fff;
+      background-color: black;
+    }
 
   &__rating {
     font-size: 13px;
@@ -282,5 +291,44 @@ h1 {
 
   label {
     padding-left: 25px;
+  }
+}
+
+
+#tab-box {
+
+  .review-form {
+    display: none;
+  }
+
+  .review-form.active {
+    display: block;
+  }
+}
+
+.delete-from-bookshelf {
+  border-top: 5px #1e1e1e solid;
+  background-color: $background-beige-color;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background-color: $hover-red-color;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+  border-style: none;
+  margin: 0 auto;
+  text-decoration: none;
+  display:block;
+
+  &:hover {
+    background-color: black;
   }
 }
