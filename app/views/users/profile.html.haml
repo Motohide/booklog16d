@@ -19,12 +19,12 @@
           = image_tag "user-icon.png",class:"profile-wrapper__menu__image"
         %ul.profile-wrapper__menu__list
           %li.profile-wrapper__menu__list-book
-            = link_to "", "", class:"fa fa-book"
+            = link_to "", user_path(current_user), class:"fa fa-book"
           %li.profile-wrapper__menu__list-timeline
             = link_to "", "", class:"fa fa-clock-o"
         %ul.profile-wrapper__menu__list
           %li.profile-wrapper__menu__list-user
-            = link_to "", "", class:"fa fa-user"
+            = link_to "", profile_user_path(current_user), class:"fa fa-user"
           %li.profile-wrapper__menu__list-more
             = link_to "", "", class:"fa fa-plus"
 
