@@ -40,8 +40,7 @@
 
           %h2 ブクログを新しく始める方はこちら
           .social-network
-            %a{href:"", class:"create-new-account-btn"}
-              新規登録
+            = link_to " 新規登録", new_user_registration_path, class:"create-new-account-btn"
 
       .account-page__footer
         %ul
