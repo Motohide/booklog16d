@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only:[:profile, :edit,:update]
+  before_action :set_user, only:[:profile, :edit,:update, :my_books]
   before_action :check_user, only:[:edit, :update]
 
   def my_books

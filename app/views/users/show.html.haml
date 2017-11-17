@@ -1,0 +1,233 @@
+= render 'shared/header'
+= render 'shared/flash'
+.body
+
+  .wrapper
+    %ul.breadcrumbs
+      %li.breadcrumbs__home
+        %a{href:""} 仮
+      %li.breadcrumbs__home
+        %a{href:""} > 仮
+      %li.breadcrumbs__current-page
+        >  仮です
+
+    .profile-wrapper
+      .profile-wrapper__menu
+        - if @user.avatar.present?
+          = image_tag @user.avatar,class:"profile-wrapper__menu__image"
+        - else
+          = image_tag "user-icon.png",class:"profile-wrapper__menu__image"
+        %ul.profile-wrapper__menu__list
+          %li.profile-wrapper__menu__list-book
+            = link_to "", "", class:"fa fa-book"
+          %li.profile-wrapper__menu__list-timeline
+            = link_to "", "", class:"fa fa-clock-o"
+        %ul.profile-wrapper__menu__list
+          %li.profile-wrapper__menu__list-user
+            = link_to "", "", class:"fa fa-user"
+          %li.profile-wrapper__menu__list-more
+            = link_to "", "", class:"fa fa-plus"
+
+      .profile-wrapper__info
+        .profile-wrapper__info__title
+          プロフィール
+        .profile-wrapper__info__name
+          = @user.nickname
+        %ul.profile-wrapper__info__status
+          %li
+            登録アイテム
+            %br
+            = link_to "7", ""
+          %li
+            レビュー
+            %br
+            = link_to "1", ""
+          %li
+            レビュー率
+            %br
+            = link_to "14.3%", ""
+          %li
+            フレーズ
+            %br
+            = link_to "1", ""
+        .profile-wrapper__info__following
+          %span.follow-this-user-btn
+            あなたの本棚
+          .follow__count
+            %a{href:"", class:"following__count__number"}
+              1223
+              %span
+                フォロー
+          .follow__count
+            %a{href:"", class:"follower__count__number"}
+              55556
+              %span
+                フォロワー
+          %a{href:"",class:"profile-wrapper__info__share-btns"}
+            %li.fa.fa-twitter-square
+            %li.fa.fa-facebook-square
+            %li シェア
+      = link_to "",edit_user_path(current_user),class:"fa fa-cog setting-btn"
+
+    .form-wrapper
+      .form-wrapper__top
+        .user-birth-date
+          = @user.set_birth_date
+          生まれ
+          = @user.set_gender
+
+      .input-row
+        .left-contents
+          名前
+        .right-contents__show
+          = @user.nickname
+
+      .input-row
+        .left-contents
+          本棚の名前
+        .right-contents__show
+          = @user.nickname
+          の本棚
+
+      .input-row
+        .left-contents
+          本棚の紹介文
+        .right-contents__show
+          本棚の紹介文
+      .input-row
+        .left-contents
+          性別
+        .right-contents__show
+          = @user.set_gender
+      .input-row
+        .left-contents
+          生年月日
+        .right-contents__show
+          = @user.set_birth_date
+          生まれ
+      = render "user-data", user: @user
+
+      .section-row
+        .section-row__title
+          プロフィール
+        .section-row__biography
+          = @user.biography
+
+      .section-row
+        .section-row__title
+          パーソナルタグ
+        %a{href:"",class:"section-row__edit-link"}
+          パーソナルタグを指定する
+
+      .section-row
+        .section-row__title
+          興味のあるジャンル
+        %a{href:"",class:"section-row__edit-link"}
+          興味のあるジャンルを設定する
+
+      .section-row
+        .section-row__title
+          好きな作家
+        %a{href:"",class:"section-row__edit-link"}
+          好きな作家を設定する
+
+      .section-row
+        .section-row__title
+          お気に入りベスト3
+          %a{href:""}
+            ヨオオオ
+        %table.section-row__favorite-ranking
+          %th.section-row__favorite-ranking-1
+            こ
+          %td
+            %a{href:""}
+              設定
+          %th.section-row__favorite-ranking-2
+            こ
+          %td
+            %a{href:""}
+              設定
+          %th.section-row__favorite-ranking-3
+            こ
+          %td
+            %a{href:""}
+              設定
+
+      .section-row
+        .section-row__title
+          読書目標
+        %a{href:"",class:"section-row__edit-link"}
+          読書目標を設定する
+
+    .side-bar
+      .advertisement
+      .side-bar__title
+        ランキング
+      .side-bar__list
+        %p.side-bar__subtitle
+          ランキング
+        %ul
+          %li
+            %a{href:""} 速報ランキング
+          %li
+            %a{href:""} 週間ランキング
+          %li
+            %a{href:""} 月間ランキング
+          %li
+            %a{href:""} みんなのベスト3
+          %li
+            %a{href:""} オーディオブック
+
+        %p.side-bar__subtitle
+          年間ランキング
+        %ul
+          %li
+            %a{href:""} 2016年のランキング
+          %li
+            %a{href:""} 2015年のランキング
+          %li
+            %a{href:""} 2014年のランキング
+          %li
+            %a{href:""} 2013年のランキング
+          %li
+            %a{href:""} 2012年のランキング
+          %li
+            %a{href:""} 2011年のランキング
+          %li
+            %a{href:""} 2010年のランキング
+          %li
+            %a{href:""} 2009年のランキング
+
+        %p.side-bar__subtitle
+          新刊情報
+        %ul
+          %li
+            %a{href:""} 新刊情報
+          %li
+            %a{href:""} 電子書籍[IT系技術書]
+
+        %p.side-bar__subtitle
+          レビュー
+        %ul
+          %li
+            %a{href:""} 新着レビュー
+
+        %p.side-bar__subtitle
+          おすすめ
+        %ul
+          %li
+            %a{href:""} ブクログ公式本棚
+          %li
+            %a{href:""} ブクログ公式本棚の新着情報
+          %li
+            %a{href:""} ブクログ特集
+
+        %p.side-bar__subtitle
+          本棚を探す
+        %ul
+          %li
+            %a{href:""} プロフィールから本棚を探す
+          %li
+            %a{href:""} ブクログID検索
+/ 上記のul部分は後でgemを調べて実装する
+= render 'shared/footer'
