@@ -109,53 +109,7 @@
           %li
             %a{href:""} 評価★1
 
-        %ul.review-area
-          %li
-            .user-icon
-              = image_tag "user-icon",class:"user-image"
-            .review-area__summary
-              .review-area__summary__user-info
-                = current_user.nickname
-                2017年10月15日
-              .review-area__summary__rating
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-              .review-area__summary__review-text
-                %p
-                  当たり前の事をどこまでもどこまでも追いかけて考えると、物事の大事な根っこの部分にぶつかり発見する。
-              .review-area__summary__reaction
-                %a{href:""}
-                  = image_tag "btn/like-btn",class:"review-area__summary__reaction-like"
-                %span.like-count
-                  23
-                %a{href:"", class:"review-area__summary__reaction-comment"}
-                  コメントする
-          %li
-            .user-icon
-              = image_tag "user-icon",class:"user-image"
-            .review-area__summary
-              .review-area__summary__user-info
-                = current_user.nickname
-                2017年10月15日
-              .review-area__summary__rating
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-              .review-area__summary__review-text
-                %p
-                  当たり前の事をどこまでもどこまでも追いかけて考えると、物事の大事な根っこの部分にぶつかり発見する。
-              .review-area__summary__reaction
-                %a{href:""}
-                  = image_tag "btn/like-btn",class:"review-area__summary__reaction-like"
-                %span.like-count
-                  23
-                %a{href:"", class:"review-area__summary__reaction-comment"}
-                  コメントする
+        = render "review"
 
         %ul.review-more-btns
           %li.review-more-btns-amazon
