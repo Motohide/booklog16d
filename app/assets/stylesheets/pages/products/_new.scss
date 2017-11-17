@@ -44,7 +44,7 @@ h1 {
       height: 40px;
       width: 340px;
       padding: 25px;
-      background-color: white;
+      background-color: $background-white-color;
       border-bottom: 1px $border-gray-color solid;
       font-size: 13px;
     }
@@ -53,7 +53,7 @@ h1 {
       display: inline-block;
       padding: 12px 20px;
       margin: 20px 240px;
-      color: #fff;
+      color: $text-white-color;
       background-color: #38aef0;
       border: 1px $border-gray-color solid;
       border-radius: 5px;

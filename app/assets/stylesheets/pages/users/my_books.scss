@@ -14,7 +14,7 @@
   width: 1000px;
   height: 200px;
   padding: 15px;
-  background-color: #fff;
+  background-color: $background-white-color;
   border-radius: 8px;
 }
 
@@ -60,7 +60,7 @@
     line-height: 45px;
     font-size: 12px;
     text-align: right;
-    color: white;
+    color: $text-white-color;
 
     li {
     display: inline-block;
@@ -70,7 +70,7 @@
 
     a {
       text-decoration: none;
-      color: #fff;
+      color: $text-white-color;
     }
 
     span {

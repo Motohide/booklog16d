@@ -89,7 +89,7 @@
   .right-contents {
     float: left;
     font-size: 13px;
-    background-color: white;
+    background-color: $background-white-color;
     width: calc(100% - 180px);
 
     input {
@@ -172,7 +172,7 @@
     font-size: 12px;
     border-radius: 5px;
     padding: 10px 20px;
-    color: white;
+    color: $text-white-color;
     text-align: center;
     border-style: none;
     margin: 0 auto;
@@ -197,7 +197,7 @@
     margin: 0 0 15px;
     border: 3px $link-lightblue-color solid;
     text-align: center;
-    background-color: white;
+    background-color: $background-white-color;
     border-radius: 10px;
     padding: 10px 15px;
     font-weight: bold;
@@ -224,7 +224,7 @@
     }
 
     li {
-      background-color: #fff;
+      background-color: $background-white-color;
       border-left: 3px $border-gray-color solid;
       border-right: 3px $border-gray-color solid;
       border-bottom: 1px $border-gray-color solid;

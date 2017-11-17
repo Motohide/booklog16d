@@ -20,7 +20,7 @@
     padding: 0 30px;
     margin-left: 10px;
     background-color: $link-lightblue-color;
-    color: white;
+    color: $text-white-color;
     border-style: none;
 
 
@@ -46,7 +46,7 @@
       border-radius: 3px;
       padding: 3px 7px;
       border: 1px $border-dovegray-color solid;
-      background-color: white;
+      background-color: $background-white-color;
       color: $btn-text-gray-color;
     }
   }
@@ -84,7 +84,7 @@
   margin: 2px 0px 0;
   width: 640px;
   border: 5px solid $border-black-color;
-  background-color: white;
+  background-color: $background-white-color;
 
   &__order {
     background-color: #e8f6f5;

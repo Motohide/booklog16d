@@ -23,7 +23,7 @@
 
 .product-wrapper {
   border-top: 7px #ede9c5 solid;
-  background-color: white;
+  background-color: $background-white-color;
   overflow: auto;
 
   &__title {
@@ -220,7 +220,7 @@
     border: 1px silver solid;
     margin-left: 12px;
     float: left;
-    background-color: white;
+    background-color: $background-white-color;
     margin-bottom: 20px;
 
     &__user-info {
@@ -310,7 +310,7 @@
     span {
       border-radius: 3px 3px 0 0;
       display: block;
-      background-color: #FFF;
+      background-color: $background-white-color;
     }
 
     &-facebook {
@@ -352,7 +352,7 @@
 .additional-info-area {
   margin: 20px 0 4px 0;
   padding: 20px 20px 10px;
-  background-color: white;
+  background-color: $background-white-color;
   border: 1px $border-gray-color solid;
   overflow: auto;
 
@@ -412,7 +412,7 @@
       display: inline-block;
 
       &:hover {
-        background-color: white;
+        background-color: $background-white-color;
       }
 
       a {

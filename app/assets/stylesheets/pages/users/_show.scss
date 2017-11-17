@@ -1,5 +1,5 @@
 .profile-wrapper {
-  background-color: white;
+  background-color: $background-white-color;
   border-radius: 8px;
   padding: 15px;
   overflow: auto;
@@ -18,7 +18,7 @@
     }
 
     &__list {
-      background-color: white;
+      background-color: $background-white-color;
       letter-spacing: -.4em;
 
       li {
@@ -32,7 +32,7 @@
         }
 
         a {
-         color: white;
+         color: $text-white-color;
         }
       }
 
@@ -229,7 +229,7 @@
     th {
       font-size: 12px;
       padding: 0 4px;
-      color: white;
+      color: $text-white-color;
     }
 
     td {
@@ -239,7 +239,7 @@
       font-size: 11px;
       width: 52px;
       height:52px;
-      background-color: white;
+      background-color: $background-white-color;
 
       a {
         text-decoration: none;
@@ -277,6 +277,6 @@
   float: left;
   font-size: 13px;
   width: calc(100% - 230px);
-  background-color: white;
+  background-color: $background-white-color;
   padding: 25px;
 }
