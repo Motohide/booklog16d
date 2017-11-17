@@ -8,9 +8,9 @@
   .wrapper
     %ul.breadcrumbs
       %li.breadcrumbs__home
-        %a{href:""} 仮
+        = link_to "仮"
       %li.breadcrumbs__home
-        %a{href:""} > 仮
+        = link_to "> 仮"
       %li.breadcrumbs__current-page
         >  仮です
 
@@ -64,7 +64,7 @@
                 = image_tag "btn/other_store.png",class:"other-shop-btn"
         .product-wrapper__more
           .product-wrapper__more__link
-            %a{href:""}
+            = link_to do
               %i.fa.fa-file-code-o
               サイトに貼り付ける
           .product-wrapper__more__info
@@ -97,17 +97,17 @@
 
         %ul.review-wrapper__sort-by-rating
           %li
-            %a{href:""} すべてのレビュー
+            = link_to "すべてのレビュー"
           %li
-            %a{href:""} 評価★5
+            = link_to "評価★5"
           %li
-            %a{href:""} 評価★4
+            = link_to "評価★4"
           %li
-            %a{href:""} 評価★3
+            = link_to "評価★3"
           %li
-            %a{href:""} 評価★2
+            = link_to "評価★2"
           %li
-            %a{href:""} 評価★1
+            = link_to "評価★1"
 
         = render "review"
 
@@ -168,17 +168,17 @@
             %li
               = link_to "サンプルテキスト(ジャンプ・コミックス)", ""
           %p.additional-info-area__link
-            %a{href:""} 尾田栄一郎の作品ランキング・新刊情報
+            = link_to "尾田栄一郎の作品ランキング・新刊情報"
 
         .additional-info-area
           %h2.area-title
             外部サイトの商品情報・レビュー
           %p.additional-info-area__link
-            %a{href:""} Amazonでレビューを見る
+            = link_to "Amazonでレビューを見る"
           %p.additional-info-area__link
-            %a{href:""} カーリルで図書館の貸し出し状況を見る
+            = link_to "カーリルで図書館の貸し出し状況を見る"
           %p.additional-info-area__link
-            %a{href:""} Webcat Plus(国立情報学研究所)で図書情報を見る
+            = link_to "Webcat Plus(国立情報学研究所)で図書情報を見る"
 
         .user-status-area
           .user-status-area__reading-status-box

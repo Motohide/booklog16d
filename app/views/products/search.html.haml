@@ -67,41 +67,40 @@
           本を登録する
         %ul
           %li
-            %a{href:""} キーワードで検索
+            = link_to "キーワードで検索"
           %li
-            %a{href:""} タグから検索
+            = link_to "タグから検索"""
           %li
-            %a{href:""} まとめて登録(ISBN)
+            = link_to "まとめて登録(ISBN)"
           %li
-            %a{href:""} ブックマックレートで登録
+            = link_to "ブックマックレートで登録"
           %li
-            %a{href:""} オリジナルアイテム登録
+            = link_to "オリジナルアイテム登録"
 
         %p.side-bar__subtitle
           編集する
         %ul
           %li
-            %a{href:""} 本の並び替え
+            = link_to "本の並び替え"
           %li
-            %a{href:""} カテゴリの編集・削除
+            = link_to "カテゴリの編集・削除"
           %li
-            %a{href:""} タグの編集・削除
+            = link_to "タグの編集・削除"
           %li
-            %a{href:""} 読書状況まとめて変更
+            = link_to "読書状況まとめて変更"
           %li
-            %a{href:""} コメント一覧
+            = link_to "コメント一覧"
           %li
-            %a{href:""} まとめて削除
+            = link_to "まとめて削除"
 
         %p.side-bar__subtitle
           外部で活用する
         %ul
           %li
-            %a{href:""} まとめて紹介リンク作成
+            = link_to "まとめて紹介リンク作成"
           %li
-            %a{href:""} 本棚ブログパーツ作成
+            = link_to "本棚ブログパーツ作成"
           %li
-            %a{href:""} エクスポート
+            = link_to "エクスポート"
 
-/ 上記のul部分は後でgemを調べて実装する
 = render 'shared/footer'
