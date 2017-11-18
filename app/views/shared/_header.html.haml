@@ -15,7 +15,8 @@
       .search.global-navi
         %input.search__input
         .search__search-btn
-          %i.fa.fa-search
+          = link_to search_products_path do
+            %i.fa.fa-search
       - if user_signed_in?
         %ul.global-navi.global-navi__right
           %li.global-navi__mypage
