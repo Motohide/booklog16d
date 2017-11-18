@@ -44,23 +44,23 @@
         .review-title
           = link_to "あなたのレビューを見る"
 
-      #tab-box
+      = form_for @review, url: product_reviews_path, html: {id: "tab-box"} do |f|
         .form-wrapper.review-form.active
           .input-row.input-row__reading-status
             .left-contents
               読書状況
             .right-contents
               .right-contents__edit-status
-                %input{ type: "radio"}
-                %label.status-text 未設定
-                %input{ type: "radio"}
-                %label.status-text 読みたい
-                %input{ type: "radio"}
-                %label.status-text 今読んでいる
-                %input{ type: "radio"}
-                %label.status-text 読み終わった
-                %input{ type: "radio"}
-                %label.status-text 積読
+                = f.radio_button :reading_status, 1
+                = f.label :reading_status,"未設定", value: 1, class:"status-text"
+                = f.radio_button :reading_status, 2
+                = f.label :reading_status,"読みたい", value: 2, class:"status-text"
+                = f.radio_button :reading_status, 3
+                = f.label :reading_status,"今読んでいる", value: 3, class:"status-text"
+                = f.radio_button :reading_status, 4
+                = f.label :reading_status,"読み終わった", value: 4, class:"status-text"
+                = f.radio_button :reading_status, 5
+                = f.label :reading_status,"積読", value: 5, class:"status-text"
 
           .input-row.input-row__evaluation
             .left-contents
@@ -89,10 +89,10 @@
               レビュー・感想
             .right-contents
               .impression-text
-                %textarea{placeholder: "レビューや感想を書く", class:"left-contents__biography"}
+                = f.text_area :body, placeholder: "レビューや感想を書く", class:"left-contents__biography"
               .checkbox
                 %label
-                  %input{type: "checkbox"}
+                  = f.check_box :spoiler_status, checked_value: 1, unchecked_value: 0
                   ネタバレの内容を含む
               %ul
                 %li HTMLタグ使用不可
@@ -128,7 +128,7 @@
             .left-contents.left-contents__biography
               読書メモ(非公開)
             .right-contents
-              %textarea{ placeholder: "自分用のメモを入力。例）山下書店で買った、高橋さんがおすすめされた、図書館にあったなど", class:"left-contents__biography"}
+              = f.text_area :note, placeholder: "自分用のメモを入力。例）山下書店で買った、高橋さんがおすすめされた、図書館にあったなど", class:"left-contents__biography"
               %ul
                 %li HTMLタグ使用不可 / あなた以外は見ることができません
 
@@ -138,13 +138,13 @@
             .right-contents
               .right-contents__nonpublic
                 %label
-                  %input{type: "checkbox"}
+                  = f.check_box :public_status, checked_value: 1, unchecked_value: 0
                   非公開で登録
                 %ul
                   %li 非公開で登録された本は、本棚の所有者以外は閲覧できません。
 
           .btn-wrapper
-            %input{value: "登録情報を変更する", type: "submit", class:"update-btn"}
+            = f.submit "登録情報を更新する", class:"update-btn"
 
 
 
