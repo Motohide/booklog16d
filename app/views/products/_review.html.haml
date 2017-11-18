@@ -1,7 +1,7 @@
 %ul.review-area
   %li
     .user-icon
-      = image_tag "user-icon",class:"user-image"
+      = image_tag "user-icon.png",class:"user-image"
     .review-area__summary
       .review-area__summary__user-info
         = current_user.nickname
@@ -17,7 +17,7 @@
           当たり前の事をどこまでもどこまでも追いかけて考えると、物事の大事な根っこの部分にぶつかり発見する。
       .review-area__summary__reaction
         = link_to do
-          = image_tag "btn/like-btn",class:"review-area__summary__reaction-like"
+          = image_tag "btn/like-btn.png",class:"review-area__summary__reaction-like"
         %span.like-count
           23
         = link_to "コメントする", "",class:"review-area__summary__reaction-comment"
