@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load',function() {
   $('.right-contents__rating').each(function() {
     for (var i = 0; i < 5; i ++) {
       //グレーの星の画像star-off.pngを5個appendさせる

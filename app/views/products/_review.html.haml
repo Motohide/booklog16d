@@ -1,5 +1,6 @@
 %ul.review-area
   %li
+  - if review.body.present?
     .user-icon
       - if review.user.avatar.present?
         = image_tag review.user.avatar,class:"user-image"
@@ -10,11 +11,10 @@
         = review.user.nickname
         2017年10月15日
       .review-area__summary__rating
-        %i.fa.fa-star
-        %i.fa.fa-star
-        %i.fa.fa-star
-        %i.fa.fa-star
-        %i.fa.fa-star
+        - review.rate.times do
+          %i.fa.fa-star
+        - (5 - review.rate).times do
+          %i.fa.fa-star-o
       .review-area__summary__review-text
         %p
           = review.body

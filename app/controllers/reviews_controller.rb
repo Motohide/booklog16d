@@ -1,14 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only:[:edit, :update]
 
-  def new
-    @review = Review.new
-  end
-
-  def create
-    @review = Review.new(review_params)
-  end
-
   def edit
     @product = Product.find(params[:product_id])
   end
@@ -26,7 +18,7 @@ end
 private
 
 def review_params
- params.require(:review).permit(:reading_status, :rate, :body, :note, :public_status, :spoiler_status).merge(user_id: current_user.id, product_id: params[:product_id])
+ params.require(:review).permit(:reading_status, :rate, :body, :note, :public_status, :spoiler_status).merge( user_id: current_user.id)
 end
 
 def set_review

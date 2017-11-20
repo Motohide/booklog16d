@@ -230,7 +230,21 @@
 
     &__rating {
       padding: 20px 20px 0;
-      color: $star-orange-color;
+      font-size: 0;
+
+      .fa {
+        margin-right: 1px;
+      }
+
+      .fa-star {
+        font-size: 16px;
+        color: $star-orange-color;
+      }
+
+      .fa-star-o {
+        font-size: 16px;
+        color: $border-gray-color;
+      }
     }
 
     &__review-text {
