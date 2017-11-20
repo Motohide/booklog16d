@@ -202,8 +202,13 @@ h1 {
     }
 
   &__rating {
+    position: relative;
     font-size: 13px;
     padding: 25px;
+
+    input {
+      display: none;
+    }
 
     img {
       width: 20px;
@@ -216,6 +221,7 @@ h1 {
       border:1px #a1a1a1 solid;
       border-radius: 3px;
       margin-left: 5px;
+      cursor: pointer;
     }
   }
 

@@ -68,10 +68,7 @@
               評価
             .right-contents
               .right-contents__rating
-                - 5.times do
-                  = image_tag "rating/star-off.png", class:"star"
-                = image_tag "rating/star_clear.png", class:"star-clear"
-
+                = f.range_field :rate, min:"0", max:"5",value:"",class:"input-range"
           .input-row.input-row__catagory
             .left-contents
               カテゴリ
