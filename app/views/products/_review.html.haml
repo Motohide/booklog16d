@@ -1,12 +1,11 @@
 %ul.review-area
-  %li
   - if review.body.present?
     .user-icon
       - if review.user.avatar.present?
         = image_tag review.user.avatar,class:"user-image"
       - else
         = image_tag "user-icon.png",class:"user-image"
-    .review-area__summary
+    .review-area__summary{spoiler_status: review.spoiler_status}
       .review-area__summary__user-info
         = review.user.nickname
         2017年10月15日
