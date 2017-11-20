@@ -6,5 +6,5 @@ $(document).on('turbolinks:load',function(){
     $('.prepend-spoiler').css('color','#000');
   }).on('mouseleave', function(){
     $('.prepend-spoiler').css('color','#f0f0f0');
-  })
+  });
 });
