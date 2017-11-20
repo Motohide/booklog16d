@@ -8,4 +8,6 @@ class User < ApplicationRecord
   jp_prefecture :prefecture_code
 
    mount_uploader :avatar, AvatarUploader
+
+   has_many :reviews
 end

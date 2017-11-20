@@ -1,10 +1,13 @@
 %ul.review-area
   %li
     .user-icon
-      = image_tag "user-icon.png",class:"user-image"
+      - if review.user.avatar.present?
+        = image_tag review.user.avatar,class:"user-image"
+      - else
+        = image_tag "user-icon.png",class:"user-image"
     .review-area__summary
       .review-area__summary__user-info
-        = current_user.nickname
+        = review.user.nickname
         2017年10月15日
       .review-area__summary__rating
         %i.fa.fa-star
@@ -14,7 +17,7 @@
         %i.fa.fa-star
       .review-area__summary__review-text
         %p
-          当たり前の事をどこまでもどこまでも追いかけて考えると、物事の大事な根っこの部分にぶつかり発見する。
+          = review.body
       .review-area__summary__reaction
         = link_to do
           = image_tag "btn/like-btn.png",class:"review-area__summary__reaction-like"

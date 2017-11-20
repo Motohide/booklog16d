@@ -109,7 +109,7 @@
           %li
             = link_to "評価★1"
 
-        = render "review"
+        = render partial: "review", collection: @reviews
 
         %ul.review-more-btns
           %li.review-more-btns-amazon
