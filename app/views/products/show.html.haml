@@ -21,7 +21,7 @@
         .product-wrapper__left
           = link_to "" do
             = image_tag @product.image,class:"product-wrapper__image"
-          = link_to "", "", class:"book-btn"
+          = link_to "", edit_product_review_path(@review), class:"book-btn"
         .product-wrapper__info
           %ul.product-wrapper__info__status
             %li

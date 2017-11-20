@@ -44,7 +44,7 @@
         .review-title
           = link_to "あなたのレビューを見る"
 
-      = form_for @review, url: product_reviews_path, html: {id: "tab-box"} do |f|
+      = form_for @review, url: product_review_path(@review), html: {id: "tab-box"} do |f|
         .form-wrapper.review-form.active
           .input-row.input-row__reading-status
             .left-contents
