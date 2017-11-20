@@ -15,14 +15,15 @@
       %h1 登録情報の編集・削除
       .book-introduce
         .book-introduce__image
-          %a{href:""}
-            = image_tag "books/image-book.jpg"
+          = link_to product_path(@product) do
+            = image_tag @product.image
           .reacquire
             = link_to "再取得"
         .book-introduce__info
           .book-introduce__info__title
-            = link_to "ランチ酒", ""
-          .book-introduce__info__author 原田ひ香
+            = link_to @product.name, product_path(@product)
+          .book-introduce__info__author
+            = @product.author
           %ul.book-introduce__info__btn
             %li
               = link_to "みんなのレビュー", "", class:"item-info-btn item-info-btn-red"
