@@ -49,7 +49,7 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
 .header__wrapper {
  position: fixed;
  width: 100vw;
-z-index: 1;
+ z-index: 2;
 }
 
   .global-navi-wrapper {
@@ -85,6 +85,24 @@ z-index: 1;
           opacity: 0.6;
         }
       }
+
+      .hover-home-icon {
+        display: none;
+        top: 20px;
+        left: 120px;
+        opacity: 0.5;
+
+        span {
+          background-color: black;
+          font-size: 12px;
+          border-radius: 3px;
+          position: fixed;
+          line-height: 25px;
+          padding: 0 12px;
+          top: 50px;
+          right: 137px;
+        }
+      }
     }
 
     &__left {
@@ -93,6 +111,8 @@ z-index: 1;
     }
 
     &__right {
+      position: relative;
+      overflow: hidden;
       float: right;
       font-size: 24px;
     }

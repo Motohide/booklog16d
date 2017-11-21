@@ -24,6 +24,8 @@
             = link_to "ログアウト", destroy_user_session_path,method: :DELETE, class:"devise-btns user-sign_out-btn"
           %li.global-navi__home
             = link_to "", profile_user_path(current_user), class:"fa fa-home link_to-cancel"
+            .hover-home-icon
+              %span ホーム
           %li.global-navi__bookshelf
             = link_to "", user_path(current_user), class:"fa fa-book link_to-cancel"
           %li.global-navi__timeline
