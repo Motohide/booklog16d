@@ -86,11 +86,10 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
         }
       }
 
-      .hover-home-icon {
+      .hover-icon {
         display: none;
-        opacity: 0.5;
-
-        span {
+        opacity: 0.7;
+          span {
           background-color: black;
           font-size: 12px;
           border-radius: 3px;
@@ -98,10 +97,28 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
           line-height: 25px;
           padding: 0 12px;
           top: 50px;
-          right: 137px;
+        }
+
+        &__home-icon {
+          span {
+            right: 137px;
+          }
+        }
+
+        &__bookshelf-icon {
+          span {
+            right: 98px;
+          }
+        }
+
+        &__timeline-icon {
+          span {
+            right: 18px;
+          }
         }
       }
     }
+
 
     &__left {
       float: left;
