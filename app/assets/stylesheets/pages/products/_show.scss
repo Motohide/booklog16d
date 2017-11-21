@@ -265,6 +265,10 @@
           text-align: right;
           display: block;
           margin-right: 30px;
+
+          &:hover {
+            color: $hover-red-color;
+          }
         }
       }
       .show-class {
