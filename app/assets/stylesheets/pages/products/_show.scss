@@ -254,7 +254,44 @@
       margin-bottom: 10px;
 
       p {
+        word-wrap: break-word;
         font-size: 14px;
+
+
+        a {
+          color: $link-lightblue-color;
+          text-decoration: none;
+          font-size: 14px;
+          text-align: right;
+          display: block;
+          margin-right: 30px;
+        }
+      }
+      .show-class {
+        a::after {
+          margin-left: 5px;
+          content: " ";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-top: solid 3px $link-lightblue-color;
+          border-left: solid 3px $link-lightblue-color;
+          transform: rotate(45deg);
+          bottom: 97px;
+        }
+      }
+
+      .hide-class {
+        a::after {
+          margin-left: 5px;
+          content: " ";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-top: solid 3px $link-lightblue-color;
+          border-right: solid 3px $link-lightblue-color;
+          transform: rotate(135deg);
+        }
       }
     }
 
