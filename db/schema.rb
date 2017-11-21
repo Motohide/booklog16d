@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120030657) do
+ActiveRecord::Schema.define(version: 20171121031932) do
 
   create_table "bookshelves", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -35,12 +35,12 @@ ActiveRecord::Schema.define(version: 20171120030657) do
   create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "reading_status"
     t.integer  "rate"
-    t.string   "body"
+    t.text     "body",           limit: 65535
     t.string   "note"
     t.integer  "public_status"
     t.integer  "spoiler_status"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.integer  "user_id"
     t.integer  "product_id"
     t.index ["product_id"], name: "index_reviews_on_product_id", using: :btree
