@@ -39,6 +39,26 @@
                 %span タイムライン
           %li.global-navi__dropdown-menu-click
             = link_to "", "", class:"fa fa-bars link_to-cancel"
+            .dropdown-menu
+              %ul
+                %li
+                  = link_to "ブックログ公式本棚", "", class:"fa fa-heart"
+                %li.bar-border
+                  = link_to "ブックログ特集", "", class:"fa fa-diamond"
+                %li
+                  = link_to "ブックログのアプリ", "", class:"fa fa-mobile"
+                %li.bar-border
+                  = link_to "チュートリアル", "", class:"fa fa-check-square-o"
+                %li
+                  = link_to "お知らせブログ", "", class:"fa fa-info-circle"
+                %li
+                  = link_to "ヘルプ", "", class:"fa fa-question-circle"
+                %li.bar-border
+                  = link_to "ブックログ公式グッズ", "", class:"fa fa-shopping-cart"
+                %li
+                  = link_to "Twitterをフォーロ", "", class:"fa fa-twitter"
+                %li
+                  = link_to "Facebookをフォーロ", "", class:"fa fa-facebook-square"
       - else
         %ul.global-navi.global-navi__right
           %li.global-navi__mypage

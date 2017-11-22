@@ -117,8 +117,68 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
           }
         }
       }
-    }
 
+      .dropdown-menu {
+        position: fixed;
+        top: 63px;
+        right: 10px;
+        width: 180px;
+        background-color: #fff;
+        border: 5px $border-black-color solid;
+
+        ul {
+          margin-top: 5px;
+          font-size: 12px;
+          line-height: 0;
+        }
+
+        li {
+          padding: 5px 0;
+          width: 100%;
+          margin: 0px;
+        }
+
+        li.bar-border {
+          border-bottom: 1px $border-gray-color solid;
+        }
+
+        a {
+          color: $border-black-color;
+          text-decoration: none;
+          padding: 6px 15px;
+          display: block;
+        }
+
+        .fa:before {
+          margin-right: 7px;
+          font-size: 14px;
+          display: inline-block;
+        }
+      }
+
+      .dropdown-menu:before {
+        content: "";
+        position: absolute;
+        top: -24px;
+        left: 50%;
+        margin-left: 50px;
+        border: 16px solid transparent;
+        border-bottom: 13px solid #FFF;
+        z-index: 2;
+      }
+
+      .dropdown-menu:after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        margin-left: 51px;
+        border: 15px solid transparent;
+        border-bottom: 12px solid $border-black-color;
+        z-index: 1;
+      }
+
+    }
 
     &__left {
       float: left;
