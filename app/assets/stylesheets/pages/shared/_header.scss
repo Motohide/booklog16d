@@ -77,6 +77,15 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
       margin: 0 10px;
       line-height: 60px;
 
+        img {
+          height: 24px;
+          width: 24px;
+          padding: 2px;
+          background-color: #fff;
+          border: 1px #666 solid;
+          vertical-align: middle;
+        }
+
       .link_to-cancel {
         text-decoration: none;
         color: $text-white-color;
