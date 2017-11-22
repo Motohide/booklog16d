@@ -7,7 +7,6 @@ $(document).on('turbolinks:load',function() {
     showText: '</br>続きを読む',
     hideText: '閉じる',
     showClass: 'show-class',
-    hideClass: 'hide-class',
-    controlBtn: 'dsfdsf'
+    hideClass: 'hide-class'
   });
 });
