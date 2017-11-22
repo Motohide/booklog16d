@@ -13,7 +13,8 @@
         %li.global-navi__matome
           = link_to "まとめ", "", class:"link_to-cancel"
       .search.global-navi
-        %input.search__input
+        %input.search__input{type: "text", placeholder: "作品・著者名で検索して本棚登録"}
+        %i.fa.fa-question-circle
         .search__search-btn
           = link_to search_products_path do
             %i.fa.fa-search
