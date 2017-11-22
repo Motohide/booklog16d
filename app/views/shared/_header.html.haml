@@ -19,9 +19,8 @@
             %i.fa.fa-search
       - if user_signed_in?
         %ul.global-navi.global-navi__right
-          %li.global-navi__mypage
           %li.global-navi__user-icon-header
-            = image_tag "user-icon.png", class:"user-icon-header"
+            = link_to image_tag "user-icon.png", class:"user-icon-header"
             .dropdown-user-icon
               %ul
                 %li.bar-border
@@ -37,7 +36,7 @@
                 %li
                   = link_to "プロフィールの設定", "", class:"fa fa-smile-o"
                 %li.bar-border
-                  = link_to "ログアウト", "", class:"fa fa-sign-out"
+                  =link_to "ログアウト", destroy_user_session_path,method: :DELETE, class:"fa fa-sign-out"
 
           %li.global-navi__home
             = link_to "", profile_user_path(current_user), class:"fa fa-home link_to-cancel"
