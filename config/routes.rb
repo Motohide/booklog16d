@@ -15,4 +15,10 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
+  resources :items, only: :show do
+    collection do
+      get 'search'
+    end
+  end
 end
