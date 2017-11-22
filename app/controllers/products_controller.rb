@@ -19,8 +19,10 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @review = Review.find_or_create_by(product_id: params[:id], user_id: current_user.id)
-    @reviews = Review.where(product_id: params[:id])
+
+    if user_signed_in?
+      @review = Review.find_or_create_by(product_id: params[:id], user_id: current_user.id)
+    end
   end
 
   def search
