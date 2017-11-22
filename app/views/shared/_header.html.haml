@@ -20,8 +20,25 @@
       - if user_signed_in?
         %ul.global-navi.global-navi__right
           %li.global-navi__mypage
-          %li.glove-navi__user-icon-header
+          %li.global-navi__user-icon-header
             = image_tag "user-icon.png", class:"user-icon-header"
+            .dropdown-user-icon
+              %ul
+                %li.bar-border
+                  = link_to "ユーザーさん", "", class:"fa fa-user"
+                %li
+                  = link_to "本の並び替え", "", class:"fa fa-th"
+                %li
+                  = link_to "カテゴリーの編集・削除", "", class:"fa fa-folder"
+                %li.bar-border
+                  = link_to "タグの編集・削除", "", class:"fa fa-tags"
+                %li
+                  = link_to "本棚の設定", "", class:"fa fa-cog"
+                %li
+                  = link_to "プロフィールの設定", "", class:"fa fa-smile-o"
+                %li.bar-border
+                  = link_to "ログアウト", "", class:"fa fa-sign-out"
+
           %li.global-navi__home
             = link_to "", profile_user_path(current_user), class:"fa fa-home link_to-cancel"
             .hover-icon
@@ -39,7 +56,7 @@
                 %span タイムライン
           %li.global-navi__dropdown-menu-click
             = link_to "", "#", class:"fa fa-bars link_to-cancel"
-            .dropdown-menu
+            .dropdown-menu-icon
               %ul
                 %li
                   = link_to "ブックログ公式本棚", "", class:"fa fa-heart"
