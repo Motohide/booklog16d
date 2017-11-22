@@ -1,5 +1,5 @@
-%ul.review-area
-  - if review.body.present?
+- if review.body.present? && review.public_status == 0
+  %ul.review-area
     .user-icon
       - if review.user.avatar.present?
         = image_tag review.user.avatar,class:"user-image"
@@ -26,4 +26,3 @@
         %span.like-count
           23
         = link_to "コメントする", "",class:"review-area__summary__reaction-comment"
-
