@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load',function() {
-
   $('.main-thumb').slick({
     infinite: true,
     slidesToShow: 3,

@@ -1,4 +1,4 @@
-$(function () {
+$(document).on('turbolinks:load',function() {
   $('.review-area__summary__review-text p').collapser({
     ellipsis: "",
     mode: 'chars',
