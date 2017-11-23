@@ -48,11 +48,14 @@
       - if user_signed_in?
         %ul.global-navi.global-navi__right
           %li.global-navi__user-icon-header
-            = link_to image_tag "user-icon.png", class:"user-icon-header"
+            - if current_user.avatar.present?
+              = image_tag current_user.avatar, class:"user-icon-header"
+            - else
+              = image_tag "user-icon.png", class:"user-icon-header"
             .dropdown-user-icon
               %ul
                 %li.bar-border
-                  = link_to "ユーザーさん", "", class:"fa fa-user"
+                  = link_to "#{current_user.nickname}さん", "", class:"fa fa-user"
                 %li
                   = link_to "本の並び替え", "", class:"fa fa-th"
                 %li
@@ -62,7 +65,7 @@
                 %li
                   = link_to "本棚の設定", "", class:"fa fa-cog"
                 %li.bar-border
-                  = link_to "プロフィールの設定", "", class:"fa fa-smile-o"
+                  = link_to "プロフィールの設定", edit_user_path(current_user), class:"fa fa-smile-o"
                 %li
                   =link_to "ログアウト", destroy_user_session_path,method: :DELETE, class:"fa fa-sign-out"
 

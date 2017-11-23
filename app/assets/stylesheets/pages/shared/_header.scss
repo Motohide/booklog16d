@@ -77,13 +77,14 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
       margin: 0 10px;
       line-height: 60px;
 
-        img {
+        .user-icon-header {
           height: 24px;
           width: 24px;
           padding: 2px;
           background-color: #fff;
           border: 1px #666 solid;
           vertical-align: middle;
+          cursor: pointer;
         }
 
       .dropdown-user-icon {
