@@ -21,7 +21,7 @@
         .product-wrapper__left
           = link_to "" do
             = image_tag @item.image, class:"product-wrapper__image"
-          = link_to "", "", class:"book-btn"
+          = link_to "", edit_item_review_path(@review.isbn, @review.id), class:"book-btn"
         .product-wrapper__info
           %ul.product-wrapper__info__status
             %li
@@ -31,12 +31,12 @@
             %li
               %i.fa.fa-star
               %span
-
+                = @average_rate
               評価
             %li
               %i.fa.fa-comment
               %span
-
+                = @review_total
               人レビュー
           .product-wrapper__info__author
             著者:
@@ -111,7 +111,7 @@
           %li
             = link_to "評価★1"
 
-        = render partial: "review"
+        = render partial: "review", collection: @reviews
 
         %ul.review-more-btns
           %li.review-more-btns-amazon

@@ -12,6 +12,10 @@ class ItemsController < ApplicationController
                           author: data["summary"]["author"],
                           publisher: data["summary"]["publisher"],
                           release_date: data["summary"]["pubdate"])
+      @review = Review.find_or_create_by(isbn: params[:id], user_id: current_user.id) if user_signed_in?
+      @reviews = Review.where(isbn: params[:id])
+      @review_total = @reviews.where.not(body: nil).length
+      @average_rate = @reviews.average(:rate)
   end
 
   def search
