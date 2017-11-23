@@ -10,13 +10,13 @@ Rails.application.routes.draw do
     end
   end
   resources :products, only: [:index, :new, :create, :show] do
-    resources :reviews, only: [:edit, :update]
     collection do
       get 'search'
     end
   end
 
   resources :items, only: :show do
+    resources :reviews, only: [:edit, :update]
     collection do
       get 'search'
     end
