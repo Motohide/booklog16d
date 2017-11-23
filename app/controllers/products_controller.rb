@@ -21,10 +21,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @review_total = @product.reviews.where.not(body: nil).length
     @average_rate = @product.reviews.average(:rate)
-
-    if user_signed_in?
-      @review = Review.find_or_create_by(product_id: params[:id], user_id: current_user.id)
-    end
+    @review = Review.find_or_create_by(product_id: params[:id], user_id: current_user.id) if user_signed_in?
   end
 
   def search
