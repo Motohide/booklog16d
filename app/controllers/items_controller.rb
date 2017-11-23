@@ -1,6 +1,17 @@
 class ItemsController < ApplicationController
 
   def show
+      openBD_uri = URI.parse('https://api.openbd.jp/v1/get?isbn=' + params[:id])
+      openBD_json = Net::HTTP.get(openBD_uri)
+      openBD_result = JSON.parse(openBD_json).to_a
+      data = openBD_result[0]
+
+      @item = Item.new(isbn: data["summary"]["isbn"],
+                          name: data["summary"]["title"],
+                          image: data["summary"]["cover"],
+                          author: data["summary"]["author"],
+                          publisher: data["summary"]["publisher"],
+                          release_date: data["summary"]["pubdate"])
   end
 
   def search
