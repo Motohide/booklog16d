@@ -1,9 +1,7 @@
 .search-wrapper__result
-  = @isbn_list
   .search-wrapper__result-top
-    = @search
     .product-name
-      = link_to "テニスクラシックBreak 2017年 12 月号 [雑誌]",""
+      = link_to result.name,item_path(result.isbn)
     %ul
       %li.product-evaluation.product-evaluation__count
         1人が登録
@@ -19,7 +17,10 @@
         = image_tag "store/amazon-mini.gif"
         Amazon.co.jpで見る
   .search-wrapper__result-image
-    = image_tag "karioki2.jpg"
+    - if result.image.present?
+      = image_tag result.image, class:"image-import"
+    - else
+      = image_tag "no_image.png", class:"image-import"
   .search-wrapper__result-register
     = link_to "", "", class:"add-product-btn"
     = link_to "", "", class:"add-product-btn-secretly"

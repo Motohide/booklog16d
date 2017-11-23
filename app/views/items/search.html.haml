@@ -56,7 +56,8 @@
           おすすめ順
         %li
           = link_to "発売日順","",class:"search-wrapper__order-release-date"
-      = render "search-result"
+      = render partial: "search-result",collection: @search_results, as:"result"
+
 
     .side-bar
       .advertisement

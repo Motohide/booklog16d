@@ -49,21 +49,19 @@ class ItemsController < ApplicationController
       openBD_result = JSON.parse(openBD_json).to_a
 
       @openBD_result = openBD_result
-      @search = []
+      @search_results = []
 
-
-      @openBD_result.each do |data|
+      @openBD_result.each_with_index do |data, i|
         if data.present?
-          item = Item.new(isbn: data["onix"]["RecordReference"],
-                          name: data["onix"]["DescriptiveDetail"]["TitleDetail"]["TitleElement"]["TitleText"]["content"],
-                          image: data["onix"]["CollateralDetail"]["SupportingResource"][0]["ResourceVersion"][0]["ResourceLink"],
-                          author: data["onix"]["DescriptiveDetail"]["Contributor"][0]["PersonName"]["content"],
-                          publisher: data["onix"]["PublishingDetail"]["Imprint"]["ImprintName"],
-                          release_date: data["onix"]["PublishingDetail"]["PublishingDate"][0]["Date"])
-          @search << item
+          item = Item.new(isbn: data["summary"]["isbn"],
+                          name: data["summary"]["title"],
+                          image: data["summary"]["cover"],
+                          author: data["summary"]["author"],
+                          publisher: data["summary"]["publisher"],
+                          release_date: data["summary"]["pubdate"])
+          @search_results << item
         end
       end
-
     end
 
   end
