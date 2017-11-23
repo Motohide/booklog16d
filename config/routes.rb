@@ -21,4 +21,6 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
+  resources :bookmarks, only: :create
 end
