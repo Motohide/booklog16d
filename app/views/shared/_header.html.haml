@@ -61,9 +61,9 @@
                   = link_to "タグの編集・削除", "", class:"fa fa-tags"
                 %li
                   = link_to "本棚の設定", "", class:"fa fa-cog"
-                %li
-                  = link_to "プロフィールの設定", "", class:"fa fa-smile-o"
                 %li.bar-border
+                  = link_to "プロフィールの設定", "", class:"fa fa-smile-o"
+                %li
                   =link_to "ログアウト", destroy_user_session_path,method: :DELETE, class:"fa fa-sign-out"
 
           %li.global-navi__home
@@ -100,9 +100,9 @@
                 %li.bar-border
                   = link_to "ブックログ公式グッズ", "", class:"fa fa-shopping-cart"
                 %li
-                  = link_to "Twitterをフォーロ", "", class:"fa fa-twitter"
+                  = link_to "Twitterをフォロー", "", class:"fa fa-twitter"
                 %li
-                  = link_to "Facebookをフォーロ", "", class:"fa fa-facebook-square"
+                  = link_to "Facebookページ", "", class:"fa fa-facebook-square"
       - else
         %ul.global-navi.global-navi__right
           %li.global-navi__mypage
