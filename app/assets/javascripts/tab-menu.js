@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+$(document).on('turbolinks:load', function() {
   $('.edit-tab li').on('click', function(e){
     e.preventDefault();
     if($(this).not('active')){

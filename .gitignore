@@ -26,5 +26,3 @@ public/uploads/product/image
 public/uploads/tmp
 
 config/secrets.yml
-
-app/assets/images/
