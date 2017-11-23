@@ -7,9 +7,9 @@ class ReviewsController < ApplicationController
 
   def update
     if @review.update(review_params)
-      redirect_to product_path(@review.product_id)
+      redirect_to product_path(@review.product_id), notice: 'レビューを編集しました'
     else
-      render :edit
+      render :edit, alert: 'レビューの編集に失敗しました'
     end
   end
 
