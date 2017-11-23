@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load', function() {
-    $('.question-icon').on('mouseover',function(e){
-    e.preventDefault()
+    $('.question-icon').on('mouseover',function(){
     $(this).parent().find('.search-content').slideDown(0);
     //メニュー領域外をホバーしたらメニューを閉じる
     $(this).parent().find('.search-content').mouseout(function(){
