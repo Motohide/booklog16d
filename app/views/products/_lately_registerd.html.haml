@@ -1,0 +1,13 @@
+.release-container
+  - if book.image.present?
+    = image_tag book.image,class:"review-container__image"
+  - else
+    = image_tag "no_image.png",class:"review-container__image"
+  .release-container__product-info
+    .release-container__product-info__title
+      = book.name
+    .release-container__product-info__author
+      = book.author
+    .release-container__product-info__publish-date
+      = book.release_date
+  .release-container__date

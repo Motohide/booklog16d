@@ -60,11 +60,12 @@
         }
       }
       &__product-info {
-        float: left;
         &__title {
           text-decoration: underline;
           font-size: 14px;
           font-weight: bold;
+          word-break: break-all;
+          width: 100px;
 
           &:hover {
            color: $text-lightblue-color;
@@ -133,12 +134,12 @@
       }
 
       &__product-info {
-        float: left;
 
         &__title {
           text-decoration: underline;
           font-size: 14px;
           font-weight: bold;
+          word-break: break-all;
 
           &:hover {
            color: $text-lightblue-color;
@@ -201,12 +202,12 @@
       }
 
       &__product-info {
-        float: left;
 
         &__title {
           text-decoration: underline;
           font-size: 14px;
           font-weight: bold;
+          word-break: break-all;
 
           &:hover {
            color: $text-lightblue-color;

@@ -25,36 +25,16 @@
             = link_to "もっとみる", "", class:"more-btn__body"
         .middle-page-content__ranking
           %h2.top-title
-            ランキング
-          - 10.times do
-            .ranking-container
-              = image_tag "book__review__karioki.jpg",class:"ranking-container__image"
-              .ranking-container__product-info
-                .ranking-container__product-info__title
-                  AAAAAAAAAAAAAaaa
-                .ranking-container__product-info__author
-                  作者の名前だよ
-                .ranking-container__evaluation
-                  = link_to "219人が登録","",class:"ranking-container__evaluation__registration-number"
-                  = link_to "3.75", "", class:"fa fa-star ranking-container__evaluation__average"
-                  %span.ranking-container__evaluation__recent-registration-number 最近69人が登録
+            登録者数ランキング
+          = render partial: "ranking", collection: @ranking_books_results, as:"ranking"
           .more-btn
             = link_to "もっとみる", "", class:"more-btn__body"
 
         .middle-page-content__release
           %h2.top-title
-            新刊情報
-          - 10.times do
-            .release-container
-              = image_tag "book__review__karioki.jpg",class:"release-container__image"
-              .release-container__product-info
-                .release-container__product-info__title
-                  YOOOOOOOOOOOOO
-                .release-container__product-info__author
-                  作者の名前だよ
-                .release-container__product-info__publish-date
-                  2017年11月3日
-              .release-container__date
+            最近登録された本
+          = render partial: "lately_registerd", collection: @bookmark_books_results, as:"book"
+
           .more-btn
             = link_to "もっとみる", "", class:"more-btn__body"
         .popular-author
