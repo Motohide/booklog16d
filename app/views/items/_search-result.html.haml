@@ -25,5 +25,8 @@
   .search-wrapper__result-register
     = form_for @bookmark do |f|
       = f.hidden_field :isbn, value:"#{result.isbn}"
-      = f.submit "", class:"add-product-btn"
+      - if Bookmark.where(isbn: result.isbn, user_id: current_user.id).present?
+        = link_to "", edit_item_review_path(result.isbn, Review.find_by(isbn: result.isbn, user_id: current_user.id)), class:"add-product-btn-review"
+      - else
+        = f.submit "", class:"add-product-btn"
       = link_to "", "", class:"add-product-btn-secretly"

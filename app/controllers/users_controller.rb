@@ -3,9 +3,10 @@ class UsersController < ApplicationController
   before_action :check_user, only:[:edit, :update]
 
   def show
-      @bookmarks = current_user.bookmarks.map{|book| book.isbn.to_i}
+      @bookmark = current_user.bookmarks.map{|book| book.isbn }
+      @bookmark = @bookmark.map(&:to_i)
+      openBD_uri = URI.parse('https://api.openbd.jp/v1/get?isbn=' +"#{@bookmark}")
 
-      openBD_uri = URI.parse('https://api.openbd.jp/v1/get?isbn=' +"#{@bookmarks}")
       openBD_json = Net::HTTP.get(openBD_uri)
       openBD_result = JSON.parse(openBD_json).to_a
 
