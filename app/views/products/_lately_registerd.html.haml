@@ -1,13 +1,14 @@
 .release-container
-  - if book.image.present?
-    = image_tag book.image,class:"review-container__image"
-  - else
-    = image_tag "no_image.png",class:"review-container__image"
+  = link_to item_path(book.isbn) do
+    - if book.image.present?
+      = image_tag book.image,class:"review-container__image"
+    - else
+      = image_tag "no_image.png",class:"review-container__image"
   .release-container__product-info
     .release-container__product-info__title
-      = book.name
+      = link_to book.name, item_path(book.isbn)
     .release-container__product-info__author
-      = book.author
+      = link_to book.author, item_path(book.isbn)
     .release-container__product-info__publish-date
       = book.release_date
   .release-container__date

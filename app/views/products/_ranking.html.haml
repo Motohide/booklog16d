@@ -1,13 +1,14 @@
 .ranking-container
-  - if ranking.image.present?
-    = image_tag ranking.image,class:"review-container__image"
-  - else
-    = image_tag "no_image.png",class:"review-container__image"
+  = link_to item_path(ranking.isbn) do
+    - if ranking.image.present?
+      = image_tag ranking.image,class:"review-container__image"
+    - else
+      = image_tag "no_image.png",class:"review-container__image"
   .ranking-container__product-info
     .ranking-container__product-info__title
-      = ranking.name
+      = link_to ranking.name, item_path(ranking.isbn)
     .ranking-container__product-info__author
-      = ranking.author
+      = link_to ranking.author, item_path(ranking.isbn)
     .ranking-container__evaluation
       = link_to "#{Bookmark.where(isbn: ranking.isbn).length}人が登録","",class:"ranking-container__evaluation__registration-number"
       = link_to "#{Review.where(isbn: ranking.isbn).average(:rate)}", "", class:"fa fa-star ranking-container__evaluation__average"

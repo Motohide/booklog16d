@@ -1,14 +1,15 @@
 - if review.body.present?
   .review-container
-    - if @review_books_results[review_counter].image.present?
-      = image_tag @review_books_results[review_counter].image,class:"review-container__image"
-    - else
-      = image_tag "no_image.png",class:"review-container__image"
+    = link_to item_path(@review_books_results[review_counter].isbn) do
+      - if @review_books_results[review_counter].image.present?
+        = image_tag @review_books_results[review_counter].image,class:"review-container__image"
+      - else
+        = image_tag "no_image.png",class:"review-container__image"
     .review-container__product-info
       %span.review-container__product-info__title
-        = @review_books_results[review_counter].name
+        = link_to @review_books_results[review_counter].name, item_path(@review_books_results[review_counter].isbn)
       .review-container__product-info__author
-        = @review_books_results[review_counter].author
+        = link_to @review_books_results[review_counter].author, item_path(@review_books_results[review_counter].isbn)
     .review-container__review
       .user-info
         .user-name
