@@ -13,23 +13,99 @@
         %li.global-navi__matome
           = link_to "まとめ", "", class:"link_to-cancel"
       .search.global-navi
-        %input.search__input
+        %input.search__input{type: "text", placeholder: "作品・著者名で検索して本棚登録"}
+        %i.fa.fa-question-circle.question-icon
+        .search-content
+          %p.introduce-text 検索キーワードの前に下記の文字列をつけて検索してください。裏ワザです。（例 @dvd 東野圭吾）
+          %ul
+            %li
+              %span @e
+              電子書籍横断検索(一般書)』 から検索
+            %li
+              %span @dvd
+              『映画』から検索
+            %li
+              %span @cd
+              音楽』から検索
+            %li
+              %span @us
+              『Amazon.com』から検索
+            %li
+              %span @o
+              『電子書籍横断検索(技術書)』から検索
+            %li
+              %span @p
+              『パブーの電子書籍』から検索
+            %li
+              %span @
+              『Kindleストア』から検索
+            %li
+              %span @i
+              『iTunes Store(iPhone) 』から検索
         .search__search-btn
           = link_to search_products_path do
             %i.fa.fa-search
       - if user_signed_in?
         %ul.global-navi.global-navi__right
-          %li.global-navi__mypage
-          %li
-            = link_to "ログアウト", destroy_user_session_path,method: :DELETE, class:"devise-btns user-sign_out-btn"
+          %li.global-navi__user-icon-header
+            - if current_user.avatar.present?
+              = image_tag current_user.avatar, class:"user-icon-header"
+            - else
+              = image_tag "user-icon.png", class:"user-icon-header"
+            .dropdown-user-icon
+              %ul
+                %li.bar-border
+                  = link_to "#{current_user.nickname}さん", "", class:"fa fa-user"
+                %li
+                  = link_to "本の並び替え", "", class:"fa fa-th"
+                %li
+                  = link_to "カテゴリーの編集・削除", "", class:"fa fa-folder"
+                %li.bar-border
+                  = link_to "タグの編集・削除", "", class:"fa fa-tags"
+                %li
+                  = link_to "本棚の設定", "", class:"fa fa-cog"
+                %li.bar-border
+                  = link_to "プロフィールの設定", edit_user_path(current_user), class:"fa fa-smile-o"
+                %li
+                  =link_to "ログアウト", destroy_user_session_path,method: :DELETE, class:"fa fa-sign-out"
+
           %li.global-navi__home
             = link_to "", profile_user_path(current_user), class:"fa fa-home link_to-cancel"
+            .hover-icon
+              .hover-icon.hover-icon__home-icon
+                %span ホーム
           %li.global-navi__bookshelf
             = link_to "", user_path(current_user), class:"fa fa-book link_to-cancel"
+            .hover-icon
+              .hover-icon.hover-icon__bookshelf-icon
+                %span 本棚
           %li.global-navi__timeline
             = link_to "", "", class:"fa fa-clock-o link_to-cancel"
+            .hover-icon
+              .hover-icon.hover-icon__timeline-icon
+                %span タイムライン
           %li.global-navi__dropdown-menu-click
-            = link_to "", "", class:"fa fa-bars link_to-cancel"
+            %i.fa.fa-bars
+            .dropdown-menu-icon
+              %ul
+                %li
+                  = link_to "ブックログ公式本棚", "", class:"fa fa-heart"
+                %li.bar-border
+                  = link_to "ブックログ特集", "", class:"fa fa-diamond"
+                %li
+                  = link_to "ブックログのアプリ", "", class:"fa fa-mobile"
+                %li.bar-border
+                  = link_to "チュートリアル", "", class:"fa fa-check-square-o"
+                %li
+                  = link_to "お知らせブログ", "", class:"fa fa-info-circle"
+                %li
+                  = link_to "ヘルプ", "", class:"fa fa-question-circle"
+                %li.bar-border
+                  = link_to "ブックログ公式グッズ", "", class:"fa fa-shopping-cart"
+                %li
+                  = link_to "Twitterをフォロー", "", class:"fa fa-twitter"
+                %li
+                  = link_to "Facebookページ", "", class:"fa fa-facebook-square"
       - else
         %ul.global-navi.global-navi__right
           %li.global-navi__mypage
