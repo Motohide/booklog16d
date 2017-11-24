@@ -12,8 +12,8 @@
           = link_to "談話室", "", class:"link_to-cancel"
         %li.global-navi__matome
           = link_to "まとめ", "", class:"link_to-cancel"
-      .search.global-navi
-        %input.search__input{type: "text", placeholder: "作品・著者名で検索して本棚登録"}
+      = form_tag(search_items_path, method: "GET", class:"search global-navi") do
+        = text_field_tag :keyword, "", class:"search__input", placeholder:"作品・著者名で検索して本棚で登録"
         %i.fa.fa-question-circle.question-icon
         .search-content
           %p.introduce-text 検索キーワードの前に下記の文字列をつけて検索してください。裏ワザです。（例 @dvd 東野圭吾）
@@ -42,9 +42,7 @@
             %li
               %span @i
               『iTunes Store(iPhone) 』から検索
-        .search__search-btn
-          = link_to search_products_path do
-            %i.fa.fa-search
+        = button_tag "" , class: 'search__search-btn fa fa-search', type: :submit
       - if user_signed_in?
         %ul.global-navi.global-navi__right
           %li.global-navi__user-icon-header
