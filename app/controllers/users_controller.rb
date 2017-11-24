@@ -5,22 +5,28 @@ class UsersController < ApplicationController
   def show
       @bookmark = current_user.bookmarks.map{|book| book.isbn }
       @bookmark = @bookmark.map(&:to_i)
-      openBD_uri = URI.parse('https://api.openbd.jp/v1/get?isbn=' +"#{@bookmark}")
+      bookmark_openbd_results = []
 
-      openBD_json = Net::HTTP.get(openBD_uri)
-      openBD_result = JSON.parse(openBD_json).to_a
+      @bookmark.each do |isbn|
+        openBD_uri = URI.parse('https://api.openbd.jp/v1/get?isbn=' +"#{isbn}")
+        openBD_json = Net::HTTP.get(openBD_uri)
+        openBD_result = JSON.parse(openBD_json).to_a
+
+        bookmark_openbd_results << openBD_result
+      end
+
 
       @books = []
 
-
-      openBD_result.each_with_index do |data, i|
+      binding.pry
+      bookmark_openbd_results.each_with_index do |data, i|
         if data.present?
-          item = Item.new(isbn: data["summary"]["isbn"],
-                          name: data["summary"]["title"],
-                          image: data["summary"]["cover"],
-                          author: data["summary"]["author"],
-                          publisher: data["summary"]["publisher"],
-                          release_date: data["summary"]["pubdate"])
+          item = Item.new(isbn: data[0]["summary"]["isbn"],
+                          name: data[0]["summary"]["title"],
+                          image: data[0]["summary"]["cover"],
+                          author: data[0]["summary"]["author"],
+                          publisher: data[0]["summary"]["publisher"],
+                          release_date: data[0]["summary"]["pubdate"])
           @books << item
         end
       end
