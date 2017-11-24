@@ -20,7 +20,7 @@
         .middle-page-content__popular-review
           %h2.top-title
             最新のレビュー
-          = render "late_review"
+          = render partial: "late_review", collection: @reviews, as:"review"
           .more-btn
             = link_to "もっとみる", "", class:"more-btn__body"
         .middle-page-content__ranking

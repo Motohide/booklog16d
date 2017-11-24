@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
       @books = []
 
+
       openBD_result.each_with_index do |data, i|
         if data.present?
           item = Item.new(isbn: data["summary"]["isbn"],

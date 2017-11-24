@@ -14,14 +14,15 @@ class ProductsController < ApplicationController
       @review_books << openBD_result
     end
 
+
     @review_books.each_with_index do |data, i|
       if data.present?
-        item = Item.new(isbn: data["summary"]["isbn"],
-                        name: data["summary"]["title"],
-                        image: data["summary"]["cover"],
-                        author: data["summary"]["author"],
-                        publisher: data["summary"]["publisher"],
-                        release_date: data["summary"]["pubdate"])
+        item = Item.new(isbn: data[0]["summary"]["isbn"],
+                        name: data[0]["summary"]["title"],
+                        image: data[0]["summary"]["cover"],
+                        author: data[0]["summary"]["author"],
+                        publisher: data[0]["summary"]["publisher"],
+                        release_date: data[0]["summary"]["pubdate"])
         @review_books_results << item
       end
     end
