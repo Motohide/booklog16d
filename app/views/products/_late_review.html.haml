@@ -5,7 +5,7 @@
     - else
       = image_tag "no_image.png",class:"review-container__image"
     .review-container__product-info
-      .review-container__product-info__title
+      %span.review-container__product-info__title
         = @review_books_results[review_counter].name
       .review-container__product-info__author
         = @review_books_results[review_counter].author

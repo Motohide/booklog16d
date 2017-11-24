@@ -6,6 +6,8 @@ class UsersController < ApplicationController
       @bookmark = current_user.bookmarks.map{|book| book.isbn }
       @bookmark = @bookmark.map(&:to_i)
       bookmark_openbd_results = []
+      @books = []
+
 
       @bookmark.each do |isbn|
         openBD_uri = URI.parse('https://api.openbd.jp/v1/get?isbn=' +"#{isbn}")
@@ -15,10 +17,6 @@ class UsersController < ApplicationController
         bookmark_openbd_results << openBD_result
       end
 
-
-      @books = []
-
-      binding.pry
       bookmark_openbd_results.each_with_index do |data, i|
         if data.present?
           item = Item.new(isbn: data[0]["summary"]["isbn"],
