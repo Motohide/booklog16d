@@ -50,7 +50,9 @@ ActiveRecord::Schema.define(version: 20171123095703) do
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.integer  "user_id"
+    t.integer  "product_id"
     t.string   "isbn"
+    t.index ["product_id"], name: "index_reviews_on_product_id", using: :btree
     t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
   end
 
