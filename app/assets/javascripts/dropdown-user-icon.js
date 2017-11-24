@@ -12,7 +12,6 @@
 //   });
 // });
 
-
 $(document).on('click', function(e) {
   if(!$(e.target).closest('.dropdown-user-icon').length && !$(e.target).closest('.global-navi__user-icon-header').length){
       $('.dropdown-user-icon').hide();
