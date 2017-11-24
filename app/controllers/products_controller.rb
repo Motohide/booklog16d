@@ -54,11 +54,9 @@ class ProductsController < ApplicationController
         @bookmark_books_results << item
       end
     end
-
     @bookmark_books_results.uniq!{|n| n.name}
 
-    ranking_isbn_lists = Bookmark.group(:isbn).order('isbn ASC').count(:isbn).keys
-
+    ranking_isbn_lists = Bookmark.group(:isbn).order('count_isbn DESC').count(:isbn).keys
     ranking_isbn_lists.each do |isbn|
       openBD_uri = URI.parse('https://api.openbd.jp/v1/get?isbn=' +"#{isbn}")
       openBD_json = Net::HTTP.get(openBD_uri)
