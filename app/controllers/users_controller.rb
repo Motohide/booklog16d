@@ -20,8 +20,6 @@ class UsersController < ApplicationController
   def profile
   end
 
-
-
   private
   def update_params
     params.require(:user).permit(:email, :nickname, :gender, :birth_date, :avatar, :prefecture_code, :hometown, :website, :biography, :job)

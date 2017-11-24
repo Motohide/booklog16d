@@ -49,7 +49,7 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
 .header__wrapper {
  position: fixed;
  width: 100vw;
-z-index: 1;
+ z-index: 2;
 }
 
   .global-navi-wrapper {
@@ -72,10 +72,70 @@ z-index: 1;
 
   .global-navi {
     background-color: $globalnavi-blue-color;
+
+      &__dropdown-menu-click {
+        cursor: pointer;
+      }
     li {
       display: inline-block;
       margin: 0 10px;
       line-height: 60px;
+
+        .user-icon-header {
+          height: 24px;
+          width: 24px;
+          padding: 2px;
+          background-color: #fff;
+          border: 1px #666 solid;
+          vertical-align: middle;
+          cursor: pointer;
+        }
+
+
+      .dropdown-user-icon {
+        display: none;
+        position: fixed;
+        top: 59px;
+        right: 132px;
+        width: 185px;
+        background-color: #fff;
+        border: 5px $border-black-color solid;
+
+        a {
+          color: $border-black-color;
+          text-decoration: none;
+          padding: 6px 15px;
+          display: block;
+        }
+
+        .fa:before {
+          margin-right: 7px;
+          font-size: 14px;
+          display: inline-block;
+        }
+      }
+
+      .dropdown-user-icon:before {
+        content: "";
+        position: absolute;
+        top: -24px;
+        left: 50%;
+        margin-left: -20px;
+        border: 16px solid transparent;
+        border-bottom: 13px solid #FFF;
+        z-index: 2;
+      }
+
+      .dropdown-user-icon:after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        margin-left: -19px;
+        border: 15px solid transparent;
+        border-bottom: 12px solid $border-black-color;
+        z-index: 1;
+      }
 
       .link_to-cancel {
         text-decoration: none;
@@ -85,6 +145,111 @@ z-index: 1;
           opacity: 0.6;
         }
       }
+
+      .hover-icon {
+        display: none;
+        opacity: 0.7;
+          span {
+          background-color: black;
+          font-size: 12px;
+          border-radius: 3px;
+          position: fixed;
+          line-height: 25px;
+          padding: 0 12px;
+          top: 50px;
+        }
+
+        &__home-icon {
+          span {
+            right: 137px;
+          }
+        }
+
+        &__bookshelf-icon {
+          span {
+            right: 98px;
+          }
+        }
+
+        &__timeline-icon {
+          span {
+            right: 18px;
+          }
+        }
+      }
+
+      .dropdown-menu-icon {
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 10px;
+        width: 180px;
+        background-color: #fff;
+        border: 5px $border-black-color solid;
+
+        a {
+          color: $border-black-color;
+          text-decoration: none;
+          padding: 6px 15px;
+          display: block;
+        }
+
+        .fa:before {
+          margin-right: 7px;
+          font-size: 14px;
+          display: inline-block;
+        }
+
+        .fa.fa-twitter:before {
+          color: #1dadea;
+        }
+
+        .fa.fa-facebook-square:before {
+          color: #4861a8;
+        }
+      }
+
+      .dropdown-menu-icon:before {
+        content: "";
+        position: absolute;
+        top: -24px;
+        left: 51%;
+        margin-left: 60px;
+        border: 11px solid transparent;
+        border-bottom: 16px solid $background-white-color;
+        z-index: 2;
+      }
+
+      .dropdown-menu-icon:after {
+        content: "";
+        position: absolute;
+        top: -35px;
+        left: 51%;
+        margin-left: 57px;
+        border: 14px solid transparent;
+        border-bottom: 19px solid $border-black-color;
+        z-index: 1;
+      }
+
+      ul {
+          margin-top: 5px;
+          font-size: 12px;
+          line-height: 0;
+        }
+
+      li {
+        padding: 5px 0;
+        width: 100%;
+        margin: 0px;
+
+        &:hover {
+          background-color: $menu-gray-color;
+        }
+      }
+
+      li.bar-border {
+        border-bottom: 1px $border-gray-color solid;
+      }
     }
 
     &__left {
@@ -93,6 +258,9 @@ z-index: 1;
     }
 
     &__right {
+      position: relative;
+      right: 10px;
+      overflow: hidden;
       float: right;
       font-size: 24px;
     }
@@ -106,14 +274,75 @@ z-index: 1;
     &__input {
       float: left;
       height: 24px;
+      font-size: 13px;
+      width: 220px;
+      padding: 2px;
     }
 
     &__search-btn {
-      float: left;
-      background-color: $background-white-color;
-      color: #666;
       height: 23px;
-      padding: 2px 6px 3px;
+      float: left;
+      padding: 2px 7px 6px;
+      background-color: $background-white-color;
+
+      &:hover {
+        background-color: $link-lightblue-color;
+
+        i {
+          color: $text-white-color;
+        }
+      }
+
+      a {
+        color: #666;
+      }
+    }
+
+    .fa.fa-question-circle {
+      position: absolute;
+      top: 8px;
+      right: 33px;
+      color: $border-gray-color;
+      font-size: 14px;
+
+      &:hover {
+        color: $border-black-color;
+      }
+    }
+
+    .search-content {
+      display: none;
+      position: fixed;
+      top: 60px;
+      background-color: #fff;
+      width: 290px;
+      border: 5px $border-black-color solid;
+      text-align: left;
+      padding: 15px;
+
+      p {
+        color: #333;
+        font-size: 12px;
+        margin-bottom:10px;
+        margin-top: 0;
+      }
+
+      ul {
+        background-color: $menu-gray-color;
+        padding: 10px;
+      }
+
+      li {
+        color: #333;
+        font-size: 12px;
+        width: 100%;
+        margin: 0;
+        line-height: 0;
+      }
+
+      span {
+        padding-right: 15px;
+      }
     }
 
   }
