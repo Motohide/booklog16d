@@ -3,7 +3,27 @@ class UsersController < ApplicationController
   before_action :check_user, only:[:edit, :update]
 
   def show
+      @bookmarks = current_user.bookmarks.map{|book| book.isbn.to_i}
+
+      openBD_uri = URI.parse('https://api.openbd.jp/v1/get?isbn=' +"#{@bookmarks}")
+      openBD_json = Net::HTTP.get(openBD_uri)
+      openBD_result = JSON.parse(openBD_json).to_a
+
+      @books = []
+
+      openBD_result.each_with_index do |data, i|
+        if data.present?
+          item = Item.new(isbn: data["summary"]["isbn"],
+                          name: data["summary"]["title"],
+                          image: data["summary"]["cover"],
+                          author: data["summary"]["author"],
+                          publisher: data["summary"]["publisher"],
+                          release_date: data["summary"]["pubdate"])
+          @books << item
+        end
+      end
   end
+
 
   def edit
   end
