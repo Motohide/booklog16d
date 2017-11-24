@@ -1,6 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.10.0"
 
+set :branch "deploy-branch"
 set :application, "booklog16d"
 set :repo_url, "git://github.com/Motohide/booklog16d.git"
 
