@@ -23,5 +23,7 @@
     - else
       = image_tag "no_image.png", class:"image-import"
   .search-wrapper__result-register
-    = link_to "", "", class:"add-product-btn"
-    = link_to "", "", class:"add-product-btn-secretly"
+    = form_for @bookmark do |f|
+      = f.hidden_field :isbn, value:"#{result.isbn}"
+      = f.submit "", class:"add-product-btn"
+      = link_to "", "", class:"add-product-btn-secretly"
