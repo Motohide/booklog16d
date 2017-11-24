@@ -19,9 +19,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    require 'net/http'
-    require 'uri'
-    require 'json'
+    @bookmark = Bookmark.new
 
 # GoogleBooksApiから入力されたkeywordに基づいてisbn番号を取得
     if params[:keyword].present?
