@@ -55,10 +55,7 @@ class ProductsController < ApplicationController
       end
     end
 
-    @bookmark_books_results = @bookmark_books_results.uniq
-
-
-# これを参考にreviewのisbnをまとめる
+    @bookmark_books_results.uniq!{|n| n.name}
 
     ranking_isbn_lists = Bookmark.group(:isbn).order('isbn ASC').count(:isbn).keys
 
