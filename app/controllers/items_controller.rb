@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
       @reviews = Review.where(isbn: params[:id])
       @review_total = @reviews.where.not(body: nil).length
       @average_rate = @reviews.average(:rate)
+      @total_bookmarks = @reviews.length
   end
 
   def search
@@ -77,7 +78,6 @@ class ItemsController < ApplicationController
         end
       end
     end
-
   end
 
 end

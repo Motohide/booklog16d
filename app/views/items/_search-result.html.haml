@@ -4,12 +4,14 @@
       = link_to result.name,item_path(result.isbn)
     %ul
       %li.product-evaluation.product-evaluation__count
-        1人が登録
+        = Bookmark.where(isbn: result.isbn).length
+        人が登録
       %li.product-evaluation.product-evaluation__average
         %i.fa.fa-star
-        4.00
+        = Review.where(isbn: result.isbn).average(:rate)
       %li.product-evaluation.product-evaluation__review
-        1レビュー
+        = Review.where(isbn: result.isbn).length
+        レビュー
     .product-info
       %span 雑誌
       %span
