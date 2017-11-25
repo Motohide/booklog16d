@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
 
   def show
+      @bookmark = Bookmark.new
       openBD_uri = URI.parse('https://api.openbd.jp/v1/get?isbn=' + params[:id])
       openBD_json = Net::HTTP.get(openBD_uri)
       openBD_result = JSON.parse(openBD_json).to_a

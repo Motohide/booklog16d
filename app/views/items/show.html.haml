@@ -18,10 +18,15 @@
       .product-wrapper
         .product-wrapper__title
           = @item.name
-        .product-wrapper__left
+
+        = form_for @bookmark, url: bookmarks_path, html: {class:"product-wrapper__left"} do |f|
           = link_to "" do
             = image_tag @item.image, class:"product-wrapper__image"
-          = link_to "", edit_item_review_path(@review.isbn, @review.id), class:"book-btn"
+          - if Bookmark.where(isbn: params[:id], user_id: current_user.id).present?
+            = link_to "", edit_item_review_path(@review.isbn, @review.id), class:"book-btn-review"
+          - else
+            = f.hidden_field :isbn, value:"#{params[:id]}"
+            = f.submit "", class:"book-btn"
         .product-wrapper__info
           %ul.product-wrapper__info__status
             %li
