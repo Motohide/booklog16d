@@ -184,12 +184,17 @@
       width: 190px;
       text-align: center;
       float: left;
+
+      .image-import {
+        height: 140px;
+        width: 100px;
+      }
     }
 
     &-register {
       float: left;
       width: calc(100% - 190px);
-      padding: 45px 0;
+      padding: 33px 0;
       height: 100%;
 
       .add-product-btn {
@@ -202,6 +207,15 @@
 
         &:hover {
           background-position: 0px -182px;
+        }
+
+        &-review {
+          margin: 10px auto 30px;
+          display: block;
+          width: 132px;
+          height: 41px;
+          background-image: url(/images/common-btns.png);
+          background-position: -270px 0;
         }
 
         &-secretly {

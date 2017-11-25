@@ -280,17 +280,16 @@ font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリ�
     }
 
     &__search-btn {
-      height: 23px;
+      border-radius: 0;
+      border-style: none;
+      line-height: 24px;
       float: left;
       padding: 2px 7px 6px;
       background-color: $background-white-color;
 
       &:hover {
         background-color: $link-lightblue-color;
-
-        i {
-          color: $text-white-color;
-        }
+        color: $text-white-color;
       }
 
       a {

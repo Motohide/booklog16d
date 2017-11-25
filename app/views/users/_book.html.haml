@@ -1,0 +1,7 @@
+.books-display__book
+  %span
+    = link_to item_path(book.isbn) do
+      - if book.image.present?
+        = image_tag book.image
+      - else
+        = image_tag "no_image.png"

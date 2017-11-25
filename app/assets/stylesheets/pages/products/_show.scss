@@ -8,6 +8,15 @@
   width: 130px;
   height: 41px;
   background-image: url(/images/common-btns.png);
+
+  &-review {
+    display: block;
+    margin: 15px auto 0;
+    width: 130px;
+    height: 41px;
+    background-image: url(/images/common-btns.png);
+    background-position: -270px 0;
+  }
 }
 
 .wrapper-product-show {

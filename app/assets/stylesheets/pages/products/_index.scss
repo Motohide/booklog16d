@@ -60,23 +60,32 @@
         }
       }
       &__product-info {
-        float: left;
         &__title {
           text-decoration: underline;
           font-size: 14px;
           font-weight: bold;
+          word-break: break-all;
+          width: 100px;
 
-          &:hover {
-           color: $text-lightblue-color;
+          a {
+            color: black;
+
+            &:hover {
+             color: $text-lightblue-color;
+            }
           }
+
         }
         &__author {
           margin: 10px 0 5px;
           font-size: 12px;
-          color: $text-lightblue-color;
+          a {
+            text-decoration: none;
+            color: $text-lightblue-color;
 
-          &:hover {
-           color: $hover-red-color;
+            &:hover {
+              color: $hover-red-color;
+            }
           }
         }
       }
@@ -133,25 +142,33 @@
       }
 
       &__product-info {
-        float: left;
 
         &__title {
           text-decoration: underline;
           font-size: 14px;
           font-weight: bold;
+          word-break: break-all;
 
-          &:hover {
-           color: $text-lightblue-color;
+          a {
+            color: black;
+
+            &:hover {
+             color: $text-lightblue-color;
+            }
           }
         }
 
         &__author {
           margin: 10px 0 5px;
           font-size: 12px;
-          color: $text-lightblue-color;
 
-          &:hover {
-           color: $hover-red-color;
+          a {
+            color: $text-lightblue-color;
+            text-decoration: none;
+
+            &:hover {
+              color: $hover-red-color;
+            }
           }
         }
       }
@@ -201,25 +218,34 @@
       }
 
       &__product-info {
-        float: left;
 
         &__title {
           text-decoration: underline;
           font-size: 14px;
           font-weight: bold;
+          word-break: break-all;
 
-          &:hover {
-           color: $text-lightblue-color;
+          a {
+            color: black;
+
+            &:hover {
+             color: $text-lightblue-color;
+            }
           }
         }
 
         &__author {
           margin: 10px 0 0;
           font-size: 12px;
-          color: $text-lightblue-color;
 
-          &:hover {
-           color: $hover-red-color;
+          a {
+            color: $text-lightblue-color;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: none;
+             color: $hover-red-color;
+            }
           }
         }
 

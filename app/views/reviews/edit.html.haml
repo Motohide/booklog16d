@@ -15,15 +15,15 @@
       %h1 登録情報の編集・削除
       .book-introduce
         .book-introduce__image
-          = link_to product_path(@product) do
-            = image_tag @product.image
+          = link_to item_path(@item.isbn) do
+            = image_tag @item.image
           .reacquire
             = link_to "再取得"
         .book-introduce__info
           .book-introduce__info__title
-            = link_to @product.name, product_path(@product)
+            = link_to @item.name, item_path(@item.isbn)
           .book-introduce__info__author
-            = @product.author
+            = @item.author
           %ul.book-introduce__info__btn
             %li
               = link_to "みんなのレビュー", "", class:"item-info-btn item-info-btn-red"
@@ -45,7 +45,7 @@
         .review-title
           = link_to "あなたのレビューを見る"
 
-      = form_for @review, url: product_review_path(@review), html: {id: "tab-box"} do |f|
+      = form_for @review, url: item_review_path(@review), html: {id: "tab-box"} do |f|
         .form-wrapper.review-form.active
           .input-row.input-row__reading-status
             .left-contents

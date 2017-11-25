@@ -1,0 +1,34 @@
+.search-wrapper__result
+  .search-wrapper__result-top
+    .product-name
+      = link_to result.name,item_path(result.isbn)
+    %ul
+      %li.product-evaluation.product-evaluation__count
+        = Bookmark.where(isbn: result.isbn).length
+        人が登録
+      %li.product-evaluation.product-evaluation__average
+        %i.fa.fa-star
+        = Review.where(isbn: result.isbn).average(:rate)
+      %li.product-evaluation.product-evaluation__review
+        = Review.where(isbn: result.isbn).length
+        レビュー
+    .product-info
+      %span 雑誌
+      %span
+        = result.release_date
+      %span
+        = image_tag "store/amazon-mini.gif"
+        Amazon.co.jpで見る
+  .search-wrapper__result-image
+    - if result.image.present?
+      = image_tag result.image, class:"image-import"
+    - else
+      = image_tag "no_image.png", class:"image-import"
+  .search-wrapper__result-register
+    = form_for @bookmark do |f|
+      = f.hidden_field :isbn, value:"#{result.isbn}"
+      - if Bookmark.where(isbn: result.isbn, user_id: current_user.id).present?
+        = link_to "", edit_item_review_path(result.isbn, Review.find_by(isbn: result.isbn, user_id: current_user.id)), class:"add-product-btn-review"
+      - else
+        = f.submit "", class:"add-product-btn"
+      = link_to "", "", class:"add-product-btn-secretly"

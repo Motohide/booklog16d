@@ -1,0 +1,27 @@
+- if review.body.present?
+  .review-container
+    = link_to item_path(@review_books_results[review_counter].isbn) do
+      - if @review_books_results[review_counter].image.present?
+        = image_tag @review_books_results[review_counter].image,class:"review-container__image"
+      - else
+        = image_tag "no_image.png",class:"review-container__image"
+    .review-container__product-info
+      %span.review-container__product-info__title
+        = link_to @review_books_results[review_counter].name, item_path(@review_books_results[review_counter].isbn)
+      .review-container__product-info__author
+        = link_to @review_books_results[review_counter].author, item_path(@review_books_results[review_counter].isbn)
+    .review-container__review
+      .user-info
+        .user-name
+          = review.user.nickname
+        .rating
+          - review.rate.times do
+            %i.fa.fa-star
+          - (5 - review.rate).times do
+            %i.fa.fa-star-o
+      .review-text
+        .review-text__body
+          = review.body
+        .review-text__like-count
+          = image_tag "faving.gif"
+

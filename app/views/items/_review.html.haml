@@ -1,0 +1,28 @@
+- if review.body.present? && review.public_status == 0
+  %ul.review-area
+    .user-icon
+      - if review.user.avatar.present?
+        = image_tag review.user.avatar,class:"user-image"
+      - else
+        = image_tag "user-icon.png",class:"user-image"
+    .review-area__summary{spoiler_status: review.spoiler_status}
+      .review-area__summary__user-info
+        = link_to "#{review.user.nickname}さん", user_path(review.user)
+        のレビュー
+      .review-area__summary__rating
+        - review.rate.times do
+          %i.fa.fa-star
+        - (5 - review.rate).times do
+          %i.fa.fa-star-o
+        %span
+          = link_to "" do
+            = review.set_created_at
+      .review-area__summary__review-text
+        %p
+          = review.body
+      .review-area__summary__reaction
+        = link_to do
+          = image_tag "btn/like-btn.png",class:"review-area__summary__reaction-like"
+        %span.like-count
+          23
+        = link_to "コメントする", "",class:"review-area__summary__reaction-comment"
